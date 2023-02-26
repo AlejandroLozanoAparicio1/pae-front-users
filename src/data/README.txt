@@ -1,0 +1,1 @@
+folder for constants or json data files

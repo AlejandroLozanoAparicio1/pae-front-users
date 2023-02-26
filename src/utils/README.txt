@@ -1,0 +1,1 @@
+folder for util functions used in several pages in the application
