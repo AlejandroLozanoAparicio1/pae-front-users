@@ -1,0 +1,12 @@
+.header {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  box-shadow: 0px 0.5px 5px #656565;
+
+  ._logo {
+    height: 90%;
+    object-fit: cover;
+    margin: auto;
+  }
+}
