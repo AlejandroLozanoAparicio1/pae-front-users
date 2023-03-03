@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import { AnswersContext } from '../../../context/AnswersContext';
 import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import styles from './possible_answer.module.scss';
 
 const PossibleAnswer: React.FC<PossibleAnswerType> = (props) => {
+  const useAnswersContext = useContext(AnswersContext);
+
   return (
     <div className={styles.possible_answer_container}>
       <input
@@ -9,6 +13,8 @@ const PossibleAnswer: React.FC<PossibleAnswerType> = (props) => {
         type='radio'
         value={props.possibleAnswer}
         key={props.question + '_' + props.possibleAnswer}
+        onClick={useAnswersContext?.handleAnswer}
+        id={props.question + '_' + props.possibleAnswer}
       />
       <label className={styles.possible_answer_label}>{props.possibleAnswer}</label>
     </div>

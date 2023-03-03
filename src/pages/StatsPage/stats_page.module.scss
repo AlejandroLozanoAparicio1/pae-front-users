@@ -1,0 +1,15 @@
+@import '../../utils/colors.module.scss';
+
+.data_results {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 92vh;
+
+  ._container {
+    padding: 1rem 2rem;
+    border: 4px solid $blue-accent;
+    background-color: $light-blue-accent;
+    border-radius: 0.6rem;
+  }
+}

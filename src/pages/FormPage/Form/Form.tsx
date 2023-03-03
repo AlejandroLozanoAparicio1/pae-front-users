@@ -1,10 +1,8 @@
-import { useContext } from 'react';
 import FormType from '../../../utils/types/FormType';
 import PossibleAnswer from '../PossibleAnswer/PossibleAnswer';
 import styles from './form.module.scss';
 
 const Form: React.FC<FormType> = (props) => {
-  const answers = useContext(AnswersContext);
   return (
     <div className={styles.form}>
       <h3 className={styles._question}>{props.form.question}</h3>

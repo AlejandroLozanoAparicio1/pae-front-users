@@ -1,8 +1,10 @@
+@import '../../utils/colors.module.scss';
+
 .header {
   width: 100vw;
   height: 8vh;
   display: flex;
-  box-shadow: 0px 0.5px 5px #656565;
+  box-shadow: 0px 0.5px 5px $light-gray;
 
   ._logo {
     height: 90%;

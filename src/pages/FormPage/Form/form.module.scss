@@ -1,14 +1,16 @@
+@import '../../../utils/colors.module.scss';
+
 .form {
   padding: 0.6rem;
   margin: 4rem 0;
-  border: 3px solid #8fb8de;
+  border: 3px solid $light-blue-accent;
   border-radius: 0.4rem;
 
   ._question {
     padding: 0.4rem;
     font-size: 2rem;
-    color: #375171;
-    border-bottom: 1px solid #8fb8de;
+    color: $blue-accent;
+    border-bottom: 1px solid $light-blue-accent;
     margin-bottom: 1rem;
   }
 }
