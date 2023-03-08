@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import AnswersProvider from './context/AnswersContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormPage from './pages/FormPage/FormPage';
+import InfoPage from './pages/InfoPage/InfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
 
 const router = createBrowserRouter([
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: '/stats',
     element: <StatsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/info',
+    element: <InfoPage />,
     errorElement: <ErrorPage />,
   },
 ]);

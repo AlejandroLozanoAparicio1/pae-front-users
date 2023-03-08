@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: 92vh;
+
+  ._video {
+    width: 90vw;
+    aspect-ratio: 16 / 9;
+  }
+}
