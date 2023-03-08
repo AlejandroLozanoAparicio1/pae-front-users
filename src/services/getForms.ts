@@ -6,29 +6,50 @@ function fetchForms(): FormGroupType {
       {
         form: {
           id: '0',
-          question: '1',
-          possibleAnswers: ['a', 'b', 'c', 'd'],
+          question: 'A que grupo perteneces?',
+          possibleAnswers: [
+            'Pacient amb càncer o familiar d’un pacient amb cancer',
+            'Professional sanitari',
+            'Professional relacionat amb el radó',
+            'Expert en radó',
+            'Ciutadà d’una zona amb radó',
+          ],
         },
       },
       {
         form: {
           id: '1',
-          question: '2',
-          possibleAnswers: ['e', 'f', 'g', 'h'],
+          question: 'Sabes qué es el gas radón?',
+          possibleAnswers: ['Sí', 'No'],
         },
       },
       {
         form: {
           id: '2',
-          question: '3',
-          possibleAnswers: ['i', 'j', 'k', 'l'],
+          question:
+            'En caso de haber respondido afirmativamente a la pregunta anterior, cómo lo has descubierto?',
+          possibleAnswers: [
+            'Conocidos, amigos, família',
+            'Hospital clínic',
+            '...',
+            '...',
+            '...',
+            '...',
+          ],
         },
       },
       {
         form: {
           id: '3',
-          question: '4',
-          possibleAnswers: ['m', 'n', 'o', 'p'],
+          question: 'Cómo has encontrado este cuestionario?',
+          possibleAnswers: [
+            'Conocidos, amigos, família',
+            'Hospital clínic',
+            '...',
+            '...',
+            '...',
+            '...',
+          ],
         },
       },
     ],

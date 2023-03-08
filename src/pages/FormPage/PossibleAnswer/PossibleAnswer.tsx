@@ -12,9 +12,9 @@ const PossibleAnswer: React.FC<PossibleAnswerType> = (props) => {
         className={styles.possible_answer_input}
         type='radio'
         value={props.possibleAnswer}
-        key={props.question + '_' + props.possibleAnswer}
+        key={props.id + '_' + props.possibleAnswer}
         onClick={useAnswersContext?.handleAnswer}
-        id={props.question + '_' + props.possibleAnswer}
+        id={props.id + '_' + props.possibleAnswer}
       />
       <label className={styles.possible_answer_label}>{props.possibleAnswer}</label>
     </div>

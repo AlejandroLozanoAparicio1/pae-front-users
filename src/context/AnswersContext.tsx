@@ -30,7 +30,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
 
   function handleAnswer(e: any) {
     const aux = answers.slice(0, answers.length);
-    aux[parseInt(e.target.id[0]) - 1] = { questionId: e.target.id[0], answerId: e.target.value };
+    aux[parseInt(e.target.id[0])] = { questionId: e.target.id[0], answerId: e.target.value };
     setAnswers(aux);
   }
 

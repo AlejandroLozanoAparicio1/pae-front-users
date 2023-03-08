@@ -9,9 +9,9 @@ const StatsPage: React.FC = () => {
   return (
     <div className={styles.data_results}>
       <div className={styles._container}>
-        {useAnswersContext?.answers.map((item) => {
-          return <DataResults answer={item}></DataResults>;
-        })}
+        {useAnswersContext?.answers.map((item) => (
+          <DataResults answer={item}></DataResults>
+        ))}
       </div>
     </div>
   );
