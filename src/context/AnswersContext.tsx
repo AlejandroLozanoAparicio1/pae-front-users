@@ -26,6 +26,46 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
       questionId: '3',
       answerId: '',
     },
+    {
+      questionId: '4',
+      answerId: '',
+    },
+    {
+      questionId: '5',
+      answerId: '',
+    },
+    {
+      questionId: '6',
+      answerId: '',
+    },
+    {
+      questionId: '7',
+      answerId: '',
+    },
+    {
+      questionId: '8',
+      answerId: '',
+    },
+    {
+      questionId: '9',
+      answerId: '',
+    },
+    {
+      questionId: '10',
+      answerId: '',
+    },
+    {
+      questionId: '11',
+      answerId: '',
+    },
+    {
+      questionId: '12',
+      answerId: '',
+    },
+    {
+      questionId: '13',
+      answerId: '',
+    },
   ]);
 
   function handleAnswer(e: any) {

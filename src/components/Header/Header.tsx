@@ -17,6 +17,11 @@ const Header: React.FC = () => {
           </a>
         </li>
       </ul>
+      <div className={styles._hamburguer_menu}>
+        <span className={styles._line}></span>
+        <span className={styles._line}></span>
+        <span className={styles._line}></span>
+      </div>
     </div>
   );
 };

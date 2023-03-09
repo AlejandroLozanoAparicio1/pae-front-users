@@ -16,6 +16,10 @@
     width: 90%;
     height: 100%;
 
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+
     li {
       width: 50%;
       height: 100%;
@@ -38,6 +42,26 @@
         color: black;
         overflow-y: hidden;
       }
+    }
+  }
+
+  ._hamburguer_menu {
+    width: 50px;
+    height: 100%;
+    padding-top: 3vh;
+
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+
+    ._line {
+      display: block;
+      width: 35px;
+      height: 3px;
+      margin-bottom: 4px;
+
+      border-radius: 1rem;
+      background-color: gray;
     }
   }
 }
