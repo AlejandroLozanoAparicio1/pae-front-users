@@ -1,0 +1,12 @@
+.block_video_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 3rem 7rem;
+  gap: 3rem;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+    margin: 1rem 3rem;
+  }
+}

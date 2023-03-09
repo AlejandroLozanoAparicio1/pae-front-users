@@ -12,5 +12,9 @@
     color: $blue-accent;
     border-bottom: 1px solid $light-blue-accent;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.3rem;
+    }
   }
 }
