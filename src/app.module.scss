@@ -1,5 +1,9 @@
 .app {
-  ._form_container {
-    display: flex;
+  position: relative;
+  ._page_container {
+    display: block;
+    position: relative;
+    margin-top: 8vh;
+    z-index: 1;
   }
 }

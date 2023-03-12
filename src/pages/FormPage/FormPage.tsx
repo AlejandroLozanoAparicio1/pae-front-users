@@ -1,7 +1,7 @@
-import FormGroup from './FormGroup/FormGroup';
+import Form from './Form/Form';
 
 const FormPage: React.FC = () => {
-  return <FormGroup />;
+  return <Form />;
 };
 
 export default FormPage;
