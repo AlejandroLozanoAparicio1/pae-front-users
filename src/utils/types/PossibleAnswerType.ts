@@ -1,5 +1,6 @@
+import GetAnswerType from './GetAnswerType';
+
 export default interface PossibleAnswerType {
-  id: string;
-  question: string;
-  possibleAnswer: string;
+  answer: GetAnswerType;
+  question_id: number;
 }

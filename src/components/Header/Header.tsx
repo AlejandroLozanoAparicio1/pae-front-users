@@ -1,15 +1,14 @@
-import { useContext } from 'react';
+import { useState } from 'react';
 import logo from '../../assets/logo.png';
-import { HamburgerMenuContext } from '../../context/HamburgerMenuContext';
 import PageList from '../PageList/PageList';
 import styles from './header.module.scss';
 
 const Header: React.FC = () => {
-  const useHamburgerMenuContext = useContext(HamburgerMenuContext);
-  const hambClass = useHamburgerMenuContext?.hamburgerMenu ? styles._open : styles._closed;
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
+  const hambClass = hamburgerMenu ? styles._open : styles._closed;
 
   const handleHamburguerClick = (e: any) => {
-    useHamburgerMenuContext?.setHamburgerMenu(!useHamburgerMenuContext?.hamburgerMenu);
+    setHamburgerMenu(!hamburgerMenu);
   };
 
   return (
@@ -37,7 +36,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </div>
-      {useHamburgerMenuContext?.hamburgerMenu && <PageList />}
+      {hamburgerMenu && <PageList />}
     </>
   );
 };

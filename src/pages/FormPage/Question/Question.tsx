@@ -8,9 +8,8 @@ const Question: React.FC<QuestionType> = (props) => {
       <h3 className={styles._question}>{props.question_name}</h3>
       {props.answers.map((answer) => (
         <Answer
-          answer_id={answer.answer_id}
-          answer_type={answer.answer_type}
-          answer={answer.answer}
+          answer={answer}
+          question_id={props.question_id}
           key={props.question_id + '_' + answer.answer_id}
         />
       ))}
