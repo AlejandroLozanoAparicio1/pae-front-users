@@ -12,7 +12,6 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
   const [answers, setAnswers] = useState<AnswerType[]>([]);
 
   function handleAnswer(e: any) {
-    console.log(e.target);
     const aux = answers.slice(0, answers.length);
     let question_id = '';
     let answer_id = '';
@@ -31,11 +30,12 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
     for (let j = 0; j < aux.length; j++) {
       if (question_id === aux[j].questionId) {
         aux[j].answerId = answer_id;
+        aux[j].answerText = e.target.value;
         isInside = true;
       }
     }
     if (!isInside) {
-      aux.push({ questionId: question_id, answerId: answer_id });
+      aux.push({ questionId: question_id, answerId: answer_id, answerText: e.target.value });
     }
     setAnswers(aux);
   }
