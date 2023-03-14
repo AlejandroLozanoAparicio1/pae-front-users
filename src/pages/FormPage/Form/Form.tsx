@@ -22,9 +22,16 @@ const Form: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   function handleSubmit(e: any) {
-    useAnswersContext?.answers
-      ? postForm({ answers: useAnswersContext?.answers })
-      : setError('Could not post results to server.');
+    // eslint-disable-next-line eqeqeq
+    if (form?.length === useAnswersContext?.answers.length) {
+      useAnswersContext?.answers
+        ? postForm({ answers: useAnswersContext?.answers })
+        : setError('Could not post results to server.');
+    } else {
+      e.preventDefault();
+      setError('Tienes que responder todas las preguntas antes de terminar el questionario!');
+      setTimeout(() => setError(''), 5000);
+    }
   }
 
   return (
@@ -40,10 +47,12 @@ const Form: React.FC = () => {
               key={item.questionary_id}
             />
           ))}
-        {error}
-        <Link type='submit' onClick={handleSubmit} className={styles._link_button} to={'/stats'}>
-          submit
-        </Link>
+        <div className={styles._button_error_container}>
+          <a type='submit' onClick={handleSubmit} className={styles._link_button} href={'/stats'}>
+            submit
+          </a>
+          {error !== '' && <p className={styles._error}>{error}</p>}
+        </div>
         {/* <button type='submit' onClick={handleSubmit} className={styles._button}>
           submit
         </button> */}
