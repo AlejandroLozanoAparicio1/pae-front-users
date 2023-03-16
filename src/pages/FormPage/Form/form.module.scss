@@ -2,16 +2,44 @@
 
 .form_group {
   width: 100%;
-  margin: 0 20%;
+  margin: 0 auto;
   width: 60%;
 
   @media screen and (max-width: 600px) {
-    margin: 0 5%;
+    margin: 0 auto;
     width: 90%;
   }
 
   ._form {
     padding-bottom: 4rem;
+  }
+
+  ._loading {
+    width: fit-content;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid $yellow-accent;
+    position: relative;
+    overflow-y: hidden;
+
+    ._text_container {
+      width: 15%;
+      height: 5%;
+      background-color: darken($yellow-accent, 25%);
+      border-radius: 2rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      animation: loading_size 2s infinite ease-in-out backwards, loading 2s infinite backwards;
+
+      p {
+        display: block;
+        z-index: 1;
+      }
+    }
   }
 
   ._button_error_container {
@@ -53,5 +81,75 @@
       text-decoration: none;
       color: black;
     }
+  }
+}
+
+@keyframes loading {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  24% {
+    top: 0;
+    left: 85%;
+  }
+  25% {
+    top: 0;
+    left: 98%;
+  }
+  49% {
+    top: 58%;
+    left: 97%;
+  }
+  50% {
+    top: 94%;
+    left: 85%;
+  }
+  74% {
+    top: 95%;
+    left: 0;
+  }
+  75% {
+    top: 65%;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes loading_size {
+  0% {
+    width: 15%;
+    height: 5%;
+  }
+  24% {
+    width: 15%;
+    height: 5%;
+  }
+  25% {
+    width: 3%;
+    height: 35%;
+  }
+  49% {
+    width: 3%;
+    height: 35%;
+  }
+  50% {
+    width: 15%;
+    height: 5%;
+  }
+  74% {
+    width: 15%;
+    height: 5%;
+  }
+  75% {
+    width: 3%;
+    height: 35%;
+  }
+  99% {
+    width: 3%;
+    height: 35%;
   }
 }

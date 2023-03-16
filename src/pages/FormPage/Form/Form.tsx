@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { AnswersContext } from '../../../context/AnswersContext';
 import fetchForm from '../../../services/getForm';
 import postForm from '../../../services/postForm';
@@ -37,7 +36,7 @@ const Form: React.FC = () => {
   return (
     <div className={styles.form_group}>
       <form className={styles._form} action='/stats'>
-        {form &&
+        {form ? (
           form!.map((item) => (
             <Question
               questionary_id={item.questionary_id}
@@ -46,7 +45,13 @@ const Form: React.FC = () => {
               answers={item.answers}
               key={item.questionary_id}
             />
-          ))}
+          ))
+        ) : (
+          <div className={styles._loading}>
+            <p>Loading...</p>
+            <span className={styles._text_container}></span>
+          </div>
+        )}
         <div className={styles._button_error_container}>
           <a type='submit' onClick={handleSubmit} className={styles._link_button} href={'/stats'}>
             submit
