@@ -9,13 +9,16 @@ const StatsPage: React.FC = () => {
   return (
     <div className={styles.data_results}>
       <div className={styles._container}>
-        {useAnswersContext?.answers.map((item) => (
-          <DataResults
-            questionId={item.questionId}
-            answerId={item.answerId}
-            answerText={item.answerText}
-          ></DataResults>
-        ))}
+        {useAnswersContext?.answers.map((item) => {
+          console.log('a');
+          return (
+            <DataResults
+              questionId={item.questionId}
+              answerId={item.answerId}
+              answerText={item.answerText}
+            ></DataResults>
+          );
+        })}
       </div>
     </div>
   );

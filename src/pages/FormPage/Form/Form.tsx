@@ -21,7 +21,6 @@ const Form: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   function handleSubmit(e: any) {
-    // eslint-disable-next-line eqeqeq
     if (form?.length === useAnswersContext?.answers.length) {
       useAnswersContext?.answers
         ? postForm({ answers: useAnswersContext?.answers })
@@ -31,11 +30,16 @@ const Form: React.FC = () => {
       setError('Tienes que responder todas las preguntas antes de terminar el questionario!');
       setTimeout(() => setError(''), 5000);
     }
+    e.preventDefault();
+    const forma = e.target;
+    const formData = new FormData(forma);
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson);
   }
 
   return (
     <div className={styles.form_group}>
-      <form className={styles._form} action='/stats'>
+      <form className={styles._form} action='/stats' onSubmit={handleSubmit}>
         {form ? (
           form!.map((item) => (
             <Question
@@ -43,7 +47,7 @@ const Form: React.FC = () => {
               question_id={item.question_id}
               question_name={item.question_name}
               answers={item.answers}
-              key={item.questionary_id}
+              key={item.question_id}
             />
           ))
         ) : (
@@ -52,15 +56,16 @@ const Form: React.FC = () => {
             <span className={styles._text_container}></span>
           </div>
         )}
-        <div className={styles._button_error_container}>
+        {/*<div className={styles._button_error_container}>
           <a type='submit' onClick={handleSubmit} className={styles._link_button} href={'/stats'}>
             submit
           </a>
           {error !== '' && <p className={styles._error}>{error}</p>}
-        </div>
-        {/* <button type='submit' onClick={handleSubmit} className={styles._button}>
+        </div>*/}
+        <button type='submit' className={styles._button}>
           submit
-        </button> */}
+        </button>
+        {error !== '' && <p className={styles._error}>{error}</p>}
       </form>
     </div>
   );
