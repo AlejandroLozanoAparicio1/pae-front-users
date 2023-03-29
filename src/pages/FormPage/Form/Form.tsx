@@ -17,7 +17,7 @@ const Form: React.FC = () => {
     // };
     // getForm();
     const res = fetchForm();
-    setForm(res);
+    setTimeout(() => setForm(res), 1000);
   }, []);
 
   const useAnswersContext = useContext(AnswersContext);
@@ -59,14 +59,8 @@ const Form: React.FC = () => {
             <span className={styles._text_container}></span>
           </div>
         )}
-        {/*<div className={styles._button_error_container}>
-          <a type='submit' onClick={handleSubmit} className={styles._link_button} href={'/stats'}>
-            submit
-          </a>
-          {error !== '' && <p className={styles._error}>{error}</p>}
-        </div>*/}
         <button type='submit' className={styles._button}>
-          submit
+          Submit
         </button>
         {error !== '' && <p className={styles._error}>{error}</p>}
       </form>

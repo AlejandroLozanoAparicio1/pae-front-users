@@ -2,34 +2,111 @@
   {
     "questionary_id": 0,
     "question_id": 0,
-    "question_name": "holaa",
+    "question_name": "Señale la/s opción/es que más se ajusten a su situación:",
     "answers": [
       {
         "answer_id": 0,
         "answer_type": "radio",
-        "answer": "20"
+        "answer": "Soy paciente que padece/ha padecido cáncer"
       },
       {
         "answer_id": 1,
         "answer_type": "radio",
-        "answer": "21"
+        "answer": "Soy familiar/conocido de un paciente con cáncer"
       },
       {
         "answer_id": 2,
         "answer_type": "radio",
-        "answer": "22"
+        "answer": "Soy un profesional sanitario que trabaja con pacientes con cáncer de pulmón (médico/enfermería, etc)"
+      },
+      {
+        "answer_id": 3,
+        "answer_type": "radio",
+        "answer": "Me dedico a la investigación del radón en cáncer de pulmón"
+      },
+      {
+        "answer_id": 4,
+        "answer_type": "radio",
+        "answer": "Trabajo en arquitectura/construcción de edificios"
+      },
+      {
+        "answer_id": 5,
+        "answer_type": "radio",
+        "answer": "Ninguna de las previas"
       }
     ]
   },
   {
     "questionary_id": 0,
     "question_id": 1,
-    "question_name": "adeu",
+    "question_name": "¿Cuál es su género?",
     "answers": [
       {
         "answer_id": 0,
         "answer_type": "radio",
-        "answer": "24"
+        "answer": "Mujer"
+      },
+      {
+        "answer_id": 1,
+        "answer_type": "radio",
+        "answer": "Hombre"
+      },
+      {
+        "answer_id": 2,
+        "answer_type": "radio",
+        "answer": "No binario"
+      },
+      {
+        "answer_id": 3,
+        "answer_type": "radio",
+        "answer": "Prefiero no contestar"
+      },
+      {
+        "answer_id": 4,
+        "answer_type": "text",
+        "answer": "Otros"
+      }
+    ]
+  },
+  {
+    "questionary_id": 0,
+    "question_id": 2,
+    "question_name": "Indique su nivel de estudios",
+    "answers": [
+      {
+        "answer_id": 0,
+        "answer_type": "radio",
+        "answer": "No tengo estudios"
+      },
+      {
+        "answer_id": 1,
+        "answer_type": "radio",
+        "answer": "Educación obligatoria"
+      },
+      {
+        "answer_id": 2,
+        "answer_type": "radio",
+        "answer": "Bachillerato/escuela superior"
+      },
+      {
+        "answer_id": 3,
+        "answer_type": "radio",
+        "answer": "Licenciatura/grado universitario"
+      },
+      {
+        "answer_id": 4,
+        "answer_type": "radio",
+        "answer": "Grado medio/superior (FP)"
+      },
+      {
+        "answer_id": 5,
+        "answer_type": "radio",
+        "answer": "Estudios postgrado"
+      },
+      {
+        "answer_id": 6,
+        "answer_type": "text",
+        "answer": "Otro"
       }
     ]
   }
