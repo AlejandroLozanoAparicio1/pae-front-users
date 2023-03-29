@@ -9,12 +9,15 @@ import styles from './form.module.scss';
 const Form: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
   useEffect(() => {
-    const getForm = async () => {
-      fetchForm().then((res) => {
-        setForm(res);
-      });
-    };
-    getForm();
+    // const getForm = async () => {
+    //   console.log('res');
+    //   fetchForm().then((res) => {
+    //     setForm(res);
+    //   });
+    // };
+    // getForm();
+    const res = fetchForm();
+    setForm(res);
   }, []);
 
   const useAnswersContext = useContext(AnswersContext);

@@ -1,0 +1,36 @@
+[
+  {
+    "questionary_id": 0,
+    "question_id": 0,
+    "question_name": "holaa",
+    "answers": [
+      {
+        "answer_id": 0,
+        "answer_type": "radio",
+        "answer": "20"
+      },
+      {
+        "answer_id": 1,
+        "answer_type": "radio",
+        "answer": "21"
+      },
+      {
+        "answer_id": 2,
+        "answer_type": "radio",
+        "answer": "22"
+      }
+    ]
+  },
+  {
+    "questionary_id": 0,
+    "question_id": 1,
+    "question_name": "adeu",
+    "answers": [
+      {
+        "answer_id": 0,
+        "answer_type": "radio",
+        "answer": "24"
+      }
+    ]
+  }
+]
