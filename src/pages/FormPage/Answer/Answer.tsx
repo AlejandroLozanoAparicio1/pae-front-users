@@ -1,14 +1,19 @@
 import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
+import CheckboxAnswer from './CheckboxAnswer';
 import RadioAnswer from './RadioAnswer';
 import TextAnswer from './TextAnswer';
 
 const Answer: React.FC<PossibleAnswerType> = (props) => {
   return (
     <>
-      {props.answer.answer_type === 'radio' ? (
+      {props.answer.answer_type === 'radio' && (
         <RadioAnswer answer={props.answer} question_id={props.question_id} />
-      ) : (
+      )}
+      {props.answer.answer_type === 'text' && (
         <TextAnswer answer={props.answer} question_id={props.question_id} />
+      )}
+      {props.answer.answer_type === 'checkbox' && (
+        <CheckboxAnswer answer={props.answer} question_id={props.question_id} />
       )}
     </>
   );

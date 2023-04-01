@@ -1,9 +1,34 @@
-.possible_answer_container {
+@import '../../../utils/colors.module.scss';
+
+.answer_container {
   padding: 0.5rem 0.2rem;
-}
-.possible_answer_input {
-  margin: 0.2rem;
-}
-.possible_answer_label {
-  margin: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+
+  .answer_label {
+    margin-left: 0.2rem;
+
+    .answer_input {
+      margin: 0.2rem;
+    }
+    .answer_checkbox {
+      margin: 0.2rem;
+    }
+
+    .answer_text_span {
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  .answer_text {
+    border: 1px solid $light-gray;
+    padding: 0.25rem;
+    margin-left: 1rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
 }

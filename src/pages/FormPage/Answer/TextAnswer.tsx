@@ -33,10 +33,10 @@ const TextAnswer: React.FC<PossibleAnswerType> = (props) => {
   };
 
   return (
-    <div className={styles.possible_answer_container}>
-      <label className={styles.possible_answer_label}>
+    <div className={styles.answer_container}>
+      <label className={styles.answer_label}>
         <input
-          className={styles.possible_answer_input}
+          className={styles.answer_input}
           type='radio'
           value={answerText}
           key={props.answer.answer_id}
@@ -47,7 +47,7 @@ const TextAnswer: React.FC<PossibleAnswerType> = (props) => {
         {props.answer.answer}
       </label>
       <input
-        className={styles.possible_answer_input}
+        className={styles.answer_text}
         type={props.answer.answer_type}
         key={'text_' + props.answer.answer_id}
         // name={'text_' + props.question_id.toString()}

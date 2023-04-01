@@ -6,32 +6,32 @@
     "answers": [
       {
         "answer_id": 0,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Soy paciente que padece/ha padecido cáncer"
       },
       {
         "answer_id": 1,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Soy familiar/conocido de un paciente con cáncer"
       },
       {
         "answer_id": 2,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Soy un profesional sanitario que trabaja con pacientes con cáncer de pulmón (médico/enfermería, etc)"
       },
       {
         "answer_id": 3,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Me dedico a la investigación del radón en cáncer de pulmón"
       },
       {
         "answer_id": 4,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Trabajo en arquitectura/construcción de edificios"
       },
       {
         "answer_id": 5,
-        "answer_type": "radio",
+        "answer_type": "checkbox",
         "answer": "Ninguna de las previas"
       }
     ]

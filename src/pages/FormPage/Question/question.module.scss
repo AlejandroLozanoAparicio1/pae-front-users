@@ -3,15 +3,16 @@
 .form {
   padding: 0.6rem;
   margin: 2.5rem 0;
-  border: 3px solid $light-blue-accent;
-  border-radius: 0.4rem;
+  border: 2px solid $light-blue-accent;
+  border-radius: 0.2rem;
 
   ._question {
-    padding: 0.4rem;
-    font-size: 2rem;
-    color: $blue-accent;
     border-bottom: 1px solid $light-blue-accent;
     margin-bottom: 1rem;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $blue-accent;
 
     @media screen and (max-width: 600px) {
       font-size: 1.3rem;

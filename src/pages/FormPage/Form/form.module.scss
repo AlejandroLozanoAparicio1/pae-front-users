@@ -12,6 +12,12 @@
 
   ._form {
     padding-bottom: 4rem;
+
+    ._error {
+      color: red;
+      text-align: center;
+      margin-top: 2rem;
+    }
   }
 
   ._loading {
@@ -43,16 +49,6 @@
   }
 
   ._button {
-    // text-align: center;
-    // width: 20%;
-    // margin: 0 40%;
-    // padding: 0.6rem 0;
-
-    // border: 0px;
-    // border-radius: 1rem;
-    // background-color: $yellow-accent;
-    // font-weight: 600;
-
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
@@ -79,12 +75,6 @@
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-
-    ._error {
-      color: red;
-      text-align: center;
-      margin-top: 2rem;
-    }
 
     ._link_button {
       text-align: center;
