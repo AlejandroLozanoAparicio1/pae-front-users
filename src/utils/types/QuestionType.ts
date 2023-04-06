@@ -1,8 +1,8 @@
-import GetAnswerType from './GetAnswerType';
+import OptionType from './OptionType';
 
 export default interface QuestionType {
-  questionary_id: number;
-  question_id: number;
-  question_name: string;
-  answers: GetAnswerType[];
+  questionId: number;
+  questionText: string;
+  type: 'checkbox' | 'radio' | 'text';
+  optionsList: OptionType[];
 }

@@ -1,28 +1,35 @@
 @import '../../../utils/colors.module.scss';
 
-.answer_container {
+.answerContainer {
   padding: 0.5rem 0.2rem;
   font-size: 1rem;
   font-weight: 400;
 
-  .answer_label {
-    margin-left: 0.2rem;
+  .answerLabel {
+    margin-left: 0.5rem;
 
-    .answer_input {
-      margin: 0.2rem;
-    }
-    .answer_checkbox {
-      margin: 0.2rem;
-    }
-
-    .answer_text_span {
-      &:focus-visible {
-        outline: none;
-      }
+    &:focus-visible {
+      outline: none;
     }
   }
 
-  .answer_text {
+  .answerRadio {
+    margin: 0.2rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .answerCheckbox {
+    margin: 0.5rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .answerText {
     border: 1px solid $light-gray;
     padding: 0.25rem;
     margin-left: 1rem;

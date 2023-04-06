@@ -3,43 +3,47 @@ import { AnswersContext } from '../../../context/AnswersContext';
 import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import styles from './answer.module.scss';
 
-const RadioAnswer: React.FC<PossibleAnswerType> = ({ answer, question_id }) => {
+const RadioAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {
   const useAnswersContext = useContext(AnswersContext);
 
   const handleAnswer = (e: any) => {
-    const questionId = question_id.toString();
-    const answerId = answer.answer_id.toString();
+    const questionIdStr = questionId.toString();
+    const answerId = option.optionsId.toString();
     const aux = useAnswersContext
       ? useAnswersContext?.answers.slice(0, useAnswersContext?.answers.length)
       : [];
 
     let isInside = false;
     for (let j = 0; j < aux.length; j++) {
-      if (questionId === aux[j].questionId) {
+      if (questionIdStr === aux[j].questionId) {
         aux[j].answerId = answerId;
         aux[j].answerText = e.target.value;
         isInside = true;
       }
     }
     if (!isInside) {
-      aux.push({ questionId: questionId, answerId: answerId });
+      aux.push({ questionId: questionIdStr, answerId: answerId });
     }
     useAnswersContext?.setAnswers(aux);
   };
 
   return (
-    <div className={styles.answer_container}>
-      <label className={styles.answer_label}>
-        <input
-          className={styles.answer_input}
-          type={answer.answer_type}
-          value={answer.answer_id}
-          key={answer.answer_id}
-          onClick={handleAnswer}
-          name={question_id.toString()}
-          id={question_id.toString() + '_' + answer.answer_id.toString()}
-        />
-        <span className={styles.answer_text_span}>{answer.answer}</span>
+    <div className={styles.answerContainer}>
+      <input
+        className={styles.answerRadio}
+        type={type}
+        value={option.optionsId}
+        key={option.optionsId}
+        onClick={handleAnswer}
+        name={questionId.toString()}
+        id={questionId.toString() + '_' + option.optionsId.toString()}
+        required
+      />
+      <label
+        htmlFor={questionId.toString() + '_' + option.optionsId.toString()}
+        className={styles.answerLabel}
+      >
+        {option.options}
       </label>
     </div>
   );

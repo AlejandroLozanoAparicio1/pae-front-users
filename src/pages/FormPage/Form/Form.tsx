@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
-import { AnswersContext } from '../../../context/AnswersContext';
+import { useEffect, useState } from 'react';
 import fetchForm from '../../../services/getForm';
 import postForm from '../../../services/postForm';
 import QuestionType from '../../../utils/types/QuestionType';
@@ -9,35 +8,47 @@ import styles from './form.module.scss';
 const Form: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
   useEffect(() => {
-    // const getForm = async () => {
-    //   console.log('res');
-    //   fetchForm().then((res) => {
-    //     setForm(res);
-    //   });
-    // };
-    // getForm();
-    const res = fetchForm();
-    setTimeout(() => setForm(res), 1000);
+    const getForm = async () => {
+      fetchForm().then((res) => {
+        setForm(res);
+      });
+    };
+    getForm();
   }, []);
 
-  const useAnswersContext = useContext(AnswersContext);
   const [error, setError] = useState<string | null>(null);
 
   function handleSubmit(e: any) {
-    if (form?.length === useAnswersContext?.answers.length) {
-      useAnswersContext?.answers
-        ? postForm({ answers: useAnswersContext?.answers })
-        : setError('Could not post results to server.');
-    } else {
-      e.preventDefault();
-      setError('Tienes que responder todas las preguntas antes de terminar el questionario!');
-      setTimeout(() => setError(''), 5000);
-    }
     e.preventDefault();
-    const forma = e.target;
-    const formData = new FormData(forma);
+    const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+
+    const dataObj: any = {};
+
+    Object.keys(formJson)
+      .sort()
+      .forEach((key) => {
+        const ans = formJson[key];
+        const questionKey = key[0];
+        const formItem = form?.filter((item) => item.questionId === parseInt(questionKey));
+        let type = formItem ? formItem[0].type : '';
+        if (!type) {
+          type = 'text';
+        }
+
+        dataObj[questionKey] = dataObj[questionKey]
+          ? {
+              value: dataObj[questionKey].value + ',' + ans,
+              type: type,
+            }
+          : {
+              value: ans,
+              type: type,
+            };
+      });
+
+    console.log(dataObj);
+    postForm(dataObj);
   }
 
   return (
@@ -46,11 +57,11 @@ const Form: React.FC = () => {
         {form ? (
           form!.map((item) => (
             <Question
-              questionary_id={item.questionary_id}
-              question_id={item.question_id}
-              question_name={item.question_name}
-              answers={item.answers}
-              key={item.question_id}
+              questionId={item.questionId}
+              questionText={item.questionText}
+              type={item.type}
+              optionsList={item.optionsList}
+              key={item.questionId}
             />
           ))
         ) : (
@@ -59,7 +70,17 @@ const Form: React.FC = () => {
             <span className={styles._text_container}></span>
           </div>
         )}
-        <button type='submit' className={styles._button}>
+        <button
+          type='submit'
+          className={styles._button}
+          onClick={() => {
+            setTimeout(
+              () => setError('Tienes que rellenar todos los campos antes de continuar!'),
+              500,
+            );
+            setTimeout(() => setError(''), 5000);
+          }}
+        >
           Submit
         </button>
         {error !== '' && <p className={styles._error}>{error}</p>}

@@ -3,13 +3,13 @@ import { AnswersContext } from '../../../context/AnswersContext';
 import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import styles from './answer.module.scss';
 
-const TextAnswer: React.FC<PossibleAnswerType> = (props) => {
+const TextAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {
   const useAnswersContext = useContext(AnswersContext);
   const [answerText, setAnswerText] = useState('');
 
   const handleAnswer = (e: any) => {
-    const question_id = props.question_id.toString();
-    const answer_id = props.answer.answer_id.toString();
+    const question_id = questionId.toString();
+    const answer_id = option.optionsId.toString();
     const aux = useAnswersContext
       ? useAnswersContext?.answers.slice(0, useAnswersContext?.answers.length)
       : [];
@@ -33,27 +33,30 @@ const TextAnswer: React.FC<PossibleAnswerType> = (props) => {
   };
 
   return (
-    <div className={styles.answer_container}>
-      <label className={styles.answer_label}>
-        <input
-          className={styles.answer_input}
-          type='radio'
-          value={answerText}
-          key={props.answer.answer_id}
-          onClick={handleAnswer}
-          name={props.question_id.toString()}
-          id={props.question_id.toString() + '_' + props.answer.answer_id.toString()}
-        />
-        {props.answer.answer}
+    <div className={styles.answerContainer}>
+      <input
+        className={styles.answerRadio}
+        type='radio'
+        value={answerText}
+        key={option.optionsId}
+        onClick={handleAnswer}
+        name={questionId.toString()}
+        id={questionId.toString() + '_' + option.optionsId.toString()}
+        required
+      />
+      <label
+        htmlFor={questionId.toString() + '_' + option.optionsId.toString()}
+        className={styles.answerLabel}
+      >
+        {option.options}
       </label>
       <input
-        className={styles.answer_text}
-        type={props.answer.answer_type}
-        key={'text_' + props.answer.answer_id}
-        // name={'text_' + props.question_id.toString()}
+        className={styles.answerText}
+        type={type}
+        key={'text_' + option.optionsId}
         value={answerText}
         onChange={(e) => setAnswerText(e.target.value)}
-        id={props.question_id.toString() + '_' + props.answer.answer_id.toString()}
+        id={questionId.toString() + '_' + option.optionsId.toString()}
       />
     </div>
   );

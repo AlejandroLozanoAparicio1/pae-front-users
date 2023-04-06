@@ -1,9 +1,7 @@
 import PostFormType from '../utils/types/PostFormType';
 
 function postForm(body: PostFormType) {
-  return;
-  /*
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1', {
+  fetch('https://localhost:8080/Questionary', {
     mode: 'no-cors',
     method: 'POST',
     headers: {
@@ -17,8 +15,6 @@ function postForm(body: PostFormType) {
     }
     return response.json();
   });
-  */
 }
 
 export default postForm;
-// api : https://alexwohlbruck.github.io/cat-facts/docs/
