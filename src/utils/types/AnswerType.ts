@@ -1,5 +1,6 @@
 export default interface AnswerType {
-  questionId: string;
-  answerId: string;
-  answerText?: string;
+  questionId: { questionId: number };
+  answerId: number;
+  answer: string;
+  type: string;
 }

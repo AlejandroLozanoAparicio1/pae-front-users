@@ -1,15 +1,10 @@
-import { useContext } from 'react';
-import { AnswersContext } from '../../context/AnswersContext';
-import DataResults from './DataResults/DataResults';
 import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
-  const useAnswersContext = useContext(AnswersContext);
-
   return (
     <div className={styles.dataResults}>
       <div className={styles.container}>
-        {useAnswersContext?.answers.map((item) => {
+        {/* {useAnswersContext?.answers.map((item) => {
           console.log('a');
           return (
             <DataResults
@@ -18,7 +13,7 @@ const StatsPage: React.FC = () => {
               answerText={item.answerText}
             ></DataResults>
           );
-        })}
+        })} */}
       </div>
     </div>
   );

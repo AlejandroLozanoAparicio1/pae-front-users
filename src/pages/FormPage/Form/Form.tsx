@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import fetchForm from '../../../services/getForm';
 import postForm from '../../../services/postForm';
+import AnswerType from '../../../utils/types/AnswerType';
+import PostFormType from '../../../utils/types/PostFormType';
 import QuestionType from '../../../utils/types/QuestionType';
 import Question from '../Question/Question';
 import styles from './form.module.scss';
@@ -23,28 +25,40 @@ const Form: React.FC = () => {
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
 
-    const dataObj: any = {};
+    const dataObj: PostFormType = { answers: [] };
 
     Object.keys(formJson)
       .sort()
       .forEach((key) => {
-        const ans = formJson[key];
+        const ans = formJson[key].toString();
         const questionKey = key[0];
         const formItem = form?.filter((item) => item.questionId === parseInt(questionKey));
+
         let type = formItem ? formItem[0].type : '';
         if (!type) {
           type = 'text';
         }
 
-        dataObj[questionKey] = dataObj[questionKey]
-          ? {
-              value: dataObj[questionKey].value + ',' + ans,
-              type: type,
-            }
-          : {
-              value: ans,
-              type: type,
-            };
+        const answerText = formItem
+          ? formItem[0].optionsList.filter((item) => item.optionsId === parseInt(ans))
+          : '';
+
+        const row: AnswerType = {
+          questionId: { questionId: parseInt(questionKey) },
+          answerId: parseInt(ans),
+          answer: answerText ? answerText[0].options : '',
+          type: type,
+        };
+        // !dataObj[questionKey]
+        // ? {
+        //     questionId: parseInt(questionKey),
+        //     answerId: dataObj[questionKey].value, + ',' + ans,
+        //     answer: answerText ? answerText[0].options : '',
+        //     type: type,
+        //   }
+        // :
+
+        dataObj.answers.push(row);
       });
 
     console.log(dataObj);
