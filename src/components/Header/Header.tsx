@@ -5,7 +5,7 @@ import styles from './header.module.scss';
 
 const Header: React.FC = () => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
-  const hambClass = hamburgerMenu ? styles._open : styles._closed;
+  const hambClass = hamburgerMenu ? styles.open : styles.closed;
 
   const handleHamburguerClick = (e: any) => {
     setHamburgerMenu(!hamburgerMenu);
@@ -14,16 +14,13 @@ const Header: React.FC = () => {
   return (
     <>
       <div className={styles.header}>
-        <button
-          onClick={handleHamburguerClick}
-          className={`${styles._hamburguer_menu} ${hambClass}`}
-        >
-          <span className={styles._line}></span>
-          <span className={styles._line}></span>
-          <span className={styles._line}></span>
+        <button onClick={handleHamburguerClick} className={`${styles.hamburguerMenu} ${hambClass}`}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </button>
-        <img className={styles._logo} src={logo} alt='logo' />
-        <ul className={styles._links}>
+        <img className={styles.logo} src={logo} alt='logo' />
+        <ul className={styles.links}>
           <li>
             <a key={'link_questionario'} href={'/'}>
               Questionario
