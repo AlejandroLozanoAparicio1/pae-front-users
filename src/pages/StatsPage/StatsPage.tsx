@@ -7,8 +7,8 @@ const StatsPage: React.FC = () => {
   const useAnswersContext = useContext(AnswersContext);
 
   return (
-    <div className={styles.data_results}>
-      <div className={styles._container}>
+    <div className={styles.dataResults}>
+      <div className={styles.container}>
         {useAnswersContext?.answers.map((item) => {
           console.log('a');
           return (

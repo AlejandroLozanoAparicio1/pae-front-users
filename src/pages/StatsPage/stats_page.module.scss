@@ -1,12 +1,12 @@
 @import '../../utils/colors.module.scss';
 
-.data_results {
+.dataResults {
   display: grid;
   place-content: center;
   width: 100vw;
   height: 92vh;
 
-  ._container {
+  .container {
     padding: 1rem 2rem;
     border: 2px solid $light-blue-accent;
     border-radius: 0.6rem;

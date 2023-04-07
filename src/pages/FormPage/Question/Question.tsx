@@ -5,7 +5,7 @@ import styles from './question.module.scss';
 const Question: React.FC<QuestionType> = ({ questionId, questionText, type, optionsList }) => {
   return (
     <div className={styles.form}>
-      <h3 className={styles._question}>{questionText}</h3>
+      <h3 className={styles.question}>{questionText}</h3>
       {optionsList.map((answer) => (
         <Answer
           option={answer}

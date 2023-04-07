@@ -52,8 +52,8 @@ const Form: React.FC = () => {
   }
 
   return (
-    <div className={styles.form_group}>
-      <form className={styles._form} action='/stats' onSubmit={handleSubmit}>
+    <div className={styles.formGroup}>
+      <form className={styles.form} action='/stats' onSubmit={handleSubmit}>
         {form ? (
           form!.map((item) => (
             <Question
@@ -65,14 +65,14 @@ const Form: React.FC = () => {
             />
           ))
         ) : (
-          <div className={styles._loading}>
+          <div className={styles.loading}>
             <p>Loading...</p>
-            <span className={styles._text_container}></span>
+            <span className={styles.textContainer}></span>
           </div>
         )}
         <button
           type='submit'
-          className={styles._button}
+          className={styles.button}
           onClick={() => {
             setTimeout(
               () => setError('Tienes que rellenar todos los campos antes de continuar!'),
@@ -83,7 +83,7 @@ const Form: React.FC = () => {
         >
           Submit
         </button>
-        {error !== '' && <p className={styles._error}>{error}</p>}
+        {error !== '' && <p className={styles.error}>{error}</p>}
       </form>
     </div>
   );
