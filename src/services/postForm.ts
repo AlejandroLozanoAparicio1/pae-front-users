@@ -1,19 +1,17 @@
-import PostFormType from '../utils/types/PostFormType';
+import AnswerType from '../utils/types/AnswerType';
 
-function postForm(body: PostFormType) {
-  console.log(body.answers);
+function postForm(body: AnswerType[]) {
   fetch('http://localhost:8080/answer', {
     method: 'POST',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body.answers),
+    body: JSON.stringify(body),
   }).then((response) => {
-    if (response.status >= 400 && response.status < 600) {
+    if (response.status >= 400) {
       throw response;
     }
-    return response.json();
   });
 }
 

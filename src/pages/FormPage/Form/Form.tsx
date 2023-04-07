@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import fetchForm from '../../../services/getForm';
 import postForm from '../../../services/postForm';
 import AnswerType from '../../../utils/types/AnswerType';
-import PostFormType from '../../../utils/types/PostFormType';
 import QuestionType from '../../../utils/types/QuestionType';
 import Question from '../Question/Question';
 import styles from './form.module.scss';
 
 const Form: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
+
   useEffect(() => {
     const getForm = async () => {
       fetchForm().then((res) => {
@@ -18,19 +18,13 @@ const Form: React.FC = () => {
     getForm();
   }, []);
 
-  const [error, setError] = useState<string | null>(null);
+  const buildFormAnswers = (json: any) => {
+    const dataObj: AnswerType[] = [];
 
-  function handleSubmit(e: any) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const formJson = Object.fromEntries(formData.entries());
-
-    const dataObj: PostFormType = { answers: [] };
-
-    Object.keys(formJson)
+    Object.keys(json)
       .sort()
       .forEach((key) => {
-        const ans = formJson[key].toString();
+        const ans = json[key].toString();
         const questionKey = key[0];
         const formItem = form?.filter((item) => item.questionId === parseInt(questionKey));
 
@@ -49,21 +43,20 @@ const Form: React.FC = () => {
           answer: answerText ? answerText[0].options : '',
           type: type,
         };
-        // !dataObj[questionKey]
-        // ? {
-        //     questionId: parseInt(questionKey),
-        //     answerId: dataObj[questionKey].value, + ',' + ans,
-        //     answer: answerText ? answerText[0].options : '',
-        //     type: type,
-        //   }
-        // :
 
-        dataObj.answers.push(row);
+        dataObj.push(row);
       });
 
-    console.log(dataObj);
-    postForm(dataObj);
-  }
+    return dataObj;
+  };
+
+  const handleSubmit = (e: any) => {
+    const formData = new FormData(e.target);
+    const formJson = Object.fromEntries(formData.entries());
+    const data = buildFormAnswers(formJson);
+
+    postForm(data);
+  };
 
   return (
     <div className={styles.formGroup}>
@@ -84,20 +77,9 @@ const Form: React.FC = () => {
             <span className={styles.textContainer}></span>
           </div>
         )}
-        <button
-          type='submit'
-          className={styles.button}
-          onClick={() => {
-            setTimeout(
-              () => setError('Tienes que rellenar todos los campos antes de continuar!'),
-              500,
-            );
-            setTimeout(() => setError(''), 5000);
-          }}
-        >
+        <button type='submit' className={styles.button}>
           Submit
         </button>
-        {error !== '' && <p className={styles.error}>{error}</p>}
       </form>
     </div>
   );
