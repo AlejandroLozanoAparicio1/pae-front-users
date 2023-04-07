@@ -25,7 +25,7 @@ const Form: React.FC = () => {
       .sort()
       .forEach((key) => {
         const ans = json[key].toString();
-        const questionKey = key[0];
+        const questionKey = key.split('_')[0];
         const formItem = form?.filter((item) => item.questionId === parseInt(questionKey));
 
         let type = formItem ? formItem[0].type : '';
@@ -51,10 +51,10 @@ const Form: React.FC = () => {
   };
 
   const handleSubmit = (e: any) => {
+    // e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
     const data = buildFormAnswers(formJson);
-
     postForm(data);
   };
 
