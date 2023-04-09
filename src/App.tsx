@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import styles from './app.module.scss';
 import Header from './components/Header/Header';
+import QAProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormPage from './pages/FormPage/FormPage';
 import InfoPage from './pages/InfoPage/InfoPage';
@@ -29,7 +30,9 @@ const App: React.FC = () => {
     <div className={styles.app}>
       <Header />
       <div className={styles._page_container}>
-        <RouterProvider router={router} />
+        <QAProvider>
+          <RouterProvider router={router} />
+        </QAProvider>
       </div>
     </div>
   );

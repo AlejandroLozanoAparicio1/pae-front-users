@@ -1,5 +1,5 @@
-const fetchForm = () => {
-  return fetch('http://localhost:8080/GetQuestionary?name=demo', {
+const getMostSelected = (questionId: number) => {
+  return fetch(`http://localhost:8080/mostSelected?question_id=${questionId}`, {
     method: 'GET',
     headers: {
       accept: 'application/json',
@@ -13,4 +13,4 @@ const fetchForm = () => {
   });
 };
 
-export default fetchForm;
+export default getMostSelected;

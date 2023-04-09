@@ -1,11 +1,13 @@
-import AnswerType from '../../../utils/types/AnswerType';
 import styles from './data_results.module.scss';
 
-const DataResults: React.FC<AnswerType> = (props) => {
+const DataResults: React.FC<{ sentence: string; highlight: string }> = ({
+  sentence,
+  highlight,
+}) => {
   return (
     <p className={styles.answer}>
-      <span className={styles.question}>Pregunta {props.questionId.questionId}: </span>
-      <span className={styles.answer}>{props.answer}</span>
+      {sentence}
+      <span className={styles.highlight}>{highlight}</span>
     </p>
   );
 };

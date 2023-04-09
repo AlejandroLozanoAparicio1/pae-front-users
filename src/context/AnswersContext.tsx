@@ -1,11 +1,15 @@
 import { createContext, useState } from 'react';
-import AnswerContextType from '../utils/types/AnswerContextType';
 import AnswerType from '../utils/types/AnswerType';
 
 export const AnswersContext = createContext<AnswerContextType | null>(null);
 
 interface ContextChildrenType {
   children: React.ReactNode;
+}
+
+interface AnswerContextType {
+  answers: AnswerType[];
+  setAnswers: (SetStateAction: any) => void;
 }
 
 const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {

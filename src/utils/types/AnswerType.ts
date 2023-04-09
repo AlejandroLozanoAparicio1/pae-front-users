@@ -1,5 +1,5 @@
 export default interface AnswerType {
-  questionId: { questionId: number };
+  options: { optionsId: number };
   answerId: number;
   answer: string;
   type: string;

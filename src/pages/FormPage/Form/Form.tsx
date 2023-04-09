@@ -1,13 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { StatsContext } from '../../../context/StatsContext';
 import fetchForm from '../../../services/getForm';
+import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
+import statFunctions from '../../../services/helpers/getStats';
 import postForm from '../../../services/postForm';
-import AnswerType from '../../../utils/types/AnswerType';
+import AnswerCountType from '../../../utils/types/AnswerCountType';
+import QAType from '../../../utils/types/QAType';
 import QuestionType from '../../../utils/types/QuestionType';
 import Question from '../Question/Question';
 import styles from './form.module.scss';
 
 const Form: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
+  const { setMostSelected, setSelectedCount } = useContext(StatsContext);
 
   useEffect(() => {
     const getForm = async () => {
@@ -18,44 +23,26 @@ const Form: React.FC = () => {
     getForm();
   }, []);
 
-  const buildFormAnswers = (json: any) => {
-    const dataObj: AnswerType[] = [];
-
-    Object.keys(json)
-      .sort()
-      .forEach((key) => {
-        const ans = json[key].toString();
-        const questionKey = key.split('_')[0];
-        const formItem = form?.filter((item) => item.questionId === parseInt(questionKey));
-
-        let type = formItem ? formItem[0].type : '';
-        if (!type) {
-          type = 'text';
-        }
-
-        const answerText = formItem
-          ? formItem[0].optionsList.filter((item) => item.optionsId === parseInt(ans))
-          : '';
-
-        const row: AnswerType = {
-          questionId: { questionId: parseInt(questionKey) },
-          answerId: parseInt(ans),
-          answer: answerText ? answerText[0].options : '',
-          type: type,
-        };
-
-        dataObj.push(row);
-      });
-
-    return dataObj;
-  };
-
-  const handleSubmit = (e: any) => {
-    // e.preventDefault();
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
-    const data = buildFormAnswers(formJson);
+    const { data, questionData, answerData } = buildFormAnswers(formJson, form);
     postForm(data);
+
+    const mostArray = await statFunctions.getMostSelectedStats(questionData);
+    const countArray = await statFunctions.getCountStats(answerData);
+
+    const mostStats: QAType[] = mostArray.map((value, index) => {
+      return { question: questionData[index].questionText, answer: value.options };
+    });
+
+    const countStats: AnswerCountType[] = countArray.map((value, index) => {
+      return { answer: answerData[index], count: value };
+    });
+
+    setMostSelected(mostStats);
+    setSelectedCount(countStats);
   };
 
   return (
