@@ -12,15 +12,18 @@ import styles from './form.module.scss';
 
 const Form: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
+  const [error, setError] = useState('');
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
 
   useEffect(() => {
-    const getForm = async () => {
-      fetchForm().then((res) => {
+    fetchForm()
+      .then((res) => {
         setForm(res);
+        setError('');
+      })
+      .catch((e) => {
+        setError('No se ha podido acceder a los servicios.');
       });
-    };
-    getForm();
   }, []);
 
   const handleSubmit = async (e: any) => {
@@ -64,6 +67,7 @@ const Form: React.FC = () => {
             <span className={styles.textContainer}></span>
           </div>
         )}
+        {error && <p className={styles.error}>{error}</p>}
         <button type='submit' className={styles.button}>
           Submit
         </button>
