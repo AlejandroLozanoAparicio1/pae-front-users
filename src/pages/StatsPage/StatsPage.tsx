@@ -1,19 +1,25 @@
+import { useContext } from 'react';
+import { StatsContext } from '../../context/StatsContext';
 import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
+  const { mostSelected, selectedCount } = useContext(StatsContext);
+  console.table(mostSelected);
+  console.table(selectedCount);
+
   return (
     <div className={styles.dataResults}>
       <div className={styles.container}>
-        {/* {useAnswersContext?.answers.map((item) => {
-          console.log('a');
-          return (
-            <DataResults
-              questionId={item.questionId}
-              answerId={item.answerId}
-              answerText={item.answerText}
-            ></DataResults>
-          );
-        })} */}
+        {mostSelected.map((item) => (
+          <p>
+            {item.question} : {item.question}
+          </p>
+        ))}
+        {selectedCount.map((item) => (
+          <p>
+            {item.answer} : {item.count}
+          </p>
+        ))}
       </div>
     </div>
   );

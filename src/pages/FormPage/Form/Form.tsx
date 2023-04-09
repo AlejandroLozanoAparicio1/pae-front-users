@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import Form from 'react-router-dom';
 import { StatsContext } from '../../../context/StatsContext';
 import fetchForm from '../../../services/getForm';
 import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
@@ -10,7 +11,7 @@ import QuestionType from '../../../utils/types/QuestionType';
 import Question from '../Question/Question';
 import styles from './form.module.scss';
 
-const Form: React.FC = () => {
+const FormCategory: React.FC = () => {
   const [form, setForm] = useState<QuestionType[] | null>(null);
   const [error, setError] = useState('');
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
@@ -46,6 +47,7 @@ const Form: React.FC = () => {
 
     setMostSelected(mostStats);
     setSelectedCount(countStats);
+    document.location = 'http://localhost:3000/stats';
   };
 
   return (
@@ -76,4 +78,4 @@ const Form: React.FC = () => {
   );
 };
 
-export default Form;
+export default FormCategory;

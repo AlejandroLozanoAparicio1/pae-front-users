@@ -1,7 +1,7 @@
-import Form from './Form/Form';
+import FormCategory from './Form/Form';
 
 const FormPage: React.FC = () => {
-  return <Form />;
+  return <FormCategory />;
 };
 
 export default FormPage;
