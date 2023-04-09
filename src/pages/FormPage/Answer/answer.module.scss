@@ -4,35 +4,38 @@
   padding: 0.5rem 0.2rem;
   font-size: 1rem;
   font-weight: 400;
+  display: flex;
 
   .answerLabel {
-    margin-left: 0.5rem;
+    // line-height: 10%;
+    height: fit-content;
+    width: fit-content;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .answerInput {
+    margin: 0.2rem 0.5rem;
+    height: fit-content;
+    width: fit-content;
 
     &:focus-visible {
       outline: none;
     }
   }
 
-  .answerRadio {
-    margin: 0.2rem;
+  // .answerRadio {
+  // }
 
-    &:focus-visible {
-      outline: none;
-    }
-  }
-
-  .answerCheckbox {
-    margin: 0.5rem;
-
-    &:focus-visible {
-      outline: none;
-    }
-  }
+  // .answerCheckbox {
+  // }
 
   .answerText {
+    margin: 0.2rem 0.5rem;
     border: 1px solid $light-gray;
     padding: 0.25rem;
-    margin-left: 1rem;
+    // margin-left: 1rem;
 
     &:focus-visible {
       outline: none;

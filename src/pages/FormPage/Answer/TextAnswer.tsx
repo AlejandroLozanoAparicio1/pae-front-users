@@ -8,7 +8,7 @@ const TextAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) 
   return (
     <div className={styles.answerContainer}>
       <input
-        className={styles.answerRadio}
+        className={`styles.answerRadio  ${styles.answerInput}`}
         type='radio'
         value={answerText}
         key={option.optionsId}

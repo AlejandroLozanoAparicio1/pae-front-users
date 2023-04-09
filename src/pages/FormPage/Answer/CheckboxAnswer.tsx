@@ -5,7 +5,7 @@ const CheckboxAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type
   return (
     <div className={styles.answerContainer}>
       <input
-        className={styles.answerCheckbox}
+        className={`${styles.answerCheckbox} ${styles.answerInput}`}
         type={type}
         value={option.optionsId}
         key={option.optionsId}

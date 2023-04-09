@@ -5,7 +5,7 @@ const RadioAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type })
   return (
     <div className={styles.answerContainer}>
       <input
-        className={styles.answerRadio}
+        className={`styles.answerRadio ${styles.answerInput}`}
         type={type}
         value={option.optionsId}
         key={option.optionsId}
