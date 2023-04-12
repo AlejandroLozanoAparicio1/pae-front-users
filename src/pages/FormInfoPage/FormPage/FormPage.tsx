@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from 'react';
-import Form from 'react-router-dom';
+import { useContext } from 'react';
+import { Form, useLoaderData } from 'react-router-dom';
+import Button from '../../../components/Button/Button';
 import { StatsContext } from '../../../context/StatsContext';
-import fetchForm from '../../../services/getForm';
 import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
 import statFunctions from '../../../services/helpers/getStats';
 import postForm from '../../../services/postForm';
@@ -9,26 +9,25 @@ import AnswerCountType from '../../../utils/types/AnswerCountType';
 import QAType from '../../../utils/types/QAType';
 import QuestionType from '../../../utils/types/QuestionType';
 import Question from '../Question/Question';
-import styles from './form.module.scss';
+import styles from './form_page.module.scss';
 
-const FormCategory: React.FC = () => {
-  const [form, setForm] = useState<QuestionType[] | null>(null);
-  const [error, setError] = useState('');
+function unknownToQuestionType(obj: any[]): QuestionType[] {
+  return obj.map((item) => {
+    return {
+      questionId: item.questionId,
+      questionText: item.questionText,
+      type: item.type,
+      optionsList: item.optionsList,
+    };
+  });
+}
+
+const FormPage: React.FC = () => {
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
-
-  useEffect(() => {
-    fetchForm()
-      .then((res) => {
-        setForm(res);
-        setError('');
-      })
-      .catch((e) => {
-        setError('No se ha podido acceder a los servicios.');
-      });
-  }, []);
+  const { initData, hasMorePages, page } = useLoaderData() as any;
+  const form = unknownToQuestionType(initData as any[]);
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
     const { data, questionData, answerData } = buildFormAnswers(formJson, form);
@@ -47,14 +46,13 @@ const FormCategory: React.FC = () => {
 
     setMostSelected(mostStats);
     setSelectedCount(countStats);
-    document.location = 'http://localhost:3000/stats';
   };
 
   return (
     <div className={styles.formGroup}>
-      <form className={styles.form} action='/stats' onSubmit={handleSubmit}>
+      <Form className={styles.form} action='/stats' onSubmit={handleSubmit}>
         {form ? (
-          form!.map((item) => (
+          form!.map((item: any) => (
             <Question
               questionId={item.questionId}
               questionText={item.questionText}
@@ -69,13 +67,15 @@ const FormCategory: React.FC = () => {
             <span className={styles.textContainer}></span>
           </div>
         )}
-        {error && <p className={styles.error}>{error}</p>}
-        <button type='submit' className={styles.button}>
-          Submit
-        </button>
-      </form>
+        {page > 0 && <Button text='Prev' link={`/form/${page - 1}`} />}
+        {hasMorePages ? (
+          <Button text='Next' link={`/form/${page + 1}`} />
+        ) : (
+          <Button type='submit' text='Submit' />
+        )}
+      </Form>
     </div>
   );
 };
 
-export default FormCategory;
+export default FormPage;

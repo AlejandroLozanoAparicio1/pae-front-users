@@ -26,6 +26,8 @@ const QAProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
   const [mostSelected, setMostSelected] = useState<QAType[]>([]);
   const [selectedCount, setSelectedCount] = useState<AnswerCountType[]>([]);
 
+  // make function to add stats
+
   return (
     <StatsContext.Provider
       value={{

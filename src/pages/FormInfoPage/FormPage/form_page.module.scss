@@ -47,27 +47,6 @@
       }
     }
   }
-
-  .button {
-    width: fit-content;
-    height: fit-content;
-    margin: 0 auto;
-    padding: 0.35rem 1.5rem;
-    display: flex;
-    transition: 200ms ease-in-out;
-    border: 0;
-    background-color: $light-blue-accent;
-    color: white;
-
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 200%;
-
-    &:hover {
-      background-color: $blue-accent;
-    }
-  }
 }
 
 @keyframes loading {

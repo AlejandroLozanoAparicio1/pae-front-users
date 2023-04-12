@@ -3,15 +3,23 @@ import styles from './app.module.scss';
 import Header from './components/Header/Header';
 import QAProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import FormPage from './pages/FormPage/FormPage';
+import FormPage from './pages/FormInfoPage/FormPage/FormPage';
 import InfoPage from './pages/InfoPage/InfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
+import fetchForm from './services/getForm';
+
+const loader = async ({ params }: any) => {
+  const data: [] = await fetchForm();
+  const hasMorePages = data.length - 1 > params.pageId;
+  return { initData: data[params.pageId], hasMorePages, page: parseInt(params.pageId) };
+};
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'form/:pageId',
     element: <FormPage />,
     errorElement: <ErrorPage />,
+    loader: loader,
   },
   {
     path: '/stats',

@@ -12,7 +12,7 @@ const StatsPage: React.FC = () => {
       <div className={styles.container}>
         {mostSelected.map((item) => (
           <p>
-            {item.question} : {item.question}
+            {item.question} : {item.answer}
           </p>
         ))}
         {selectedCount.map((item) => (
