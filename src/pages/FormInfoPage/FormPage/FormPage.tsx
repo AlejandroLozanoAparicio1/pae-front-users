@@ -5,7 +5,6 @@ import { StatsContext } from '../../../context/StatsContext';
 import { buildFormAnswers } from '../../../services/forms/buildFormAnswers';
 import postForm from '../../../services/forms/postForm';
 import statFunctions from '../../../services/stats/getStats';
-
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
@@ -54,13 +53,15 @@ const FormPage: React.FC = () => {
           </div>
         )}
         <div className={styles.pageButtons}>
-          <Button
-            text='Siguiente'
-            link={`/form/${questionaryName}/${page + 1}`}
-            disabled={!hasMorePages}
-            secondary
-          />
-          <Button type='submit' text='Submit' disabled={hasMorePages} />
+          {hasMorePages && (
+            <Button
+              text='Siguiente'
+              link={`/form/${questionaryName}/${page + 1}`}
+              disabled={!hasMorePages}
+              secondary
+            />
+          )}
+          {!hasMorePages && <Button type='submit' text='Submit' disabled={hasMorePages} />}
         </div>
       </Form>
     </div>
