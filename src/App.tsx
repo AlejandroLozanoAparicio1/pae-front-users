@@ -12,7 +12,7 @@ const loader = async ({ params }: any): Promise<FormLoader> => {
   const data: QuestionType[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
   return {
-    initData: data[params.pageId],
+    form: data[params.pageId],
     hasMorePages,
     page: parseInt(params.pageId),
     questionaryName: params.questionaryName,

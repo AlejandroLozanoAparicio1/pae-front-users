@@ -9,21 +9,9 @@ import statFunctions from '../../../services/stats/getStats';
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
-function unknownToQuestionType(obj: any[]): QuestionType[] {
-  return obj.map((item) => {
-    return {
-      questionId: item.questionId,
-      questionText: item.questionText,
-      type: item.type,
-      optionsList: item.optionsList,
-    };
-  });
-}
-
 const FormPage: React.FC = () => {
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
-  const { initData, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
-  const form = unknownToQuestionType(initData as any[]);
+  const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
 
   const handleSubmit = async (e: any) => {
     const formData = new FormData(e.target);
