@@ -1,13 +1,12 @@
-import { API_HOST } from '../utils/constants';
+import { API_HOST } from '../../utils/constants';
 
-const postForm = (body: AnswerType[]): Promise<any> =>
-  fetch(`${API_HOST}/answer`, {
-    method: 'POST',
+const getSelectedCount = (answer: string): Promise<any> =>
+  fetch(`${API_HOST}/selected?answer=${answer}`, {
+    method: 'GET',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
   }).then((response) => {
     if (!response.ok) {
       throw response;
@@ -15,4 +14,4 @@ const postForm = (body: AnswerType[]): Promise<any> =>
     return response.json();
   });
 
-export default postForm;
+export default getSelectedCount;

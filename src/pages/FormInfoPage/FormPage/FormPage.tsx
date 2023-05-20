@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import Button from '../../../components/Button/Button';
 import { StatsContext } from '../../../context/StatsContext';
-import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
-import statFunctions from '../../../services/helpers/getStats';
-import postForm from '../../../services/postForm';
+import { buildFormAnswers } from '../../../services/forms/buildFormAnswers';
+import postForm from '../../../services/forms/postForm';
+import statFunctions from '../../../services/stats/getStats';
 
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
@@ -22,7 +22,7 @@ function unknownToQuestionType(obj: any[]): QuestionType[] {
 
 const FormPage: React.FC = () => {
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
-  const { initData, hasMorePages, page } = useLoaderData() as any;
+  const { initData, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
   const form = unknownToQuestionType(initData as any[]);
 
   const handleSubmit = async (e: any) => {
@@ -34,11 +34,11 @@ const FormPage: React.FC = () => {
     const mostArray = await statFunctions.getMostSelectedStats(questionData);
     const countArray = await statFunctions.getCountStats(answerData);
 
-    const mostStats: QAType[] = mostArray.map((value, index) => {
+    const mostStats: MostAnswered[] = mostArray.map((value, index) => {
       return { question: questionData[index].questionText, answer: value.options };
     });
 
-    const countStats: AnswerCountType[] = countArray.map((value, index) => {
+    const countStats: AnswerCount[] = countArray.map((value, index) => {
       return { answer: answerData[index], count: value };
     });
 
@@ -66,10 +66,12 @@ const FormPage: React.FC = () => {
           </div>
         )}
         <div className={styles.pageButtons}>
-          <Button text='Anterior' link={`/form/${page - 1}`} disabled={page === 0} secondary />
-          <Button text='Siguiente' link={`/form/${page + 1}`} disabled={!hasMorePages} secondary />
-        </div>
-        <div className={styles.submitButton}>
+          <Button
+            text='Siguiente'
+            link={`/form/${questionaryName}/${page + 1}`}
+            disabled={!hasMorePages}
+            secondary
+          />
           <Button type='submit' text='Submit' disabled={hasMorePages} />
         </div>
       </Form>

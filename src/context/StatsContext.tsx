@@ -1,9 +1,9 @@
 import { createContext, useState } from 'react';
 
 interface StatsContextType {
-  mostSelected: QAType[];
+  mostSelected: MostAnswered[];
   setMostSelected: (SetStateAction: any) => void;
-  selectedCount: AnswerCountType[];
+  selectedCount: AnswerCount[];
   setSelectedCount: (SetStateAction: any) => void;
 }
 
@@ -21,8 +21,8 @@ const init = {
 export const StatsContext = createContext<StatsContextType>(init);
 
 const QAProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
-  const [mostSelected, setMostSelected] = useState<QAType[]>([]);
-  const [selectedCount, setSelectedCount] = useState<AnswerCountType[]>([]);
+  const [mostSelected, setMostSelected] = useState<MostAnswered[]>([]);
+  const [selectedCount, setSelectedCount] = useState<AnswerCount[]>([]);
 
   // make function to add stats
 

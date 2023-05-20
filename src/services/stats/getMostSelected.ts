@@ -1,4 +1,4 @@
-import { API_HOST } from '../utils/constants';
+import { API_HOST } from '../../utils/constants';
 
 const getMostSelected = (questionId: number): Promise<any> =>
   fetch(`${API_HOST}/mostSelected?question_id=${questionId}`, {

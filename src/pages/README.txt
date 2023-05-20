@@ -1,1 +1,0 @@
-1 folder per page containing the necessary page-specific components

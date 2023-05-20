@@ -6,17 +6,22 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormPage from './pages/FormInfoPage/FormPage/FormPage';
 import InfoPage from './pages/InfoPage/InfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
-import fetchForm from './services/getForm';
+import fetchForm from './services/forms/getForm';
 
-const loader = async ({ params }: any) => {
-  const data: [] = await fetchForm('demo1');
+const loader = async ({ params }: any): Promise<FormLoader> => {
+  const data: QuestionType[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
-  return { initData: data[params.pageId], hasMorePages, page: parseInt(params.pageId) };
+  return {
+    initData: data[params.pageId],
+    hasMorePages,
+    page: parseInt(params.pageId),
+    questionaryName: params.questionaryName,
+  };
 };
 
 const router = createBrowserRouter([
   {
-    path: 'form/:pageId',
+    path: 'form/:questionaryName/:pageId',
     element: <FormPage />,
     errorElement: <ErrorPage />,
     loader: loader,

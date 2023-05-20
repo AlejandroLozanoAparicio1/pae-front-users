@@ -1,7 +1,7 @@
-import { API_HOST } from '../utils/constants';
+import { API_HOST } from '../../utils/constants';
 
-const getSelectedCount = (answer: string): Promise<any> =>
-  fetch(`${API_HOST}/selected?answer=${answer}`, {
+const fetchForm = (questionaryName: string): Promise<QuestionType[][]> =>
+  fetch(`${API_HOST}/GetQuestionary?name=${questionaryName}`, {
     method: 'GET',
     headers: {
       accept: 'application/json',
@@ -14,4 +14,4 @@ const getSelectedCount = (answer: string): Promise<any> =>
     return response.json();
   });
 
-export default getSelectedCount;
+export default fetchForm;

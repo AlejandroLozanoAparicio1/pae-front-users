@@ -1,9 +1,9 @@
-type AnswerCountType = {
+type AnswerCount = {
   answer: string;
   count: number;
 };
 
-type QAType = {
+type MostAnswered = {
   question: string;
   answer: string;
 };

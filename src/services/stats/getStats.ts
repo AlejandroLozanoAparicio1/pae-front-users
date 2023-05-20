@@ -1,5 +1,5 @@
-import getMostSelected from '../getMostSelected';
-import getSelectedCount from '../getSelectedCount';
+import getMostSelected from './getMostSelected';
+import getSelectedCount from './getSelectedCount';
 
 const getMostSelectedStats = async (questionData: SimpleQuestion[]) => {
   const stats = questionData.map((question) => getMostSelected(question.questionId));
