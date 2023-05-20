@@ -1,4 +1,7 @@
-export const buildFormAnswers = (json: any, form: QuestionType[] | null) => {
+export const buildFormAnswers = (
+  json: { [k: string]: FormDataEntryValue },
+  form: QuestionType[],
+) => {
   const data: AnswerType[] = [];
   const questionArray: SimpleQuestion[] = [];
   const answerArray: string[] = [];
