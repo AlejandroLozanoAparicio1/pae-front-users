@@ -12,7 +12,6 @@ const postForm = (body: AnswerType[]): Promise<any> =>
     if (!response.ok) {
       throw response;
     }
-    return response.json();
   });
 
 export default postForm;

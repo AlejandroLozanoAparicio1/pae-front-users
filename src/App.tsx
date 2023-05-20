@@ -21,7 +21,7 @@ const loader = async ({ params }: any): Promise<FormLoader> => {
 
 const router = createBrowserRouter([
   {
-    path: 'form/:questionaryName/:pageId',
+    path: 'forms/:questionaryName/:pageId',
     element: <FormPage />,
     errorElement: <ErrorPage />,
     loader: loader,

@@ -9,17 +9,18 @@ import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
 const FormPage: React.FC = () => {
+  const navigate = useNavigate();
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
   const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
-  const navigate = useNavigate();
-  const nextPage = hasMorePages ? `/form/${questionaryName}/${page + 1}` : '/stats';
+  const nextPage = hasMorePages ? `/forms/${questionaryName}/${page + 1}` : '/stats';
 
   const handleSubmit = async (e: any) => {
-    // add data to context then post if last page
+    e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
     const { data, questionData, answerData } = buildFormAnswers(formJson, form);
-    console.log(data);
+
+    // adding data to end result of form
 
     if (!hasMorePages) {
       postForm(data);
@@ -38,7 +39,7 @@ const FormPage: React.FC = () => {
       setMostSelected(mostStats);
       setSelectedCount(countStats);
     }
-    navigate(nextPage, { replace: true });
+    navigate(nextPage);
   };
 
   return (
@@ -65,7 +66,7 @@ const FormPage: React.FC = () => {
           {hasMorePages ? (
             <Button type='submit' text='Siguiente' disabled={!hasMorePages} secondary />
           ) : (
-            !hasMorePages && <Button type='submit' text='Submit' disabled={hasMorePages} />
+            <Button type='submit' text='Submit' disabled={hasMorePages} />
           )}
         </div>
       </Form>
