@@ -67,12 +67,13 @@ const FormPage: React.FC = () => {
             <span className={styles.textContainer}></span>
           </div>
         )}
-        {page > 0 && <Button text='Prev' link={`/form/${page - 1}`} />}
-        {hasMorePages ? (
-          <Button text='Next' link={`/form/${page + 1}`} />
-        ) : (
-          <Button type='submit' text='Submit' />
-        )}
+        <div className={styles.pageButtons}>
+          <Button text='Anterior' link={`/form/${page - 1}`} disabled={page === 0} secondary />
+          <Button text='Siguiente' link={`/form/${page + 1}`} disabled={!hasMorePages} secondary />
+        </div>
+        <div className={styles.submitButton}>
+          <Button type='submit' text='Submit' disabled={hasMorePages} />
+        </div>
       </Form>
     </div>
   );

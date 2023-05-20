@@ -1,23 +1,53 @@
 @import '../../utils/colors.module.scss';
 
-.button {
+.allButton {
   width: fit-content;
   height: fit-content;
-  margin: 0 auto;
   padding: 0.35rem 1.5rem;
   display: flex;
   transition: 200ms ease-in-out;
-  border: 0;
-  background-color: $light-blue-accent;
-  color: white;
 
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
   line-height: 200%;
+}
+
+.primary {
+  background-color: $light-blue-accent;
+  color: white;
+  border: 0;
 
   &:hover {
-    background-color: $blue-accent;
+    background-color: lighten($blue-accent, 10%);
+    cursor: pointer;
+  }
+
+  &.disabled {
+    background-color: lighten($light-blue-accent, 15%) !important;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: $blue-accent;
+  border: $blue-accent solid 1px;
+
+  &:hover {
+    color: lighten($blue-accent, 10%);
+    border: lighten($blue-accent, 30%) solid 1px;
+    cursor: pointer;
+  }
+
+  &.disabled {
+    border-color: #a0a0a0 !important;
+    color: #a0a0a0 !important;
+  }
+}
+
+.disabled {
+  &:hover {
+    cursor: default;
   }
 }
 

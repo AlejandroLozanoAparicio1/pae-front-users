@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { ReactElement, createContext, useState } from 'react';
 import AnswerType from '../utils/types/AnswerType';
 
 export const AnswersContext = createContext<AnswerContextType | null>(null);
@@ -12,7 +12,7 @@ interface AnswerContextType {
   setAnswers: (SetStateAction: any) => void;
 }
 
-const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
+const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): ReactElement => {
   const [answers, setAnswers] = useState<AnswerType[]>([]);
 
   return (

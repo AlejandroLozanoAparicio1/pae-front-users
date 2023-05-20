@@ -5,17 +5,23 @@ interface ButtonType {
   type?: 'button' | 'submit' | 'reset';
   text: string;
   link?: string;
+  disabled?: boolean;
+  secondary?: boolean;
 }
 
-const Button: React.FC<ButtonType> = ({ type, text, link }) => {
+const Button: React.FC<ButtonType> = ({ type, text, link, disabled, secondary }) => {
+  let buttonStyles = `${styles.allButton}`;
+  buttonStyles += secondary ? ` ${styles.secondary}` : ` ${styles.primary}`;
+  buttonStyles += disabled ? ` ${styles.disabled}` : ``;
+
   return (
     <>
       {!link ? (
-        <button className={styles.button} type={type}>
+        <button disabled className={buttonStyles} type={type}>
           {text}
         </button>
       ) : (
-        <Link className={`${styles.button} ${styles.link}`} to={link}>
+        <Link className={` ${styles.link} ${buttonStyles}`} to={disabled ? '#' : link}>
           {text}
         </Link>
       )}
