@@ -4,8 +4,8 @@ import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
   const { mostSelected, selectedCount } = useContext(StatsContext);
-  console.table(mostSelected);
-  console.table(selectedCount);
+  // console.table(mostSelected);
+  // console.table(selectedCount);
 
   return (
     <div className={styles.dataResults}>

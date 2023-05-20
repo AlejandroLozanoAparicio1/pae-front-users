@@ -1,5 +1,7 @@
-function postForm(body: AnswerType[]) {
-  fetch('http://localhost:8080/answer', {
+import { API_HOST } from '../../utils/constants';
+
+const postForm = (body: AnswerType[]): Promise<any> =>
+  fetch(`${API_HOST}/answer`, {
     method: 'POST',
     headers: {
       accept: 'application/json',
@@ -10,8 +12,6 @@ function postForm(body: AnswerType[]) {
     if (!response.ok) {
       throw response;
     }
-    return response.json();
   });
-}
 
 export default postForm;

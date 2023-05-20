@@ -16,10 +16,10 @@
 .primary {
   background-color: $light-blue-accent;
   color: white;
-  border: 0;
+  border: $light-blue-accent solid 1px;
 
   &:hover {
-    background-color: lighten($blue-accent, 10%);
+    background-color: lighten($blue-accent, 15%);
     cursor: pointer;
   }
 

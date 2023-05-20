@@ -1,54 +1,50 @@
 import { useContext } from 'react';
-import { Form, useLoaderData } from 'react-router-dom';
+import { Form, useLoaderData, useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button/Button';
 import { StatsContext } from '../../../context/StatsContext';
-import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
-import statFunctions from '../../../services/helpers/getStats';
-import postForm from '../../../services/postForm';
-
+import { buildFormAnswers } from '../../../services/forms/buildFormAnswers';
+import postForm from '../../../services/forms/postForm';
+import statFunctions from '../../../services/stats/getStats';
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
-function unknownToQuestionType(obj: any[]): QuestionType[] {
-  return obj.map((item) => {
-    return {
-      questionId: item.questionId,
-      questionText: item.questionText,
-      type: item.type,
-      optionsList: item.optionsList,
-    };
-  });
-}
-
 const FormPage: React.FC = () => {
+  const navigate = useNavigate();
   const { setMostSelected, setSelectedCount } = useContext(StatsContext);
-  const { initData, hasMorePages, page } = useLoaderData() as any;
-  const form = unknownToQuestionType(initData as any[]);
+  const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
+  const nextPage = hasMorePages ? `/forms/${questionaryName}/${page + 1}` : '/stats';
 
   const handleSubmit = async (e: any) => {
+    e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
     const { data, questionData, answerData } = buildFormAnswers(formJson, form);
-    postForm(data);
 
-    const mostArray = await statFunctions.getMostSelectedStats(questionData);
-    const countArray = await statFunctions.getCountStats(answerData);
+    // adding data to end result of form
 
-    const mostStats: QAType[] = mostArray.map((value, index) => {
-      return { question: questionData[index].questionText, answer: value.options };
-    });
+    if (!hasMorePages) {
+      postForm(data);
 
-    const countStats: AnswerCountType[] = countArray.map((value, index) => {
-      return { answer: answerData[index], count: value };
-    });
+      const mostArray = await statFunctions.getMostSelectedStats(questionData);
+      const countArray = await statFunctions.getCountStats(answerData);
 
-    setMostSelected(mostStats);
-    setSelectedCount(countStats);
+      const mostStats: MostAnswered[] = mostArray.map((value, index) => {
+        return { question: questionData[index].questionText, answer: value.options };
+      });
+
+      const countStats: AnswerCount[] = countArray.map((value, index) => {
+        return { answer: answerData[index], count: value };
+      });
+
+      setMostSelected(mostStats);
+      setSelectedCount(countStats);
+    }
+    navigate(nextPage);
   };
 
   return (
     <div className={styles.formGroup}>
-      <Form className={styles.form} action='/stats' onSubmit={handleSubmit}>
+      <Form className={styles.form} onSubmit={handleSubmit}>
         {form ? (
           form!.map((item: any) => (
             <Question
@@ -66,11 +62,12 @@ const FormPage: React.FC = () => {
           </div>
         )}
         <div className={styles.pageButtons}>
-          <Button text='Anterior' link={`/form/${page - 1}`} disabled={page === 0} secondary />
-          <Button text='Siguiente' link={`/form/${page + 1}`} disabled={!hasMorePages} secondary />
-        </div>
-        <div className={styles.submitButton}>
-          <Button type='submit' text='Submit' disabled={hasMorePages} />
+          {/* the diabled conditions should be revised 'cause these don't make much sense */}
+          {hasMorePages ? (
+            <Button type='submit' text='Siguiente' disabled={!hasMorePages} secondary />
+          ) : (
+            <Button type='submit' text='Submit' disabled={hasMorePages} />
+          )}
         </div>
       </Form>
     </div>

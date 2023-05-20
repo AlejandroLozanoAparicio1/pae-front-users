@@ -1,5 +1,7 @@
-const fetchForm = () => {
-  return fetch('http://localhost:8080/GetQuestionary?name=demo1', {
+import { API_HOST } from '../../utils/constants';
+
+const fetchForm = (questionaryName: string): Promise<QuestionType[][]> =>
+  fetch(`${API_HOST}/GetQuestionary?name=${questionaryName}`, {
     method: 'GET',
     headers: {
       accept: 'application/json',
@@ -11,6 +13,5 @@ const fetchForm = () => {
     }
     return response.json();
   });
-};
 
 export default fetchForm;

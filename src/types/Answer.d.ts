@@ -10,18 +10,13 @@ type SimpleAnswerType = {
   answerText: string;
 };
 
-type PossibleAnswerType = {
-  questionId: number;
-  option: OptionType;
-  type: 'checkbox' | 'radio' | 'text';
-};
-
-type AnswerCountType = {
-  answer: string;
-  count: number;
-};
-
 type OptionType = {
   optionsId: number;
   options: string;
+};
+
+type PossibleAnswerType = {
+  questionId: number;
+  type: 'checkbox' | 'radio' | 'text';
+  option: OptionType;
 };
