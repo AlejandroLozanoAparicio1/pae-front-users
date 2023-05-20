@@ -17,11 +17,11 @@ const Button: React.FC<ButtonType> = ({ type, text, link, disabled, secondary })
   return (
     <>
       {!link ? (
-        <button disabled className={buttonStyles} type={type}>
+        <button disabled={disabled} className={buttonStyles} type={type}>
           {text}
         </button>
       ) : (
-        <Link className={` ${styles.link} ${buttonStyles}`} to={disabled ? '#' : link}>
+        <Link type={type} className={` ${styles.link} ${buttonStyles}`} to={disabled ? '#' : link}>
           {text}
         </Link>
       )}
