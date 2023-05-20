@@ -61,6 +61,7 @@ const FormPage: React.FC = () => {
               secondary
             />
           )}
+          {/* the diabled conditions should be revised 'cause these don't make much sense */}
           {!hasMorePages && <Button type='submit' text='Submit' disabled={hasMorePages} />}
         </div>
       </Form>
