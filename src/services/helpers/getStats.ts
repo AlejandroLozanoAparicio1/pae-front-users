@@ -1,4 +1,3 @@
-import SimpleQuestion from '../../utils/types/SimpleQuestion';
 import getMostSelected from '../getMostSelected';
 import getSelectedCount from '../getSelectedCount';
 

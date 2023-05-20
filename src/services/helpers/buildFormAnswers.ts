@@ -1,7 +1,3 @@
-import AnswerType from '../../utils/types/AnswerType';
-import QuestionType from '../../utils/types/QuestionType';
-import SimpleQuestion from '../../utils/types/SimpleQuestion';
-
 export const buildFormAnswers = (json: any, form: QuestionType[] | null) => {
   const data: AnswerType[] = [];
   const questionArray: SimpleQuestion[] = [];

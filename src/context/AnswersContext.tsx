@@ -1,5 +1,4 @@
 import { ReactElement, createContext, useState } from 'react';
-import AnswerType from '../utils/types/AnswerType';
 
 export const AnswersContext = createContext<AnswerContextType | null>(null);
 

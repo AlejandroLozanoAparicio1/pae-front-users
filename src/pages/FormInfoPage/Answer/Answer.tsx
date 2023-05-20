@@ -1,4 +1,3 @@
-import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import CheckboxAnswer from './CheckboxAnswer';
 import RadioAnswer from './RadioAnswer';
 import TextAnswer from './TextAnswer';

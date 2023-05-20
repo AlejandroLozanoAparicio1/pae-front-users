@@ -1,6 +1,4 @@
 import { createContext, useState } from 'react';
-import AnswerCountType from '../utils/types/AnswerCountType';
-import QAType from '../utils/types/QAType';
 
 interface StatsContextType {
   mostSelected: QAType[];

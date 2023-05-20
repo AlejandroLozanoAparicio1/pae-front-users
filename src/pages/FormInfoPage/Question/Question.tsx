@@ -1,4 +1,3 @@
-import QuestionType from '../../../utils/types/QuestionType';
 import Answer from '../Answer/Answer';
 import styles from './question.module.scss';
 

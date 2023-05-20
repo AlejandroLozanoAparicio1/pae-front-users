@@ -1,4 +1,3 @@
-import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import styles from './answer.module.scss';
 
 const RadioAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {

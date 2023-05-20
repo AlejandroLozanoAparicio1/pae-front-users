@@ -1,5 +1,3 @@
-import AnswerType from '../utils/types/AnswerType';
-
 function postForm(body: AnswerType[]) {
   fetch('http://localhost:8080/answer', {
     method: 'POST',
@@ -9,9 +7,10 @@ function postForm(body: AnswerType[]) {
     },
     body: JSON.stringify(body),
   }).then((response) => {
-    if (response.status >= 400) {
+    if (!response.ok) {
       throw response;
     }
+    return response.json();
   });
 }
 

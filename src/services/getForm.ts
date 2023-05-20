@@ -6,7 +6,7 @@ const fetchForm = () => {
       'Content-Type': 'application/json',
     },
   }).then((response) => {
-    if (response.status >= 400) {
+    if (!response.ok) {
       throw response;
     }
     return response.json();

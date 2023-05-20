@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PossibleAnswerType from '../../../utils/types/PossibleAnswerType';
 import styles from './answer.module.scss';
 
 const TextAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {

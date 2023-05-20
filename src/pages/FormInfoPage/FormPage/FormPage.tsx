@@ -5,9 +5,7 @@ import { StatsContext } from '../../../context/StatsContext';
 import { buildFormAnswers } from '../../../services/helpers/buildFormAnswers';
 import statFunctions from '../../../services/helpers/getStats';
 import postForm from '../../../services/postForm';
-import AnswerCountType from '../../../utils/types/AnswerCountType';
-import QAType from '../../../utils/types/QAType';
-import QuestionType from '../../../utils/types/QuestionType';
+
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
