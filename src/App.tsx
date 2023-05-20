@@ -9,7 +9,7 @@ import StatsPage from './pages/StatsPage/StatsPage';
 import fetchForm from './services/getForm';
 
 const loader = async ({ params }: any) => {
-  const data: [] = await fetchForm();
+  const data: [] = await fetchForm('demo1');
   const hasMorePages = data.length - 1 > params.pageId;
   return { initData: data[params.pageId], hasMorePages, page: parseInt(params.pageId) };
 };
