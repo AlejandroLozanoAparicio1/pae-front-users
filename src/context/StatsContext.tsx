@@ -17,29 +17,23 @@ const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
 
   const getMostSelectedStats = async (questionStats: SimpleQuestion[]) => {
     const stats = questionStats.map((question) => getMostSelected(question.questionId));
-
     const promiseResult = await Promise.all(stats).then((values) => {
       return values;
     });
-
     const aux = promiseResult.map((value: any, index: number) => {
       return { question: questionStats[index].questionText, answer: value.options };
     });
-
     setMostSelected(aux);
   };
 
   const getCountStats = async (answerStats: string[]) => {
     const stats = answerStats.map((answer) => getSelectedCount(answer));
-
     const promiseResult = await Promise.all(stats).then((values) => {
       return values;
     });
-
     const aux: AnswerCount[] = promiseResult.map((value: any, index: number) => {
       return { answer: answerStats[index], count: value };
     });
-
     setSelectedCount(aux);
   };
 
