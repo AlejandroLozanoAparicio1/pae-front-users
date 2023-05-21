@@ -1,6 +1,6 @@
 import styles from './answer.module.scss';
 
-const RadioAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {
+const RadioAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
   return (
     <div className={styles.answerContainer}>
       <input

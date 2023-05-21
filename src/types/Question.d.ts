@@ -5,5 +5,5 @@ type SimpleQuestion = {
 
 type QuestionType = SimpleQuestion & {
   type: 'checkbox' | 'radio' | 'text';
-  optionsList: OptionType[];
+  optionsList: Option[];
 };

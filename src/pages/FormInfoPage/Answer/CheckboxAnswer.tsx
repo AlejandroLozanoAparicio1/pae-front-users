@@ -1,6 +1,6 @@
 import styles from './answer.module.scss';
 
-const CheckboxAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {
+const CheckboxAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
   return (
     <div className={styles.answerContainer}>
       <input

@@ -1,22 +1,22 @@
-type AnswerType = {
+type Answer = {
   options: { optionsId: number };
   answerId: number;
   answer: string;
   type: string;
 };
 
-type SimpleAnswerType = {
+type SimpleAnswer = {
   answerId: number;
   answerText: string;
 };
 
-type OptionType = {
+type Option = {
   optionsId: number;
   options: string;
 };
 
-type PossibleAnswerType = {
+type PossibleAnswer = {
   questionId: number;
   type: 'checkbox' | 'radio' | 'text';
-  option: OptionType;
+  option: Option;
 };

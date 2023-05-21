@@ -1,21 +1,78 @@
 import { ReactElement, createContext, useState } from 'react';
 
-export const AnswersContext = createContext<AnswerContextType | null>(null);
+const init = {
+  answers: [],
+  setAnswers: () => {},
+  questionStats: [],
+  setQuestionStats: () => {},
+  answerStats: [],
+  setAnswerStats: () => {},
+  buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {},
+};
 
-interface ContextChildrenType {
-  children: React.ReactNode;
-}
-
-interface AnswerContextType {
-  answers: AnswerType[];
-  setAnswers: (SetStateAction: any) => void;
-}
+export const AnswersContext = createContext<AnswerContextType>(init);
 
 const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): ReactElement => {
-  const [answers, setAnswers] = useState<AnswerType[]>([]);
+  const [answers, setAnswers] = useState<Answer[]>([]);
+  const [questionStats, setQuestionStats] = useState<SimpleQuestion[]>([]);
+  const [answerStats, setAnswerStats] = useState<string[]>([]);
+
+  const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {
+    const data: Answer[] = [];
+    const questionArray: SimpleQuestion[] = [];
+    const answerArray: string[] = [];
+
+    Object.keys(json)
+      .sort()
+      .forEach((key) => {
+        const ans = parseInt(json[key].toString());
+        const [questionKey] = key.split('_');
+        const formItem = form.filter((item) => item.questionId === parseInt(questionKey));
+
+        let type = formItem ? formItem[0].type : '';
+        if (!type) {
+          type = 'text';
+        }
+
+        const answerObj = formItem
+          ? formItem[0].optionsList.filter((item) => item.optionsId === ans)
+          : '';
+
+        const optionId = answerObj ? answerObj[0].optionsId : -1;
+        const optionsText = answerObj ? answerObj[0].options : '';
+
+        const row: Answer = {
+          options: { optionsId: optionId },
+          answerId: ans,
+          answer: optionsText,
+          type: type,
+        };
+
+        data.push(row);
+        answerArray.push(optionsText);
+        questionArray.push({
+          questionId: parseInt(questionKey),
+          questionText: formItem ? formItem[0].questionText : '',
+        });
+      });
+
+    const questionData = [...new Set(questionArray)];
+    const answerData = [...new Set(answerArray)];
+
+    setAnswers(answers.concat(data));
+    setQuestionStats(questionData.concat(questionData));
+    setAnswerStats(answerData.concat(answerData));
+  };
 
   return (
-    <AnswersContext.Provider value={{ answers: answers, setAnswers: setAnswers }}>
+    <AnswersContext.Provider
+      value={{
+        answers: answers,
+        questionStats: questionStats,
+        answerStats: answerStats,
+        buildFormData: buildFormData,
+      }}
+    >
       {children}
     </AnswersContext.Provider>
   );

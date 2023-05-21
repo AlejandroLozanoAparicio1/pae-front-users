@@ -1,6 +1,6 @@
 import { API_HOST } from '../../utils/constants';
 
-const postForm = (body: AnswerType[]): Promise<any> =>
+const postForm = (body: Answer[]): Promise<any> =>
   fetch(`${API_HOST}/answer`, {
     method: 'POST',
     headers: {

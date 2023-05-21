@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import styles from './app.module.scss';
 import Header from './components/Header/Header';
-import QAProvider from './context/StatsContext';
+import AnswersProvider from './context/AnswersContext';
+import StatsProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormPage from './pages/FormInfoPage/FormPage/FormPage';
 import InfoPage from './pages/InfoPage/InfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
 import fetchForm from './services/forms/getForm';
-
 const loader = async ({ params }: any): Promise<FormLoader> => {
   const data: QuestionType[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
@@ -43,9 +43,11 @@ const App: React.FC = () => {
     <div className={styles.app}>
       <Header />
       <div className={styles._page_container}>
-        <QAProvider>
-          <RouterProvider router={router} />
-        </QAProvider>
+        <AnswersProvider>
+          <StatsProvider>
+            <RouterProvider router={router} />
+          </StatsProvider>
+        </AnswersProvider>
       </div>
     </div>
   );

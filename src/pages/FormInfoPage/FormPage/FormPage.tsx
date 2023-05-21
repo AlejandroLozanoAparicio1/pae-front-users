@@ -1,45 +1,32 @@
 import { useContext } from 'react';
 import { Form, useLoaderData, useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button/Button';
+import { AnswersContext } from '../../../context/AnswersContext';
 import { StatsContext } from '../../../context/StatsContext';
-import { buildFormAnswers } from '../../../services/forms/buildFormAnswers';
 import postForm from '../../../services/forms/postForm';
-import statFunctions from '../../../services/stats/getStats';
 import Question from '../Question/Question';
 import styles from './form_page.module.scss';
 
 const FormPage: React.FC = () => {
   const navigate = useNavigate();
-  const { setMostSelected, setSelectedCount } = useContext(StatsContext);
   const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
+  const { answers, questionStats, answerStats, buildFormData } = useContext(AnswersContext);
+  const { getMostSelectedStats, getCountStats } = useContext(StatsContext);
+
   const nextPage = hasMorePages ? `/forms/${questionaryName}/${page + 1}` : '/stats';
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
-    const { data, questionData, answerData } = buildFormAnswers(formJson, form);
-
-    // adding data to end result of form
+    buildFormData(formJson, form);
 
     if (!hasMorePages) {
-      postForm(data);
-
-      const mostArray = await statFunctions.getMostSelectedStats(questionData);
-      const countArray = await statFunctions.getCountStats(answerData);
-
-      const mostStats: MostAnswered[] = mostArray.map((value, index) => {
-        return { question: questionData[index].questionText, answer: value.options };
-      });
-
-      const countStats: AnswerCount[] = countArray.map((value, index) => {
-        return { answer: answerData[index], count: value };
-      });
-
-      setMostSelected(mostStats);
-      setSelectedCount(countStats);
+      postForm(answers);
+      getMostSelectedStats(questionStats);
+      getCountStats(answerStats);
     }
-    navigate(nextPage);
+    navigate(nextPage, { replace: true });
   };
 
   return (

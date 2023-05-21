@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './answer.module.scss';
 
-const TextAnswer: React.FC<PossibleAnswerType> = ({ questionId, option, type }) => {
+const TextAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
   const [answerText, setAnswerText] = useState('');
 
   return (
