@@ -60,8 +60,8 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
     const answerData = [...new Set(answerArray)];
 
     setAnswers(answers.concat(data));
-    setQuestionStats(questionData.concat(questionData));
-    setAnswerStats(answerData.concat(answerData));
+    setQuestionStats(questionStats.concat(questionData));
+    setAnswerStats(answerStats.concat(answerData));
   };
 
   return (

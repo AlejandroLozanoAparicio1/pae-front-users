@@ -26,7 +26,10 @@ const FormPage: React.FC = () => {
       getMostSelectedStats(questionStats);
       getCountStats(answerStats);
     }
-    navigate(nextPage, { replace: true });
+    navigate(
+      nextPage,
+      //, { replace: true } should uncomment but makes testing a pain
+    );
   };
 
   return (
