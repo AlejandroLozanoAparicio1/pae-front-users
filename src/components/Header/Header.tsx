@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           <span className={styles.line}></span>
         </button>
         <img className={styles.logo} src={logo} alt='logo' />
-        <ul className={styles.links}>
+        {/* <ul className={styles.links}>
           <li>
             <a key={'link_questionario'} href={'/'}>
               Questionario
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
               Información
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
       {hamburgerMenu && <PageList />}
     </>
