@@ -1,20 +1,19 @@
 import styles from './answer.module.scss';
+import checkbox from './checkbox.module.scss';
 
 const CheckboxAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
   return (
-    <div className={styles.answerContainer}>
+    <div className={`${styles.answerContainer} ${checkbox.checkbox}`}>
       <input
-        className={`${styles.answerCheckbox} ${styles.answerInput}`}
         type={type}
         value={option.optionsId}
         key={option.optionsId}
         name={questionId.toString() + '_' + option.optionsId.toString()}
         id={questionId.toString() + '_' + option.optionsId.toString()}
+        className={checkbox.checkboxFlip}
       />
-      <label
-        htmlFor={questionId.toString() + '_' + option.optionsId.toString()}
-        className={styles.answerLabel}
-      >
+      <label htmlFor={questionId.toString() + '_' + option.optionsId.toString()}>
+        <span></span>
         {option.options}
       </label>
     </div>

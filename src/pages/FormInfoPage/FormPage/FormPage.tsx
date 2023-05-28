@@ -36,14 +36,16 @@ const FormPage: React.FC = () => {
     <div className={styles.formGroup}>
       <Form className={styles.form} onSubmit={handleSubmit}>
         {form ? (
-          form!.map((item: any) => (
-            <Question
-              questionId={item.questionId}
-              questionText={item.questionText}
-              type={item.type}
-              optionsList={item.optionsList}
-              key={item.questionId}
-            />
+          form!.map((item: any, index: number) => (
+            <>
+              <Question
+                questionId={item.questionId}
+                questionText={item.questionText}
+                type={item.type}
+                optionsList={item.optionsList}
+                key={item.questionId}
+              />
+            </>
           ))
         ) : (
           <div className={styles.loading}>

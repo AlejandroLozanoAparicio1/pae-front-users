@@ -14,12 +14,13 @@ const Header: React.FC = () => {
   return (
     <>
       <div className={styles.header}>
-        <button onClick={handleHamburguerClick} className={`${styles.hamburguerMenu} ${hambClass}`}>
+        <h3 className={styles.formTitle}>Hospital Clínic</h3>
+        {/* <button onClick={handleHamburguerClick} className={`${styles.hamburguerMenu} ${hambClass}`}>
           <span className={styles.line}></span>
           <span className={styles.line}></span>
           <span className={styles.line}></span>
-        </button>
-        <img className={styles.logo} src={logo} alt='logo' />
+        </button> */}
+        {/* <img className={styles.logo} src={logo} alt='logo' /> */}
         {/* <ul className={styles.links}>
           <li>
             <a key={'link_questionario'} href={'/'}>

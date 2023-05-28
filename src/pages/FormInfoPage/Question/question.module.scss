@@ -2,20 +2,20 @@
 
 .form {
   padding: 0.6rem;
-  margin: 2.5rem 0;
-  border: 2px solid $light-blue-accent;
-  border-radius: 0.1rem;
+  margin: 0 0 1rem;
 
   .question {
-    border-bottom: 1px solid $light-blue-accent;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     padding: 0.4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: $blue-accent;
+    font-family: Poppins;
+    color: white;
+    background-color: $powder-blue;
+    border-radius: 0.5rem;
 
     @media screen and (max-width: 600px) {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 }
