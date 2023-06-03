@@ -8,5 +8,20 @@
     "en": "Submit",
     "es": "Enviar",
     "cat": "Enviar"
+  },
+  "selectLanguage.en": {
+    "en": "English",
+    "es": "Inglés",
+    "cat": "Anglès"
+  },
+  "selectLanguage.es": {
+    "en": "Spanish",
+    "es": "Español",
+    "cat": "Espanyol"
+  },
+  "selectLanguage.cat": {
+    "en": "Catalan",
+    "es": "Catalan",
+    "cat": "Català"
   }
 }

@@ -2,12 +2,10 @@
 
 .header {
   width: 100vw;
-  height: 10vh;
+  height: fit-content;
   display: flex;
-  position: fixed;
   z-index: 2;
   justify-content: center;
-  // background-color: $powder-blue;
   flex-direction: column;
 
   @media screen and (max-width: 600px) {
@@ -18,9 +16,16 @@
     color: white;
     font-family: Poppins;
     text-align: center;
-    height: 100%;
+    height: fit-content;
     line-height: 10vh;
     font-size: 1.75rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
   .logo {

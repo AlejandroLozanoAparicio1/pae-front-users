@@ -1,41 +1,29 @@
-import { useState } from 'react';
-import logo from '../../assets/logo.png';
-import PageList from '../PageList/PageList';
+import { useContext } from 'react';
+import { LabelsContext } from '../../context/LabelsContext';
+import Select from '../Select/Select';
 import styles from './header.module.scss';
 
 const Header: React.FC = () => {
-  const [hamburgerMenu, setHamburgerMenu] = useState(false);
-  const hambClass = hamburgerMenu ? styles.open : styles.closed;
-
-  const handleHamburguerClick = (e: any) => {
-    setHamburgerMenu(!hamburgerMenu);
-  };
+  const { get, setLang, lang } = useContext(LabelsContext);
+  const languageOptions = [
+    { text: get('selectLanguage.en'), value: 'en', selected: lang === 'en' },
+    { text: get('selectLanguage.es'), value: 'es', selected: lang === 'es' },
+    { text: get('selectLanguage.cat'), value: 'cat', selected: lang === 'cat' },
+  ];
 
   return (
-    <>
-      <div className={styles.header}>
-        <h3 className={styles.formTitle}>Hospital Clínic</h3>
-        {/* <button onClick={handleHamburguerClick} className={`${styles.hamburguerMenu} ${hambClass}`}>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-        </button> */}
-        {/* <img className={styles.logo} src={logo} alt='logo' /> */}
-        {/* <ul className={styles.links}>
-          <li>
-            <a key={'link_questionario'} href={'/'}>
-              Questionario
-            </a>
-          </li>
-          <li>
-            <a key={'link_información'} href={'/info'}>
-              Información
-            </a>
-          </li>
-        </ul> */}
+    <div className={styles.header}>
+      <h3 className={styles.formTitle}>Hospital Clínic</h3>
+      <div className={styles.button}>
+        <Select
+          options={languageOptions}
+          disabled={false}
+          onChange={(elem: any) => {
+            setLang(elem.target.value);
+          }}
+        ></Select>
       </div>
-      {hamburgerMenu && <PageList />}
-    </>
+    </div>
   );
 };
 
