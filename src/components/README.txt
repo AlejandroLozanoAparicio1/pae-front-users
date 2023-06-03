@@ -1,1 +1,0 @@
-folder for global components used in several pages of the application

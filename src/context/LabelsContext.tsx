@@ -2,7 +2,8 @@ import { ReactElement, createContext, useState } from 'react';
 
 export const LabelsContext = createContext<LabelsContextType>({
   get: (key: string) => '',
-  setLang: (value: string) => {},
+  setLang: (value: Language) => {},
+  lang: 'es',
 });
 
 const LabelsProvider: React.FC<LabelsContextChildrenType> = ({
@@ -17,7 +18,7 @@ const LabelsProvider: React.FC<LabelsContextChildrenType> = ({
   };
 
   return (
-    <LabelsContext.Provider value={{ get: get, setLang: setLang }}>
+    <LabelsContext.Provider value={{ get: get, setLang: setLang, lang: lang }}>
       {children}
     </LabelsContext.Provider>
   );

@@ -19,6 +19,7 @@ type StatsContextType = {
 type LabelsContextType = {
   get: (key: string) => string;
   setLang: (value: Language) => void;
+  lang: Language;
 };
 
 type LabelsContextChildrenType = {
