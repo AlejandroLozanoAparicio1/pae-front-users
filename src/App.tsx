@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import styles from './app.module.scss';
 import Header from './components/Header/Header';
 import AnswersProvider from './context/AnswersContext';
+import i18n from './context/i18n.json';
+import LabelsProvider from './context/LabelsContext';
 import StatsProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormPage from './pages/FormInfoPage/FormPage/FormPage';
@@ -41,16 +43,18 @@ const router = createBrowserRouter([
 
 const App: React.FC = () => {
   return (
-    <div className={styles.app}>
-      <Header />
-      <div className={styles._page_container}>
-        <AnswersProvider>
-          <StatsProvider>
-            <RouterProvider router={router} />
-          </StatsProvider>
-        </AnswersProvider>
+    <LabelsProvider labels={i18n} language={'cat'}>
+      <div className={styles.app}>
+        <Header />
+        <div className={styles._page_container}>
+          <AnswersProvider>
+            <StatsProvider>
+              <RouterProvider router={router} />
+            </StatsProvider>
+          </AnswersProvider>
+        </div>
       </div>
-    </div>
+    </LabelsProvider>
   );
 };
 

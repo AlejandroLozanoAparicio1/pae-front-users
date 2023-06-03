@@ -1,0 +1,12 @@
+{
+  "form.nextButton": {
+    "en": "Next",
+    "es": "Siguiente",
+    "cat": "Següent"
+  },
+  "form.submitButton": {
+    "en": "Submit",
+    "es": "Enviar",
+    "cat": "Enviar"
+  }
+}

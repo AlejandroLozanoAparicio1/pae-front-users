@@ -15,3 +15,14 @@ type StatsContextType = {
   getMostSelectedStats: (questionStats: SimpleQuestion[]) => void;
   getCountStats: (answerStats: string[]) => void;
 };
+
+type LabelsContextType = {
+  get: (key: string) => string;
+  setLang: (value: Language) => void;
+};
+
+type LabelsContextChildrenType = {
+  children: React.ReactNode;
+  labels: { [k: string]: { [k: string]: string } };
+  language: Language;
+};
