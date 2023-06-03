@@ -1,15 +1,11 @@
 @import '../../../utils/colors.module.scss';
 
 .answerContainer {
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
-  display: flex;
 
   .answerLabel {
-    // line-height: 10%;
-    height: fit-content;
-    width: fit-content;
     &:focus-visible {
       outline: none;
     }
@@ -28,12 +24,9 @@
   // .answerRadio {
   // }
 
-  // .answerCheckbox {
-  // }
-
   .answerText {
     margin: 0.2rem 0.5rem;
-    border: 1px solid $light-gray;
+    border: 1px solid $powder-blue;
     padding: 0.25rem;
     // margin-left: 1rem;
 

@@ -5,7 +5,7 @@ export default function PageList() {
     <div className={styles.linksList}>
       <ul>
         <li>
-          <a href={'/'}>Questionario</a>
+          <a href={'/'}>Cuestionario</a>
         </li>
         <li>
           <a href={'/info'}>Información</a>

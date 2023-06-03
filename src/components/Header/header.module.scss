@@ -2,20 +2,30 @@
 
 .header {
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   display: flex;
-  box-shadow: 0px 0.5px 5px $light-gray;
   position: fixed;
-  background-color: white;
   z-index: 2;
+  justify-content: center;
+  // background-color: $powder-blue;
+  flex-direction: column;
 
   @media screen and (max-width: 600px) {
     justify-content: space-between;
   }
 
+  .formTitle {
+    color: white;
+    font-family: Poppins;
+    text-align: center;
+    height: 100%;
+    line-height: 10vh;
+    font-size: 1.75rem;
+  }
+
   .logo {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     margin: auto;
 
     @media screen and (max-width: 600px) {
@@ -44,7 +54,7 @@
       transition: border ease-in-out 75ms;
 
       &:hover {
-        border-bottom: 3px solid $light-blue-accent;
+        border-bottom: 3px solid $powder-blue;
       }
 
       a {

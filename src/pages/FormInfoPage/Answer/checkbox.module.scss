@@ -1,0 +1,40 @@
+@import '../../../utils/colors.module.scss';
+
+$checkbox-size: 1rem;
+
+.checkbox {
+  .checkboxFlip {
+    display: none;
+
+    + label span {
+      display: inline-block;
+      width: 25px;
+      height: 19px;
+      margin: 0 5px -4px 0; /*layout relationship between check and label*/
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 1rem;
+        height: 1rem;
+        background: transparent;
+        border: 2px solid $hookers-green;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:after {
+        z-index: 0;
+        border: none;
+      }
+    }
+
+    &:checked + label span {
+      &:before {
+        transform: rotateY(180deg);
+        background: $hookers-green;
+      }
+    }
+  }
+}

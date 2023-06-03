@@ -1,9 +1,11 @@
+@import './utils/colors.module.scss';
 .app {
   position: relative;
+
   ._page_container {
     display: block;
     position: relative;
-    margin-top: 8vh;
+    margin-top: 10vh;
     z-index: 1;
   }
 }

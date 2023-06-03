@@ -14,9 +14,9 @@
 }
 
 .primary {
-  background-color: $light-blue-accent;
+  background-color: $powder-blue;
   color: white;
-  border: $light-blue-accent solid 1px;
+  border: $powder-blue solid 1px;
 
   &:hover {
     background-color: lighten($blue-accent, 15%);
@@ -24,12 +24,12 @@
   }
 
   &.disabled {
-    background-color: lighten($light-blue-accent, 15%) !important;
+    background-color: lighten($powder-blue, 15%) !important;
   }
 }
 
 .secondary {
-  background-color: transparent;
+  background-color: white;
   color: $blue-accent;
   border: $blue-accent solid 1px;
 
