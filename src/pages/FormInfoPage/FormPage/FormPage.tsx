@@ -11,8 +11,9 @@ import styles from './form_page.module.scss';
 const FormPage: React.FC = () => {
   const navigate = useNavigate();
   const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
-  const { answers, questionStats, answerStats, buildFormData } = useContext(AnswersContext);
-  const { getMostSelectedStats, getCountStats } = useContext(StatsContext);
+  const { answers, questionStats, answerStats, questIdStats, buildFormData } =
+    useContext(AnswersContext);
+  const { getMostSelectedStats, getCountStats, getAllCountStats } = useContext(StatsContext);
   const { get } = useContext(LabelsContext);
 
   const nextPage = hasMorePages ? `/forms/${questionaryName}/${page + 1}` : '/stats';
@@ -27,6 +28,7 @@ const FormPage: React.FC = () => {
       postForm(answers);
       getMostSelectedStats(questionStats);
       getCountStats(answerStats);
+      getAllCountStats(questIdStats);
     }
     navigate(
       nextPage,

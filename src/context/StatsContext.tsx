@@ -7,6 +7,7 @@ const init = {
   selectedCount: [],
   getMostSelectedStats: (questionStats: SimpleQuestion[]) => {},
   getCountStats: (answerStats: string[]) => {},
+  getAllCountStats: (answerStats: number[]) => {},
 };
 
 export const StatsContext = createContext<StatsContextType>(init);
@@ -37,6 +38,17 @@ const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
     setSelectedCount(aux);
   };
 
+  const getAllCountStats = async (answerStats: number[]) => {
+    const stats = answerStats.map((answer) => fetch_que_et_creis(answer));
+    const promiseResult = await Promise.all(stats).then((values) => {
+      return values;
+    });
+    const aux: tipus_que_et_creis[] = promiseResult.map((value: any, index: number) => {
+      return { objecte_que_vols };
+    });
+    setSelectedCount(aux);
+  };
+
   return (
     <StatsContext.Provider
       value={{
@@ -44,6 +56,7 @@ const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
         selectedCount: selectedCount,
         getMostSelectedStats: getMostSelectedStats,
         getCountStats: getCountStats,
+        getAllCountStats: getAllCountStats,
       }}
     >
       {children}
