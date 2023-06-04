@@ -1,12 +1,33 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { RadialChart } from 'react-vis';
+import { AnswersContext } from '../../context/AnswersContext';
 import { LabelsContext } from '../../context/LabelsContext';
 import { StatsContext } from '../../context/StatsContext';
+import postForm from '../../services/forms/postForm';
 import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
-  const { mostSelected, selectedCount, questionCounts } = useContext(StatsContext);
+  const { answers, questionStats, answerStats, questIdStats } = useContext(AnswersContext);
+  const {
+    getMostSelectedStats,
+    getCountStats,
+    getAllCountStats,
+    mostSelected,
+    selectedCount,
+    questionCounts,
+  } = useContext(StatsContext);
   const { get } = useContext(LabelsContext);
+  console.log('render');
+
+  useEffect(() => {
+    if (answers.length > 0) {
+      postForm(answers);
+      getMostSelectedStats(questionStats);
+      getCountStats(answerStats);
+      getAllCountStats(questIdStats);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answers]);
 
   return (
     <div className={styles.dataResults}>

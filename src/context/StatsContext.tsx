@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 import getMostSelected from '../services/stats/getMostSelected';
-import getSelectedCount from '../services/stats/getSelectedCount';
 import getQuestionCounts from '../services/stats/getQuestionCounts';
+import getSelectedCount from '../services/stats/getSelectedCount';
 
 const init = {
   mostSelected: [],

@@ -6,16 +6,15 @@ import i18n from './context/i18n.json';
 import LabelsProvider from './context/LabelsContext';
 import StatsProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import FormPage from './pages/FormInfoPage/FormPage/FormPage';
-import InfoPage from './pages/InfoPage/InfoPage';
+import FormInfoPage from './pages/FormInfoPage/FormInfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
 import fetchForm from './services/forms/getForm';
 
 const loader = async ({ params }: any): Promise<FormLoader> => {
-  const data: QuestionType[][] = await fetchForm(params.questionaryName);
+  const data: (QuestionType | Information)[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
   return {
-    form: data[params.pageId],
+    form: data[params.pageId] as QuestionType[],
     hasMorePages,
     page: parseInt(params.pageId),
     questionaryName: params.questionaryName,
@@ -25,18 +24,13 @@ const loader = async ({ params }: any): Promise<FormLoader> => {
 const router = createBrowserRouter([
   {
     path: 'forms/:questionaryName/:pageId',
-    element: <FormPage />,
+    element: <FormInfoPage />,
     errorElement: <ErrorPage />,
     loader: loader,
   },
   {
     path: '/stats',
     element: <StatsPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/info',
-    element: <InfoPage />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -14,28 +14,28 @@
 }
 
 .primary {
-  background-color: $powder-blue;
+  background-color: $ultra-violet;
   color: white;
-  border: $powder-blue solid 1px;
+  border: $ultra-violet solid 1px;
 
   &:hover {
-    background-color: lighten($blue-accent, 15%);
+    background-color: lighten($ultra-violet, 15%);
     cursor: pointer;
   }
 
   &.disabled {
-    background-color: lighten($powder-blue, 15%) !important;
+    background-color: lighten($ultra-violet, 15%) !important;
   }
 }
 
 .secondary {
   background-color: white;
-  color: $blue-accent;
-  border: $blue-accent solid 1px;
+  color: $ultra-violet;
+  border: 1px $ultra-violet solid;
 
   &:hover {
-    color: lighten($blue-accent, 10%);
-    border: lighten($blue-accent, 30%) solid 1px;
+    color: lighten($ultra-violet, 10%);
+    border: lighten($ultra-violet, 30%) solid 1px;
     cursor: pointer;
   }
 
