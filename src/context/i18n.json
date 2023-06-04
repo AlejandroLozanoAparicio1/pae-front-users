@@ -23,5 +23,10 @@
     "en": "Catalan",
     "es": "Catalan",
     "cat": "Català"
+  },
+  "stats.mostCommonAnswers": {
+    "en": "What are the most common answers?",
+    "es": "¿Cuales son las respuestas más comunes?",
+    "cat": "Quines son les respostes més comunes?"
   }
 }
