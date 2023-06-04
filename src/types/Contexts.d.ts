@@ -13,6 +13,7 @@ type AnswerContextType = {
 type StatsContextType = {
   mostSelected: MostAnswered[];
   selectedCount: AnswerCount[];
+  questionCounts: { angle: number }[][];
   getMostSelectedStats: (questionStats: SimpleQuestion[]) => void;
   getCountStats: (answerStats: string[]) => void;
   getAllCountStats: (answerStats: number[]) => void;
