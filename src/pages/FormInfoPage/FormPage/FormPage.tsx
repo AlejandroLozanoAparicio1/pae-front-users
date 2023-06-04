@@ -32,7 +32,8 @@ const FormPage: React.FC = () => {
     }
     navigate(
       nextPage,
-      //, { replace: true } should uncomment but makes testing a pain
+      // should uncomment but makes testing a pain
+      // { replace: true },
     );
   };
 
@@ -41,15 +42,13 @@ const FormPage: React.FC = () => {
       <Form className={styles.form} onSubmit={handleSubmit}>
         {form ? (
           form!.map((item: any, index: number) => (
-            <>
-              <Question
-                questionId={item.questionId}
-                questionText={item.questionText}
-                type={item.type}
-                optionsList={item.optionsList}
-                key={item.questionId}
-              />
-            </>
+            <Question
+              questionId={item.questionId}
+              questionText={item.questionText}
+              type={item.type}
+              optionsList={item.optionsList}
+              key={item.questionId}
+            />
           ))
         ) : (
           <div className={styles.loading}>
@@ -58,7 +57,6 @@ const FormPage: React.FC = () => {
           </div>
         )}
         <div className={styles.pageButtons}>
-          {/* the diabled conditions should be revised 'cause these don't make much sense */}
           {hasMorePages ? (
             <Button
               type='submit'

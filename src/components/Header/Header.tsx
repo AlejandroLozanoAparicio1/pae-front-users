@@ -6,9 +6,9 @@ import styles from './header.module.scss';
 const Header: React.FC = () => {
   const { get, setLang, lang } = useContext(LabelsContext);
   const languageOptions = [
-    { text: get('selectLanguage.en'), value: 'en', selected: lang === 'en' },
-    { text: get('selectLanguage.es'), value: 'es', selected: lang === 'es' },
-    { text: get('selectLanguage.cat'), value: 'cat', selected: lang === 'cat' },
+    { text: get('selectLanguage.en'), value: 'en' },
+    { text: get('selectLanguage.es'), value: 'es' },
+    { text: get('selectLanguage.cat'), value: 'cat' },
   ];
 
   return (
@@ -21,6 +21,7 @@ const Header: React.FC = () => {
           onChange={(elem: any) => {
             setLang(elem.target.value);
           }}
+          defaultValue={lang}
         ></Select>
       </div>
     </div>

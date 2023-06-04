@@ -43,7 +43,7 @@ const router = createBrowserRouter([
 
 const App: React.FC = () => {
   return (
-    <LabelsProvider labels={i18n} language={'cat'}>
+    <LabelsProvider labels={i18n} language={'en'}>
       <div className={styles.app}>
         <Header />
         <div className={styles._page_container}>

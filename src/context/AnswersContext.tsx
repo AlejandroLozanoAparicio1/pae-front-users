@@ -132,7 +132,3 @@ const handleAnswerText = (e: any) => {
     useAnswersContext?.setAnswers(aux);
   };
 */
-
-/*
-
-*/

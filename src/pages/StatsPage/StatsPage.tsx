@@ -19,7 +19,7 @@ const StatsPage: React.FC = () => {
         <ul>
           {mostSelected.map((item) => (
             <>
-              <li className={styles.info}>
+              <li key={`most-selected-answer-${item.answer}`} className={styles.info}>
                 <p className={styles.question}>{item.question}</p>
                 <p className={styles.answer}>{item.answer}</p>
               </li>
