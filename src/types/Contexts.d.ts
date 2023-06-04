@@ -6,6 +6,7 @@ type AnswerContextType = {
   answers: Answer[];
   questionStats: SimpleQuestion[];
   answerStats: string[];
+  questIdStats: number[];
   buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => void;
 };
 
@@ -14,6 +15,7 @@ type StatsContextType = {
   selectedCount: AnswerCount[];
   getMostSelectedStats: (questionStats: SimpleQuestion[]) => void;
   getCountStats: (answerStats: string[]) => void;
+  getAllCountStats: (answerStats: number[]) => void;
 };
 
 type LabelsContextType = {

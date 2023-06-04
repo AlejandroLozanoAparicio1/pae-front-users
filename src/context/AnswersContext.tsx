@@ -2,11 +2,9 @@ import { ReactElement, createContext, useState } from 'react';
 
 const init = {
   answers: [],
-  setAnswers: () => {},
   questionStats: [],
-  setQuestionStats: () => {},
   answerStats: [],
-  setAnswerStats: () => {},
+  questIdStats: [],
   buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {},
 };
 
@@ -16,11 +14,13 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [questionStats, setQuestionStats] = useState<SimpleQuestion[]>([]);
   const [answerStats, setAnswerStats] = useState<string[]>([]);
+  const [questIdStats, setQuestIdStats] = useState<number[]>([]);
 
   const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {
     const data: Answer[] = [];
     const questionArray: SimpleQuestion[] = [];
     const answerArray: string[] = [];
+    const qIdArray: number[] = [];
 
     Object.keys(json)
       .sort()
@@ -54,6 +54,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
           questionId: parseInt(questionKey),
           questionText: formItem ? formItem[0].questionText : '',
         });
+        qIdArray.push(parseInt(questionKey));
       });
 
     const questionData = [...new Set(questionArray)];
@@ -62,6 +63,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
     setAnswers(answers.concat(data));
     setQuestionStats(questionStats.concat(questionData));
     setAnswerStats(answerStats.concat(answerData));
+    setQuestIdStats(qIdArray.concat(questIdStats));
   };
 
   return (
@@ -70,6 +72,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
         answers: answers,
         questionStats: questionStats,
         answerStats: answerStats,
+        questIdStats: questIdStats,
         buildFormData: buildFormData,
       }}
     >
