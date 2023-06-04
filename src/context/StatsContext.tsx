@@ -1,13 +1,15 @@
 import { createContext, useState } from 'react';
 import getMostSelected from '../services/stats/getMostSelected';
 import getSelectedCount from '../services/stats/getSelectedCount';
+import getQuestionCounts from '../services/stats/getQuestionCounts';
 
 const init = {
   mostSelected: [],
   selectedCount: [],
+  questionCounts: [],
   getMostSelectedStats: (questionStats: SimpleQuestion[]) => {},
   getCountStats: (answerStats: string[]) => {},
-  getAllCountStats: (answerStats: number[]) => {},
+  getAllCountStats: (questionStats: number[]) => {},
 };
 
 export const StatsContext = createContext<StatsContextType>(init);
@@ -15,6 +17,7 @@ export const StatsContext = createContext<StatsContextType>(init);
 const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
   const [mostSelected, setMostSelected] = useState<MostAnswered[]>([]);
   const [selectedCount, setSelectedCount] = useState<AnswerCount[]>([]);
+  const [questionCounts, setQuestionCounts] = useState<{ angle: number }[][]>([]);
 
   const getMostSelectedStats = async (questionStats: SimpleQuestion[]) => {
     const stats = questionStats.map((question) => getMostSelected(question.questionId));
@@ -38,15 +41,18 @@ const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
     setSelectedCount(aux);
   };
 
-  const getAllCountStats = async (answerStats: number[]) => {
-    const stats = answerStats.map((answer) => fetch_que_et_creis(answer));
+  const getAllCountStats = async (questionStats: number[]) => {
+    const stats = questionStats.map((questionId) => getQuestionCounts(questionId));
     const promiseResult = await Promise.all(stats).then((values) => {
       return values;
     });
-    const aux: tipus_que_et_creis[] = promiseResult.map((value: any, index: number) => {
-      return { objecte_que_vols };
+    //const aux: QuestionCounts[] = promiseResult.map((value: any, index: number) => {
+    const aux = promiseResult.map((value, index: number) => {
+      return value.map((ans) => {
+        return { angle: ans.timesSelected };
+      });
     });
-    setSelectedCount(aux);
+    setQuestionCounts(aux);
   };
 
   return (
@@ -54,6 +60,7 @@ const StatsProvider: React.FC<ContextChildrenType> = ({ children }: any) => {
       value={{
         mostSelected: mostSelected,
         selectedCount: selectedCount,
+        questionCounts: questionCounts,
         getMostSelectedStats: getMostSelectedStats,
         getCountStats: getCountStats,
         getAllCountStats: getAllCountStats,

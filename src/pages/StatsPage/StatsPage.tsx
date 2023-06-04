@@ -5,10 +5,8 @@ import { StatsContext } from '../../context/StatsContext';
 import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
-  const { mostSelected, selectedCount } = useContext(StatsContext);
+  const { mostSelected, selectedCount, questionCounts } = useContext(StatsContext);
   const { get } = useContext(LabelsContext);
-
-  const myData = [{ angle: 2 }, { angle: 5 }, { angle: 2 }];
 
   return (
     <div className={styles.dataResults}>
@@ -38,8 +36,9 @@ const StatsPage: React.FC = () => {
           </p>
         ))}
       </div>
-
-      <RadialChart data={myData} width={300} height={300} />
+      {questionCounts.map((item) => (
+        <RadialChart data={item} width={300} height={300} />
+      ))}
     </div>
   );
 };
