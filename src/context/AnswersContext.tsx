@@ -17,6 +17,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
   const [questIdStats, setQuestIdStats] = useState<number[]>([]);
 
   const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {
+    /* maybe take these variables out and just update state once in the end?? */
     const data: Answer[] = [];
     const questionArray: SimpleQuestion[] = [];
     const answerArray: string[] = [];

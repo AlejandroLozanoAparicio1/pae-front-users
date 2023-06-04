@@ -4,13 +4,12 @@ import Header from './components/Header/Header';
 import AnswersProvider from './context/AnswersContext';
 import i18n from './context/i18n.json';
 import LabelsProvider from './context/LabelsContext';
-import StatsProvider from './context/StatsContext';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormInfoPage from './pages/FormInfoPage/FormInfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
 import fetchForm from './services/forms/getForm';
 
-const loader = async ({ params }: any): Promise<FormLoader> => {
+const formLoader = async ({ params }: any): Promise<FormLoader> => {
   const data: (QuestionType | Information)[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
   return {
@@ -23,31 +22,33 @@ const loader = async ({ params }: any): Promise<FormLoader> => {
 
 const router = createBrowserRouter([
   {
-    path: 'forms/:questionaryName/:pageId',
-    element: <FormInfoPage />,
+    path: '/',
+    element: <Header />,
     errorElement: <ErrorPage />,
-    loader: loader,
-  },
-  {
-    path: '/stats',
-    element: <StatsPage />,
-    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'forms/:questionaryName/:pageId',
+        element: <FormInfoPage />,
+        loader: formLoader,
+      },
+      {
+        path: 'stats',
+        element: <StatsPage />,
+      },
+    ],
   },
 ]);
 
 const App: React.FC = () => {
   return (
     <LabelsProvider labels={i18n} language={'en'}>
-      <div className={styles.app}>
-        <Header />
-        <div className={styles._page_container}>
-          <AnswersProvider>
-            <StatsProvider>
-              <RouterProvider router={router} />
-            </StatsProvider>
-          </AnswersProvider>
+      <AnswersProvider>
+        <div className={styles.app}>
+          <div className={styles._page_container}>
+            <RouterProvider router={router} />
+          </div>
         </div>
-      </div>
+      </AnswersProvider>
     </LabelsProvider>
   );
 };

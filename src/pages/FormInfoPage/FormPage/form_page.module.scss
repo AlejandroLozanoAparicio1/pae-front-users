@@ -33,14 +33,14 @@
     margin: 2rem auto;
     text-align: center;
     padding: 1rem;
-    border: 2px solid $yellow-accent;
+    border: 2px solid $cream;
     position: relative;
     overflow-y: hidden;
 
     .textContainer {
       width: 15%;
       height: 5%;
-      background-color: darken($yellow-accent, 25%);
+      background-color: darken($cream, 25%);
       border-radius: 2rem;
 
       position: absolute;

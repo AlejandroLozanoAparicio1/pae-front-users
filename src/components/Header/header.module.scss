@@ -7,7 +7,6 @@
   z-index: 2;
   justify-content: center;
   flex-direction: column;
-  background-color: $powder-blue;
 
   @media screen and (max-width: 600px) {
     justify-content: space-between;
@@ -92,7 +91,7 @@
       margin-bottom: 4px;
 
       border-radius: 0.1rem;
-      background-color: $blue-accent;
+      background-color: $chocolate-cosmos;
       transition: 250ms ease-in-out;
     }
 

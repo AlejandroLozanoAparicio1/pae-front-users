@@ -4,6 +4,7 @@ import styles from './FormInfoPage.module.scss';
 import FormPage from './FormPage/FormPage';
 
 const FormInfoPage: React.FC = () => {
+  console.log('aaa');
   const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
 
   /* condition for form or info page */
