@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { RadialChart } from 'react-vis';
+import { DiscreteColorLegend } from 'react-vis';
 import { LabelsContext } from '../../context/LabelsContext';
 import { useStats } from '../../hooks/useStats';
 import styles from './stats_page.module.scss';
@@ -37,7 +38,13 @@ const StatsPage: React.FC = () => {
         ))}
       </div>
       {questionCounts.map((item) => (
-        <RadialChart data={item} width={300} height={300} />
+        <div className={styles.chartContainer}>
+          <h2 className={styles.subtitle}>{item.question}</h2>
+          <div className={styles.chart}>
+            <RadialChart data={item.counts} width={300} height={300} />
+            <DiscreteColorLegend height={300} width={300} items={item.answers} />
+          </div>
+        </div>
       ))}
     </div>
   );

@@ -4,7 +4,6 @@ const init = {
   answers: [],
   questionStats: [],
   answerStats: [],
-  questIdStats: [],
   buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {},
 };
 
@@ -14,7 +13,6 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [questionStats, setQuestionStats] = useState<SimpleQuestion[]>([]);
   const [answerStats, setAnswerStats] = useState<string[]>([]);
-  const [questIdStats, setQuestIdStats] = useState<number[]>([]);
 
   const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {
     /* maybe take these variables out and just update state once in the end?? */
@@ -64,7 +62,6 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
     setAnswers(answers.concat(data));
     setQuestionStats(questionStats.concat(questionData));
     setAnswerStats(answerStats.concat(answerData));
-    setQuestIdStats(qIdArray.concat(questIdStats));
   };
 
   return (
@@ -73,7 +70,6 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
         answers: answers,
         questionStats: questionStats,
         answerStats: answerStats,
-        questIdStats: questIdStats,
         buildFormData: buildFormData,
       }}
     >
