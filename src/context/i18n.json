@@ -28,5 +28,55 @@
     "en": "What are the most common answers?",
     "es": "¿Cuales son las respuestas más comunes?",
     "cat": "Quines son les respostes més comunes?"
+  },
+  "consentForm.1": {
+    "en": "Dear participant,",
+    "es": "Estimado participante,",
+    "cat": "Estimat participant"
+  },
+  "consentForm.2": {
+    "en": "This research aims to study the knowledge and perception of risk regarding exposure to RADON in our society, all within the REBORN project.",
+    "es": "Esta investigación busca estudiar el conocimiento y percepción de riesgo en relación con la exposición al RADÓN en nuestra sociedad, todo ello dentro del proyecto REBORN.",
+    "cat": "Aquesta investigació busca estudiar el coneixement i percepció de risc en relació amb l'exposició al RADÓ en la nostra societat, tot això dins del projecte REBORN."
+  },
+  "consentForm.3": {
+    "en": "We will not use your name in any phase of data management. At any time, you can withdraw or choose not to answer any question. The information you provide will be used solely for this survey and will be stored anonymously and confidentially. In accordance with the General Data Protection Regulation (GDPR), all participant data will be destroyed as soon as the data analysis is completed.",
+    "es": "No usaremos su nombre en ninguna fase de la gestión de datos. En todo momento puede retirarse o no responder a alguna pregunta. La información que proporcione será utilizada únicamente para esta encuesta y será guardada de forma anónima y confidencial. De acuerdo con el Reglamento General de Protección de Datos (GDPR), todos los datos de los participantes se destruirán tan pronto se finalice el análisis de datos.",
+    "cat": "No farem servir el seu nom en cap fase de la gestió de dades. En tot moment, pot retirar-se o no respondre a cap pregunta. La informació que proporcioni s'utilitzarà únicament per a aquesta enquesta i s'emmagatzemarà de forma anònima i confidencial. D'acord amb el Reglament General de Protecció de Dades (GDPR), totes les dades dels participants es destruiran tan aviat es finalitzi l'anàlisi de dades."
+  },
+  "consentForm.4": {
+    "en": "Please read the following statements before accepting to participate in the survey.",
+    "es": "Lea las siguientes declaraciones antes de aceptar participar en la encuesta.",
+    "cat": "Llegiu les següents declaracions abans d'acceptar participar en l'enquesta."
+  },
+  "consentForm.5": {
+    "en": "I have read and understood the participant information sheet.",
+    "es": "He leído y entendido la hoja de información del participante.",
+    "cat": "He llegit i entès el full d'informació del participant."
+  },
+  "consentForm.6": {
+    "en": "I understand the purpose of the project and how the results will be used.",
+    "es": "Entiendo de qué se trata el proyecto y para qué se utilizarán los resultados.",
+    "cat": "Entenc de què es tracta el projecte i per a què s'utilitzaran els resultats."
+  },
+  "consentForm.7": {
+    "en": "I am aware that my participation is voluntary, and I can withdraw from the project at any time without providing a reason.",
+    "es": "Sé que mi participación es voluntaria y que puedo retirarme del proyecto en cualquier momento sin dar el motivo.",
+    "cat": "Sóc conscient que la meva participació és voluntària i que puc retirar-me del projecte en qualsevol moment sense donar el motiu."
+  },
+  "consentForm.8": {
+    "en": "I am aware that my information and responses will be kept confidential.",
+    "es": "Soy consciente de que mi información y mis respuestas se mantendrán confidenciales.",
+    "cat": "Sóc conscient que la meva informació i les meves respostes es mantindran confidencials."
+  },
+  "consentForm.9": {
+    "en": "Having read the above information, do you consent to participate in the questionnaire?",
+    "es": "Habiendo leído la información anterior, ¿consiente participar en el cuestionario?",
+    "cat": "Havent llegit la informació anterior, consent participar en el qüestionari?"
+  },
+  "consentForm.button": {
+    "en": "Start",
+    "es": "Empezar",
+    "cat": "Començar"
   }
 }

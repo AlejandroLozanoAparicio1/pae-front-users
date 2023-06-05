@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
-import InfoPage from '../InfoPage/InfoPage';
 import styles from './FormInfoPage.module.scss';
 import FormPage from './FormPage/FormPage';
+import InfoPage from './InfoPage/InfoPage';
 
 const FormInfoPage: React.FC = () => {
   console.log('aaa');

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import AnswersProvider from './context/AnswersContext';
 import i18n from './context/i18n.json';
 import LabelsProvider from './context/LabelsContext';
+import { ConsentPage } from './pages/ConsentPage/ConsentPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FormInfoPage from './pages/FormInfoPage/FormInfoPage';
 import StatsPage from './pages/StatsPage/StatsPage';
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     element: <Header />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: 'forms/:questionaryName',
+        element: <ConsentPage />,
+      },
       {
         path: 'forms/:questionaryName/:pageId',
         element: <FormInfoPage />,
