@@ -2,11 +2,6 @@
 
 .dataResults {
   width: 100vw;
-  display: grid;
-  place-content: center;
-  //should define max width and be able to expand to see all results
-  grid-template-rows: 1fr 1fr;
-
   min-height: 100vh;
   background-color: $ultra-violet;
 
@@ -15,9 +10,10 @@
   }
 
   .container {
+    max-width: 80%;
     padding: 1rem 2rem;
     border: 2px solid $powder-blue;
-    margin: 3rem;
+    margin: 3rem auto;
 
     @media screen and (max-width: 600px) {
       display: block;
@@ -71,6 +67,20 @@
     .divider {
       width: 100%;
       border: 1px solid $powder-blue;
+    }
+  }
+
+  .chartContainer {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+
+    .chart {
+      width: fit-content;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
     }
   }
 }

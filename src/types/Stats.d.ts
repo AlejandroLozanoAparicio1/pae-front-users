@@ -10,6 +10,6 @@ type MostAnswered = {
 
 type QuestionCounts = {
   question: string;
-  answers: string[];
+  answers: { title: string; strokeWidth: number }[];
   counts: { angle: number }[];
 };
