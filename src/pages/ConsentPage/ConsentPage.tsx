@@ -25,10 +25,22 @@ export const ConsentPage: React.FC = () => {
         <br />
         <p>{get('consentForm.4')}</p>
         <ul>
-          <li>{get('consentForm.5')}</li>
-          <li>{get('consentForm.6')}</li>
-          <li>{get('consentForm.7')}</li>
-          <li>{get('consentForm.8')}</li>
+          <li className={styles.li}>
+            <span className={styles.disc}></span>
+            <p>{get('consentForm.5')}</p>
+          </li>
+          <li className={styles.li}>
+            <span className={styles.disc}></span>
+            <p>{get('consentForm.6')}</p>
+          </li>
+          <li className={styles.li}>
+            <span className={styles.disc}></span>
+            <p>{get('consentForm.7')}</p>
+          </li>
+          <li className={styles.li}>
+            <span className={styles.disc}></span>
+            <p>{get('consentForm.8')}</p>
+          </li>
         </ul>
         <br />
         <p>{get('consentForm.9')}</p>

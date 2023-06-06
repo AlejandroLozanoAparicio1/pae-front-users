@@ -24,7 +24,7 @@ const Button: React.FC<ButtonType> = ({ type, text, link, disabled, secondary, o
           type={type}
           onClick={onClick ? onClick : () => {}}
         >
-          {text}
+          <span className={styles.text}>{text}</span>
         </button>
       ) : (
         <Link type={type} className={` ${styles.link} ${buttonStyles}`} to={disabled ? '#' : link}>

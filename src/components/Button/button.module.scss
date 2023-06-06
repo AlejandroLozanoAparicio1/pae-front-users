@@ -15,12 +15,33 @@
 
 .primary {
   background-color: $ultra-violet;
-  color: white;
   border: $ultra-violet solid 1px;
+  position: relative;
+
+  .text {
+    color: white;
+    z-index: 3;
+  }
+
+  &::before {
+    content: ' ';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $hookers-green;
+    transition: 200ms ease-in-out;
+    text-align: center;
+    align-items: center;
+  }
 
   &:hover {
-    background-color: lighten($ultra-violet, 15%);
     cursor: pointer;
+
+    &::before {
+      width: 100%;
+    }
   }
 
   &.disabled {
@@ -30,14 +51,45 @@
 
 .secondary {
   background-color: white;
-  color: $ultra-violet;
   border: 1px $ultra-violet solid;
+  position: relative;
+
+  .text {
+    color: $ultra-violet;
+    z-index: 3;
+    transition-delay: 100ms;
+  }
+
+  &::before {
+    content: ' ';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $ultra-violet;
+    transition: 200ms ease-in-out;
+    text-align: center;
+    align-items: center;
+  }
 
   &:hover {
-    color: lighten($ultra-violet, 10%);
-    border: lighten($ultra-violet, 30%) solid 1px;
     cursor: pointer;
+
+    .text {
+      color: white;
+    }
+
+    &::before {
+      width: 100%;
+    }
   }
+
+  // &:hover {
+  //   color: lighten($ultra-violet, 10%);
+  //   border: lighten($ultra-violet, 30%) solid 1px;
+  //   cursor: pointer;
+  // }
 
   &.disabled {
     border-color: #a0a0a0 !important;

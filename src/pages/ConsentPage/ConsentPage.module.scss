@@ -7,6 +7,7 @@
   margin: 0 auto;
   background-color: $powder-blue;
   color: black;
+  font-size: 1rem;
 
   .textContainer {
     width: 80%;
@@ -19,6 +20,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 600px) {
+      width: 95%;
+      margin: 0 auto;
+      padding: 1.2rem;
+    }
+
+    .li {
+      display: flex;
+      position: relative;
+      margin: 0.2rem 0;
+
+      .disc {
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        position: absolute;
+        background-color: black;
+        top: 35%;
+
+        @media screen and (max-width: 600px) {
+          margin: auto 0.25rem auto 0;
+        }
+      }
+
+      p {
+        margin-left: 1rem;
+      }
+    }
 
     .inputContainer {
       margin: 2rem auto;
