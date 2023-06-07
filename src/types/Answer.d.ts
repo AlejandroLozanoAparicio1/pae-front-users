@@ -13,10 +13,13 @@ type SimpleAnswer = {
 type Option = {
   optionsId: number;
   options: string;
+  optionsList: Option[];
+  traduccion: string;
 };
 
 type PossibleAnswer = {
   questionId: number;
   type: 'checkbox' | 'radio' | 'text';
   option: Option;
+  handleChange?: (value: any) => void;
 };

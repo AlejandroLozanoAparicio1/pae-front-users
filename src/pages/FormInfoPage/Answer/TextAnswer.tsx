@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './answer.module.scss';
 
-const TextAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
+const TextAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type, handleChange }) => {
   const [answerText, setAnswerText] = useState('');
 
   return (
@@ -14,6 +14,7 @@ const TextAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
         name={questionId.toString()}
         id={questionId.toString() + '_' + option.optionsId.toString()}
         required
+        onChange={handleChange}
       />
       <label
         htmlFor={questionId.toString() + '_' + option.optionsId.toString()}

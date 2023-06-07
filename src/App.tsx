@@ -11,10 +11,10 @@ import StatsPage from './pages/StatsPage/StatsPage';
 import fetchForm from './services/forms/getForm';
 
 const formLoader = async ({ params }: any): Promise<FormLoader> => {
-  const data: (QuestionType | Information)[][] = await fetchForm(params.questionaryName);
+  const data: (QuestionResponse | Information)[][] = await fetchForm(params.questionaryName);
   const hasMorePages = data.length - 1 > params.pageId;
   return {
-    form: data[params.pageId] as QuestionType[],
+    form: data[params.pageId] as QuestionResponse[],
     hasMorePages,
     page: parseInt(params.pageId),
     questionaryName: params.questionaryName,

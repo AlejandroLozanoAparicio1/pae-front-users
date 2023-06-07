@@ -1,5 +1,5 @@
 type FormLoader = {
-  form: QuestionType[];
+  form: QuestionResponse[];
   hasMorePages: boolean;
   page: number;
   questionaryName: string;

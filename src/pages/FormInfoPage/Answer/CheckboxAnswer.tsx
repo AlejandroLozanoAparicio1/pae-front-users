@@ -1,7 +1,7 @@
 import styles from './answer.module.scss';
 import checkbox from './checkbox.module.scss';
 
-const CheckboxAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
+const CheckboxAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type, handleChange }) => {
   return (
     <div className={`${styles.answerContainer} ${checkbox.checkbox}`}>
       <input
@@ -11,6 +11,7 @@ const CheckboxAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) 
         name={questionId.toString() + '_' + option.optionsId.toString()}
         id={questionId.toString() + '_' + option.optionsId.toString()}
         className={checkbox.checkboxFlip}
+        onChange={handleChange}
       />
       <label htmlFor={questionId.toString() + '_' + option.optionsId.toString()}>
         <span></span>

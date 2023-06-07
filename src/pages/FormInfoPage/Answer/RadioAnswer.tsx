@@ -1,6 +1,6 @@
 import styles from './answer.module.scss';
 
-const RadioAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => {
+const RadioAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type, handleChange }) => {
   return (
     <div className={styles.answerContainer}>
       <input
@@ -11,6 +11,7 @@ const RadioAnswer: React.FC<PossibleAnswer> = ({ questionId, option, type }) => 
         name={questionId.toString()}
         id={questionId.toString() + '_' + option.optionsId.toString()}
         required
+        onChange={handleChange}
       />
       <label
         htmlFor={questionId.toString() + '_' + option.optionsId.toString()}

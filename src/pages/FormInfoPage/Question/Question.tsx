@@ -7,9 +7,9 @@ const Question: React.FC<QuestionType> = ({ questionId, questionText, type, opti
       <h3 className={styles.question}>{questionText}</h3>
       {optionsList.map((answer) => (
         <Answer
-          option={answer}
           questionId={questionId}
           type={type}
+          option={answer}
           key={questionId + '_' + answer.optionsId}
         />
       ))}

@@ -10,6 +10,7 @@ const FormPage: React.FC<FormLoader> = ({ form, hasMorePages, page, questionaryN
   const navigate = useNavigate();
   const { get } = useContext(LabelsContext);
   const { buildFormData } = useContext(AnswersContext);
+
   const nextPage = hasMorePages ? `/forms/${questionaryName}/${page + 1}` : '/stats';
 
   const handleSubmit = async (e: any) => {
@@ -30,10 +31,11 @@ const FormPage: React.FC<FormLoader> = ({ form, hasMorePages, page, questionaryN
         {form ? (
           form!.map((item: any, index: number) => (
             <Question
-              questionId={item.questionId}
-              questionText={item.questionText}
-              type={item.type}
-              optionsList={item.optionsList}
+              {...item}
+              // questionId={item.questionId}
+              // questionText={item.questionText}
+              // type={item.type}
+              // optionsList={item.optionsList}
               key={item.questionId}
             />
           ))

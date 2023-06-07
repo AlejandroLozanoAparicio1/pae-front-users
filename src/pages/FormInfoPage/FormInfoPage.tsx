@@ -4,7 +4,6 @@ import FormPage from './FormPage/FormPage';
 import InfoPage from './InfoPage/InfoPage';
 
 const FormInfoPage: React.FC = () => {
-  console.log('aaa');
   const { form, hasMorePages, page, questionaryName } = useLoaderData() as FormLoader;
 
   /* condition for form or info page */

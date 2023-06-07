@@ -46,6 +46,12 @@
 
   &.disabled {
     background-color: lighten($ultra-violet, 15%) !important;
+
+    &:hover {
+      &::before {
+        width: 0;
+      }
+    }
   }
 }
 

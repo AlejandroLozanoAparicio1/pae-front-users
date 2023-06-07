@@ -1,6 +1,6 @@
 import { API_HOST } from '../../utils/constants';
 
-const fetchForm = (questionaryName: string): Promise<QuestionType[][]> =>
+const fetchForm = (questionaryName: string): Promise<QuestionResponse[][]> =>
   fetch(`${API_HOST}/GetQuestionary?name=${questionaryName}`, {
     method: 'GET',
     headers: {
