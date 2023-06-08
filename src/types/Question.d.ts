@@ -3,8 +3,10 @@ type SimpleQuestion = {
   questionText: string;
 };
 
-type QuestionType = SimpleQuestion & {
+type QuestionResponse = SimpleQuestion & {
   type: 'checkbox' | 'radio' | 'text';
   optionsList: Option[];
+  page: number;
+  compulsory: boolean | null;
+  questionsRelated: QuestionResponse[];
 };
-type QuestionResponse = QuestionType & { page: number; compulsory: boolean | null };

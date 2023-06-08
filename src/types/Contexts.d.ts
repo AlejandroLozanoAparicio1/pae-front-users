@@ -6,7 +6,7 @@ type AnswerContextType = {
   answers: Answer[];
   questionStats: SimpleQuestion[];
   answerStats: string[];
-  buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => void;
+  buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionResponse[]) => void;
 };
 
 type StatsContextType = {

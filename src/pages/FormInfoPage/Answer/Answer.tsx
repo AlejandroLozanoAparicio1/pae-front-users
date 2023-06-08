@@ -6,20 +6,8 @@ import styles from './answer.module.scss';
 
 const Answer: React.FC<PossibleAnswer> = ({ questionId, type, option }) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-
-  const getValue = (e: any): boolean => {
-    switch (type) {
-      case 'checkbox':
-        return e.target.checked;
-      case 'radio':
-        return e.target.checked;
-      case 'text':
-        return e.target.checked;
-    }
-  };
-
   const handleChange = (e: any) => {
-    const value = getValue(e);
+    const value = e.target.checked;
     setIsChecked(value);
   };
 

@@ -29,16 +29,10 @@ const FormPage: React.FC<FormLoader> = ({ form, hasMorePages, page, questionaryN
     <div className={styles.formGroup}>
       <Form className={styles.form} onSubmit={handleSubmit}>
         {form ? (
-          form!.map((item: any, index: number) => (
-            <Question
-              {...item}
-              // questionId={item.questionId}
-              // questionText={item.questionText}
-              // type={item.type}
-              // optionsList={item.optionsList}
-              key={item.questionId}
-            />
-          ))
+          form!.map((item) => {
+            const questionProps = [item];
+            return <Question data={questionProps} key={item.questionId} />;
+          })
         ) : (
           <div className={styles.loading}>
             <p>Loading...</p>

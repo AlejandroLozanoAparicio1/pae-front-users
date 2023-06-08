@@ -4,7 +4,7 @@ const init = {
   answers: [],
   questionStats: [],
   answerStats: [],
-  buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {},
+  buildFormData: (json: { [k: string]: FormDataEntryValue }, form: QuestionResponse[]) => {},
 };
 
 export const AnswersContext = createContext<AnswerContextType>(init);
@@ -14,7 +14,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
   const [questionStats, setQuestionStats] = useState<SimpleQuestion[]>([]);
   const [answerStats, setAnswerStats] = useState<string[]>([]);
 
-  const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionType[]) => {
+  const buildFormData = (json: { [k: string]: FormDataEntryValue }, form: QuestionResponse[]) => {
     /* maybe take these variables out and just update state once in the end?? */
     const data: Answer[] = [];
     const questionArray: SimpleQuestion[] = [];
