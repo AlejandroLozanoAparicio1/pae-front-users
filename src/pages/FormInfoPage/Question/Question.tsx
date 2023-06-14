@@ -44,7 +44,10 @@ const Question: React.FC<{
     optionsList,
   }: QuestionResponse): JSX.Element => {
     return (
-      <div /*style={{ paddingLeft: '20px' }}*/ className={styles.form}>
+      <div
+        // style={{ paddingLeft: '20px' }}
+        className={styles.form}
+      >
         <h3 className={styles.question}>{questionText}</h3>
         {optionsList.map((answer) => (
           <Answer
