@@ -1,19 +1,36 @@
 import CheckboxAnswer from './CheckboxAnswer';
 import RadioAnswer from './RadioAnswer';
 import TextAnswer from './TextAnswer';
-import styles from './answer.module.scss';
 
 const Answer: React.FC<
   PossibleAnswer & {
     answers: { [k: string]: boolean };
     setAnswers: (value: { [k: string]: boolean }) => void;
+    otherAnswers: string[];
   }
-> = ({ questionId, type, option, answers, setAnswers }) => {
+> = ({ questionId, type, option, answers, setAnswers, otherAnswers }) => {
   const handleChange = (e: any) => {
     const value = e.target.checked;
     const answersCopy = { ...answers };
     answersCopy[option.options] = value;
     setAnswers(answersCopy);
+  };
+
+  const handleChangeRadio = (e: any) => {
+    if (answers[option.options] === undefined) {
+      otherAnswers.forEach((element) => {
+        if (answers[element]) {
+          const answersCopy = { ...answers };
+          answersCopy[element] = !answersCopy[element];
+          setAnswers(answersCopy);
+        }
+      });
+    } else {
+      const value = e.target.checked;
+      const answersCopy = { ...answers };
+      answersCopy[option.options] = value;
+      setAnswers(answersCopy);
+    }
   };
 
   const renderAnswer = (currentOption: Option) => {
@@ -33,7 +50,7 @@ const Answer: React.FC<
             option={currentOption}
             questionId={questionId}
             type={type}
-            handleChange={handleChange}
+            handleChange={handleChangeRadio}
           />
         );
       case 'text':

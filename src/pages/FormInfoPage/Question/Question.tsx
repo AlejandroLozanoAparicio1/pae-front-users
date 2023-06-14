@@ -7,9 +7,13 @@ const Question: React.FC<{
 }> = ({ data }) => {
   const fillFirstAnswers = () =>
     data.reduce((accumulator: any, current) => {
-      current.optionsList.forEach(({ options }) => {
-        accumulator[options] = false;
-      });
+      if (current.answerRelateds.length > 0) {
+        current.optionsList.forEach(({ options }) => {
+          if (current.answerRelateds.some(({ answer }) => answer === options)) {
+            accumulator[options] = false;
+          }
+        });
+      }
       return accumulator;
     }, {});
 
@@ -30,6 +34,9 @@ const Question: React.FC<{
     }, {});
   }, [data, answers]);
 
+  const otherAnswers = (optionsList: Option[]): string[] =>
+    optionsList.map(({ options }) => options);
+
   const renderQuestion = ({
     questionId,
     questionText,
@@ -47,6 +54,7 @@ const Question: React.FC<{
             key={questionId + '_' + answer.optionsId}
             answers={answers}
             setAnswers={setAnswers}
+            otherAnswers={otherAnswers(optionsList)}
           />
         ))}
       </div>
