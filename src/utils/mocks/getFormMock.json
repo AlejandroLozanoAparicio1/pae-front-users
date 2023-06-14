@@ -1,68 +1,95 @@
 [
-  {
-    "questionText": "Señale la/s opción/es que más se ajusten a su situación:",
-    "type": "checkbox",
-    "optionsList": [
-      {
-        "text": "Soy paciente que padece/ha padecido cáncer"
-      },
-      {
-        "text": "Soy familiar/conocido de un paciente con cáncer"
-      },
-      {
-        "text": "Soy un profesional sanitario que trabaja con pacientes con cáncer de pulmón (médico/enfermería, etc)"
-      },
-      {
-        "text": "Me dedico a la investigación del radón en cáncer de pulmón"
-      },
-      {
-        "text": "Trabajo en arquitectura/construcción de edificios"
-      },
-      {
-        "text": "Ninguna de las previas"
-      }
-    ]
-  },
-  {
-    "questionText": "¿Cuál es su género?",
-    "type": "radio",
-    "optionsList": [
-      {
-        "text": "Mujer"
-      },
-      {
-        "text": "Hombre"
-      },
-      {
-        "text": "No binario"
-      },
-      {
-        "text": "Prefiero no contestar"
-      }
-    ]
-  },
-  {
-    "questionText": "Indique su nivel de estudios",
-    "type": "radio",
-    "optionsList": [
-      {
-        "text": "No tengo estudios"
-      },
-      {
-        "text": "Educación obligatoria"
-      },
-      {
-        "text": "Bachillerato/escuela superior"
-      },
-      {
-        "text": "Licenciatura/grado universitario"
-      },
-      {
-        "text": "Grado medio/superior (FP)"
-      },
-      {
-        "text": "Estudios postgrado"
-      }
-    ]
-  }
+  [
+    {
+      "questionId": 402,
+      "questionText": "7. ¿Actualmente usted fuma?",
+      "type": "radio",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 407,
+          "optionsList": [],
+          "options": "Sí, actualmente follo o hace menos de un año que dejé de fumar",
+          "traduccion": []
+        },
+        {
+          "optionsId": 408,
+          "optionsList": [],
+          "options": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)",
+          "traduccion": []
+        },
+        {
+          "optionsId": 409,
+          "optionsList": [],
+          "options": "Nunca he fumado",
+          "traduccion": []
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [
+        {
+          "id": 1,
+          "questionsRelated": [
+            {
+              "questionId": 403,
+              "questionText": "¿Cuántos cigarrillos de media al día folla aproximadamente?",
+              "type": "text",
+              "page": 0,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": []
+            },
+            {
+              "questionId": 404,
+              "questionText": "¿A qué edad empezó a follar?",
+              "type": "text",
+              "page": 0,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": []
+            },
+            {
+              "questionId": 405,
+              "questionText": "8. ¿Qué tipo de tabaco folla o ha follado?",
+              "type": "checkbox",
+              "page": 0,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 402,
+                  "optionsList": []
+                },
+                {
+                  "optionsId": 403,
+                  "optionsList": []
+                },
+                {
+                  "optionsId": 404,
+                  "optionsList": []
+                },
+                {
+                  "optionsId": 405,
+                  "optionsList": []
+                },
+                {
+                  "optionsId": 406,
+                  "optionsList": []
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": []
+            }
+          ],
+          "answer": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)"
+        }
+      ],
+      "traduccion": []
+    }
+  ]
 ]

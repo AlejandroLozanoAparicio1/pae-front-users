@@ -1,9 +1,35 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Answer from '../Answer/Answer';
 import styles from './question.module.scss';
 
-const Question: React.FC<{ data: QuestionResponse[] }> = ({ data }) => {
-  const [questionRelations, setQuestionRelations] = useState<{ [k: number]: boolean }>({});
+const Question: React.FC<{
+  data: QuestionResponse[];
+}> = ({ data }) => {
+  const fillFirstAnswers = () =>
+    data.reduce((accumulator: any, current) => {
+      current.optionsList.forEach(({ options }) => {
+        accumulator[options] = false;
+      });
+      return accumulator;
+    }, {});
+
+  const [answers, setAnswers] = useState<{ [k: string]: boolean }>(fillFirstAnswers());
+
+  const questionRelations: {
+    [k: string]: { shouldRender: boolean; questions: QuestionResponse[] };
+  } = useMemo(() => {
+    return data.reduce((accumulator: any, { answerRelateds }) => {
+      answerRelateds.forEach(({ answer, questionsRelated }) => {
+        const currentQuestions = {
+          shouldRender: answers[answer],
+          questions: questionsRelated,
+        };
+        accumulator[answer] = currentQuestions;
+      });
+      return accumulator;
+    }, {});
+  }, [data, answers]);
+
   const renderQuestion = ({
     questionId,
     questionText,
@@ -11,7 +37,7 @@ const Question: React.FC<{ data: QuestionResponse[] }> = ({ data }) => {
     optionsList,
   }: QuestionResponse): JSX.Element => {
     return (
-      <div style={{ paddingLeft: '20px' }} className={styles.form}>
+      <div /*style={{ paddingLeft: '20px' }}*/ className={styles.form}>
         <h3 className={styles.question}>{questionText}</h3>
         {optionsList.map((answer) => (
           <Answer
@@ -19,16 +45,12 @@ const Question: React.FC<{ data: QuestionResponse[] }> = ({ data }) => {
             type={type}
             option={answer}
             key={questionId + '_' + answer.optionsId}
+            answers={answers}
+            setAnswers={setAnswers}
           />
         ))}
       </div>
     );
-  };
-
-  const newQuest = (questionId: number) => {
-    const aux = { ...questionRelations };
-    aux[questionId] = false;
-    setQuestionRelations(aux);
   };
 
   return (
@@ -37,9 +59,13 @@ const Question: React.FC<{ data: QuestionResponse[] }> = ({ data }) => {
         return (
           <>
             {renderQuestion(question)}
-            {question.questionsRelated && questionRelations[question.questionId] ? (
-              <Question data={question.questionsRelated} />
-            ) : null}
+            {question.answerRelateds.map(
+              (object) =>
+                questionRelations[object.answer] &&
+                questionRelations[object.answer].shouldRender && (
+                  <Question data={questionRelations[object.answer].questions} />
+                ),
+            )}
           </>
         );
       })}

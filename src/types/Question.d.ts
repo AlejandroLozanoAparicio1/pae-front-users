@@ -8,5 +8,9 @@ type QuestionResponse = SimpleQuestion & {
   optionsList: Option[];
   page: number;
   compulsory: boolean | null;
-  questionsRelated: QuestionResponse[];
+  answerRelateds: {
+    id: number;
+    answer: string;
+    questionsRelated: QuestionResponse[];
+  }[];
 };

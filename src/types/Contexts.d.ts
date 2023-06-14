@@ -29,3 +29,8 @@ type LabelsContextChildrenType = {
   labels: { [k: string]: { [k: string]: string } };
   language: Language;
 };
+
+type QuestionRelationsContextType = {
+  questionRelations: { [k: number]: boolean };
+  handleQuestionChange: (questionId: number, value: boolean = false) => void;
+};

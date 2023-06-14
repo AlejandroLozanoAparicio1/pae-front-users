@@ -13,7 +13,6 @@ type SimpleAnswer = {
 type Option = {
   optionsId: number;
   options: string;
-  optionsList: Option[];
   traduccion: string;
 };
 

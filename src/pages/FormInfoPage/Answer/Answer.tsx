@@ -1,14 +1,19 @@
-import { useState } from 'react';
 import CheckboxAnswer from './CheckboxAnswer';
 import RadioAnswer from './RadioAnswer';
 import TextAnswer from './TextAnswer';
 import styles from './answer.module.scss';
 
-const Answer: React.FC<PossibleAnswer> = ({ questionId, type, option }) => {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
+const Answer: React.FC<
+  PossibleAnswer & {
+    answers: { [k: string]: boolean };
+    setAnswers: (value: { [k: string]: boolean }) => void;
+  }
+> = ({ questionId, type, option, answers, setAnswers }) => {
   const handleChange = (e: any) => {
     const value = e.target.checked;
-    setIsChecked(value);
+    const answersCopy = { ...answers };
+    answersCopy[option.options] = value;
+    setAnswers(answersCopy);
   };
 
   const renderAnswer = (currentOption: Option) => {
@@ -43,16 +48,7 @@ const Answer: React.FC<PossibleAnswer> = ({ questionId, type, option }) => {
     }
   };
 
-  return (
-    <>
-      {renderAnswer(option)}
-      {option.optionsList && isChecked && (
-        <div className={styles.revealedOpt}>
-          {option.optionsList.map((revealedOpt) => renderAnswer(revealedOpt))}
-        </div>
-      )}
-    </>
-  );
+  return <>{renderAnswer(option)}</>;
 };
 
 export default Answer;
