@@ -11,7 +11,7 @@ export const ConsentPage: React.FC = () => {
   const navigate = useNavigate();
 
   const handleBtnClick = () => {
-    navigate('/forms/demo1/0');
+    navigate('/forms/hospitalclinic/0');
   };
 
   return (

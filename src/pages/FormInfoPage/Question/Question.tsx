@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import Answer from '../Answer/Answer';
+import TextAnswer from '../Answer/TextAnswer';
 import styles from './question.module.scss';
 
 const Question: React.FC<{
@@ -44,22 +45,36 @@ const Question: React.FC<{
     optionsList,
   }: QuestionResponse): JSX.Element => {
     return (
-      <div
-        // style={{ paddingLeft: '20px' }}
-        className={styles.form}
-      >
+      <div className={styles.form}>
         <h3 className={styles.question}>{questionText}</h3>
-        {optionsList.map((answer) => (
-          <Answer
+        {optionsList.map((answer) => {
+          return (
+            <Answer
+              questionId={questionId}
+              type={type}
+              option={answer}
+              key={questionId + '_' + answer.optionsId}
+              answers={answers}
+              setAnswers={setAnswers}
+              otherAnswers={otherAnswers(optionsList)}
+            />
+          );
+        })}
+        {type === 'text' && (
+          <TextAnswer
             questionId={questionId}
             type={type}
-            option={answer}
-            key={questionId + '_' + answer.optionsId}
-            answers={answers}
-            setAnswers={setAnswers}
-            otherAnswers={otherAnswers(optionsList)}
+            option={{
+              optionsId: -1,
+              options: '',
+              traduccion: [
+                { traduccion: '', idioma: 'en' },
+                { traduccion: '', idioma: 'cat' },
+              ],
+            }}
+            key={questionId + '_text'}
           />
-        ))}
+        )}
       </div>
     );
   };

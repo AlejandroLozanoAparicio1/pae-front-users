@@ -1,95 +1,3263 @@
 [
   [
     {
-      "questionId": 402,
-      "questionText": "7. ¿Actualmente usted fuma?",
+      "questionId": 147,
+      "questionText": "1. ¿Cuál es su género?",
       "type": "radio",
       "page": 0,
       "compulsory": null,
       "optionsList": [
         {
-          "optionsId": 407,
+          "optionsId": 246,
           "optionsList": [],
-          "options": "Sí, actualmente follo o hace menos de un año que dejé de fumar",
-          "traduccion": []
+          "options": "Masculino",
+          "traduccion": [
+            {
+              "id": 297,
+              "traduccion": "Masculí",
+              "idioma": "cat"
+            },
+            {
+              "id": 298,
+              "traduccion": "Male",
+              "idioma": "en"
+            }
+          ]
         },
         {
-          "optionsId": 408,
+          "optionsId": 247,
           "optionsList": [],
-          "options": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)",
-          "traduccion": []
+          "options": "Femenino",
+          "traduccion": [
+            {
+              "id": 299,
+              "traduccion": "Femení",
+              "idioma": "cat"
+            },
+            {
+              "id": 300,
+              "traduccion": "Female",
+              "idioma": "en"
+            }
+          ]
         },
         {
-          "optionsId": 409,
+          "optionsId": 248,
           "optionsList": [],
-          "options": "Nunca he fumado",
-          "traduccion": []
+          "options": "No binario",
+          "traduccion": [
+            {
+              "id": 301,
+              "traduccion": "No binari",
+              "idioma": "cat"
+            },
+            {
+              "id": 302,
+              "traduccion": "Non-binary",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 249,
+          "optionsList": [],
+          "options": "Prefiero no responder",
+          "traduccion": [
+            {
+              "id": 303,
+              "traduccion": "Prefereixo no respondre",
+              "idioma": "cat"
+            },
+            {
+              "id": 304,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": {
+        "id": 6,
+        "information": "INTRODUCCIÓN: Primero queremos hacerle unas preguntas sobre usted.",
+        "videoUrl": null,
+        "imageName": null,
+        "traduccion": []
+      },
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 305,
+          "traduccion": "Quin és el seu gènere?",
+          "idioma": "cat"
+        },
+        {
+          "id": 306,
+          "traduccion": "What is your gender?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 148,
+      "questionText": "2. Año de nacimiento:",
+      "type": "text",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 307,
+          "traduccion": "Any de naixement",
+          "idioma": "cat"
+        },
+        {
+          "id": 308,
+          "traduccion": "Year of birth",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 149,
+      "questionText": "3. Mi estado civil es:",
+      "type": "radio",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 250,
+          "optionsList": [],
+          "options": "Soltero/a",
+          "traduccion": [
+            {
+              "id": 309,
+              "traduccion": "Solter/a",
+              "idioma": "cat"
+            },
+            {
+              "id": 310,
+              "traduccion": "Single",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 251,
+          "optionsList": [],
+          "options": "Casado/a",
+          "traduccion": [
+            {
+              "id": 311,
+              "traduccion": "Casat/da",
+              "idioma": "cat"
+            },
+            {
+              "id": 312,
+              "traduccion": "Married",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 252,
+          "optionsList": [],
+          "options": "Viudo/a",
+          "traduccion": [
+            {
+              "id": 313,
+              "traduccion": "Vidu/a",
+              "idioma": "cat"
+            },
+            {
+              "id": 314,
+              "traduccion": "Widower",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 253,
+          "optionsList": [],
+          "options": "Separado/a",
+          "traduccion": [
+            {
+              "id": 315,
+              "traduccion": "Separat/da",
+              "idioma": "cat"
+            },
+            {
+              "id": 316,
+              "traduccion": "Separated",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 254,
+          "optionsList": [],
+          "options": "Prefiero no responder",
+          "traduccion": [
+            {
+              "id": 317,
+              "traduccion": "Prefereixo no respondre",
+              "idioma": "cat"
+            },
+            {
+              "id": 318,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 319,
+          "traduccion": "El meu estat civil és:",
+          "idioma": "cat"
+        },
+        {
+          "id": 320,
+          "traduccion": "My marital status is:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 150,
+      "questionText": "4. Soy originario de:",
+      "type": "radio",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 255,
+          "optionsList": [],
+          "options": "Europa",
+          "traduccion": [
+            {
+              "id": 321,
+              "traduccion": "Europa",
+              "idioma": "cat"
+            },
+            {
+              "id": 322,
+              "traduccion": "Europe",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 256,
+          "optionsList": [],
+          "options": "África",
+          "traduccion": [
+            {
+              "id": 323,
+              "traduccion": "Àfrica",
+              "idioma": "cat"
+            },
+            {
+              "id": 324,
+              "traduccion": "Africa",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 257,
+          "optionsList": [],
+          "options": "América Latina",
+          "traduccion": [
+            {
+              "id": 325,
+              "traduccion": "Amèrica Llatina",
+              "idioma": "cat"
+            },
+            {
+              "id": 326,
+              "traduccion": "Latin America",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 258,
+          "optionsList": [],
+          "options": "América del Norte",
+          "traduccion": [
+            {
+              "id": 327,
+              "traduccion": "Amèrica del Nord",
+              "idioma": "cat"
+            },
+            {
+              "id": 328,
+              "traduccion": "North America",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 259,
+          "optionsList": [],
+          "options": "Asia",
+          "traduccion": [
+            {
+              "id": 329,
+              "traduccion": "Àsia",
+              "idioma": "cat"
+            },
+            {
+              "id": 330,
+              "traduccion": "Asia",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 260,
+          "optionsList": [],
+          "options": "Oceanía",
+          "traduccion": [
+            {
+              "id": 331,
+              "traduccion": "Oceania",
+              "idioma": "cat"
+            },
+            {
+              "id": 332,
+              "traduccion": "Oceania",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 261,
+          "optionsList": [],
+          "options": "Prefiero no responder",
+          "traduccion": [
+            {
+              "id": 333,
+              "traduccion": "Prefereixo no respondre",
+              "idioma": "cat"
+            },
+            {
+              "id": 334,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 335,
+          "traduccion": "Sóc originari de:",
+          "idioma": "cat"
+        },
+        {
+          "id": 336,
+          "traduccion": "I am originally from:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 151,
+      "questionText": "5. En relación con su nivel de estudios, señale cuál es el diploma más alto que ha obtenido:",
+      "type": "radio",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 262,
+          "optionsList": [],
+          "options": "Educación primaria (Graduado escolar)",
+          "traduccion": [
+            {
+              "id": 337,
+              "traduccion": "Educació primària (Graduat escolar)",
+              "idioma": "cat"
+            },
+            {
+              "id": 338,
+              "traduccion": "Primary education (School graduate)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 263,
+          "optionsList": [],
+          "options": "Educación secundaria obligatoria (Instituto)",
+          "traduccion": [
+            {
+              "id": 339,
+              "traduccion": "Educació secundària obligatòria (Institut)",
+              "idioma": "cat"
+            },
+            {
+              "id": 340,
+              "traduccion": "Compulsory secondary education (Institute)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 264,
+          "optionsList": [],
+          "options": "Bachillerato/Formación profesional (ciclo formativo)",
+          "traduccion": [
+            {
+              "id": 341,
+              "traduccion": "Batxillerat/Formació professional (cicle formatiu)",
+              "idioma": "cat"
+            },
+            {
+              "id": 342,
+              "traduccion": "Baccalaureate/Vocational Training (training cycle)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 265,
+          "optionsList": [],
+          "options": "Licenciatura/grado universitario",
+          "traduccion": [
+            {
+              "id": 343,
+              "traduccion": "Llicenciatura/grau universitari",
+              "idioma": "cat"
+            },
+            {
+              "id": 344,
+              "traduccion": "Bachelor's/University Degree",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 266,
+          "optionsList": [],
+          "options": "Máster/Doctorado",
+          "traduccion": [
+            {
+              "id": 345,
+              "traduccion": "Master/Doctorat",
+              "idioma": "cat"
+            },
+            {
+              "id": 346,
+              "traduccion": "Master/Doctorate degree",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 267,
+          "optionsList": [],
+          "options": "Otro:",
+          "traduccion": [
+            {
+              "id": 347,
+              "traduccion": "Altres:",
+              "idioma": "cat"
+            },
+            {
+              "id": 348,
+              "traduccion": "Others:",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 268,
+          "optionsList": [],
+          "options": "Prefiero no responder",
+          "traduccion": [
+            {
+              "id": 349,
+              "traduccion": "Prefereixo no respondre",
+              "idioma": "cat"
+            },
+            {
+              "id": 350,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 351,
+          "traduccion": "En relació amb el nivell d'estudis, assenyaleu quin és el diploma més alt que heu obtingut:",
+          "idioma": "cat"
+        },
+        {
+          "id": 352,
+          "traduccion": "In relation to your level of education, indicate the highest diploma you have obtained:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 152,
+      "questionText": "6. Señale la opción/es que más se ajuste/n a su situación (puede marcar más de una opción):",
+      "type": "checkbox",
+      "page": 0,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 274,
+          "optionsList": [],
+          "options": "Soy familiar o allegado de un paciente con cáncer",
+          "traduccion": [
+            {
+              "id": 357,
+              "traduccion": "Sóc familiar o proper d'un pacient amb càncer",
+              "idioma": "cat"
+            },
+            {
+              "id": 358,
+              "traduccion": "I am a relative or close friend of a cancer patient",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 275,
+          "optionsList": [],
+          "options": "Soy paciente que padece/ha padecido cáncer",
+          "traduccion": [
+            {
+              "id": 359,
+              "traduccion": "Sóc pacient que pateix/ha patit càncer",
+              "idioma": "cat"
+            },
+            {
+              "id": 360,
+              "traduccion": "I am a patient who has/had cancer",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 276,
+          "optionsList": [],
+          "options": "Soy un profesional sanitario que trabaja con pacientes con cáncer (médico/enfermería, etc.)",
+          "traduccion": [
+            {
+              "id": 361,
+              "traduccion": "Sóc un professional sanitari que treballa amb pacients amb càncer (metge/infermeria, etc.)",
+              "idioma": "cat"
+            },
+            {
+              "id": 362,
+              "traduccion": "I am a healthcare professional who works with cancer patients (doctor/nurse, etc.)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 277,
+          "optionsList": [],
+          "options": "Me dedico a la investigación del radón",
+          "traduccion": [
+            {
+              "id": 363,
+              "traduccion": "Em dedico a la investigació del radó",
+              "idioma": "cat"
+            },
+            {
+              "id": 364,
+              "traduccion": "I am dedicated to radon research",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 278,
+          "optionsList": [],
+          "options": "Me dedico a un trabajo relacionado con la planificación/construcción de edificios (arquitecto, obrero...)",
+          "traduccion": [
+            {
+              "id": 365,
+              "traduccion": "Em dedico a una feina relacionada amb la planificació/construcció d'edificis (arquitecte, obrer...)",
+              "idioma": "cat"
+            },
+            {
+              "id": 366,
+              "traduccion": "I dedicate myself to a job related to the planning/construction of buildings (architect, worker...)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 279,
+          "optionsList": [],
+          "options": "Ninguna de las opciones previas ",
+          "traduccion": [
+            {
+              "id": 367,
+              "traduccion": "Cap de les opcions prèvies",
+              "idioma": "cat"
+            },
+            {
+              "id": 368,
+              "traduccion": "None of the above options",
+              "idioma": "en"
+            }
+          ]
         }
       ],
       "questionInformation": null,
       "answerRelateds": [
         {
-          "id": 1,
+          "id": 60,
           "questionsRelated": [
             {
-              "questionId": 403,
-              "questionText": "¿Cuántos cigarrillos de media al día folla aproximadamente?",
-              "type": "text",
-              "page": 0,
-              "compulsory": null,
-              "optionsList": [],
-              "questionInformation": null,
-              "answerRelateds": [],
-              "traduccion": []
-            },
-            {
-              "questionId": 404,
-              "questionText": "¿A qué edad empezó a follar?",
-              "type": "text",
-              "page": 0,
-              "compulsory": null,
-              "optionsList": [],
-              "questionInformation": null,
-              "answerRelateds": [],
-              "traduccion": []
-            },
-            {
-              "questionId": 405,
-              "questionText": "8. ¿Qué tipo de tabaco folla o ha follado?",
-              "type": "checkbox",
+              "questionId": 153,
+              "questionText": "¿Qué relación tienes con el paciente con cáncer?",
+              "type": "radio",
               "page": 0,
               "compulsory": null,
               "optionsList": [
                 {
-                  "optionsId": 402,
-                  "optionsList": []
+                  "optionsId": 269,
+                  "optionsList": [],
+                  "options": "Pareja",
+                  "traduccion": [
+                    { "traduccion": "Parella", "idioma": "cat" },
+                    { "traduccion": "Partner", "idioma": "en" }
+                  ]
                 },
                 {
-                  "optionsId": 403,
-                  "optionsList": []
+                  "optionsId": 270,
+                  "optionsList": [],
+                  "options": "Familiar",
+                  "traduccion": [
+                    { "traduccion": "Familiar", "idioma": "cat" },
+                    { "traduccion": "Relative", "idioma": "en" }
+                  ]
                 },
                 {
-                  "optionsId": 404,
-                  "optionsList": []
-                },
-                {
-                  "optionsId": 405,
-                  "optionsList": []
-                },
-                {
-                  "optionsId": 406,
-                  "optionsList": []
+                  "optionsId": 271,
+                  "optionsList": [],
+                  "options": "Amigo",
+                  "traduccion": [
+                    { "traduccion": "Amic", "idioma": "cat" },
+                    { "traduccion": "Friend", "idioma": "en" }
+                  ]
                 }
               ],
               "questionInformation": null,
               "answerRelateds": [],
-              "traduccion": []
+              "traduccion": [
+                {
+                  "id": 353,
+                  "traduccion": "Quina relació tens amb el pacient amb càncer?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 354,
+                  "traduccion": "What’s your relationship with the cancer patient?",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Soy familiar o allegado de un paciente con cáncer"
+        },
+        {
+          "id": 61,
+          "questionsRelated": [
+            {
+              "questionId": 154,
+              "questionText": "¿Qué tipo de cáncer padeces/has padecido?",
+              "type": "radio",
+              "page": 0,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 272,
+                  "optionsList": [],
+                  "options": "Cáncer de pulmón",
+                  "traduccion": [
+                    { "traduccion": "Càncer de pulmó", "idioma": "cat" },
+                    { "traduccion": "Lung cancer", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 273,
+                  "optionsList": [],
+                  "options": "Otros",
+                  "traduccion": [
+                    { "traduccion": "Altres", "idioma": "cat" },
+                    { "traduccion": "Others", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 355,
+                  "traduccion": "Quin tipus de càncer pateixes/has patit?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 356,
+                  "traduccion": "What type of cancer do you have/have you had?",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Soy paciente que padece/ha padecido cáncer"
+        }
+      ],
+      "traduccion": [
+        {
+          "id": 369,
+          "traduccion": "Assenyaleu l'opció/ns que més s'ajusti/n a la vostra situació (podeu marcar més d'una opció):",
+          "idioma": "cat"
+        },
+        {
+          "id": 370,
+          "traduccion": "Indicate the option/s that best suits your situation (you can mark more than one option):",
+          "idioma": "en"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "questionId": 155,
+      "questionText": "7. ¿Actualmente usted fuma?",
+      "type": "radio",
+      "page": 1,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 290,
+          "optionsList": [],
+          "options": "Sí, actualmente fumo o hace menos de un año que dejé de fumar",
+          "traduccion": [
+            {
+              "id": 385,
+              "traduccion": "Sí, actualment fumo o fa menys d'un any que vaig deixar de fumar",
+              "idioma": "cat"
+            },
+            {
+              "id": 386,
+              "traduccion": "Yes, I currently smoke or it has been less than a year since I quit",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 291,
+          "optionsList": [],
+          "options": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)",
+          "traduccion": [
+            {
+              "id": 387,
+              "traduccion": "No, però fumava prèviament (marqueu aquesta opció si fa més d'un any que vau deixar de fumar)",
+              "idioma": "cat"
+            },
+            {
+              "id": 388,
+              "traduccion": "No, but I smoked previously (check this option if you quit smoking more than a year ago)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 292,
+          "optionsList": [],
+          "options": "Nunca he fumado",
+          "traduccion": [
+            {
+              "id": 389,
+              "traduccion": "Mai he fumat",
+              "idioma": "cat"
+            },
+            {
+              "id": 390,
+              "traduccion": "I have never smoked",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": {
+        "id": 7,
+        "information": "A continuación, le realizaremos unas preguntas sobre tabaquismo.",
+        "videoUrl": null,
+        "imageName": null,
+        "traduccion": []
+      },
+      "answerRelateds": [
+        {
+          "id": 62,
+          "questionsRelated": [
+            {
+              "questionId": 156,
+              "questionText": "¿Cuántos cigarrillos de media al día fuma aproximadamente?",
+              "type": "text",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 371,
+                  "traduccion": "Quantes cigarretes de mitjana al dia fuma aproximadament?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 372,
+                  "traduccion": "Approximately, how many cigarettes do you smoke on average a day?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 157,
+              "questionText": "¿A qué edad empezó a fumar?",
+              "type": "text",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 373,
+                  "traduccion": "A quina edat va començar a fumar?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 374,
+                  "traduccion": "At what age did you start smoking?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 158,
+              "questionText": "¿Qué tipo de tabaco fuma o ha fumado?",
+              "type": "checkbox",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 280,
+                  "optionsList": [],
+                  "options": "Rubio",
+                  "traduccion": [
+                    { "traduccion": "Ros", "idioma": "cat" },
+                    { "traduccion": "Blond", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 281,
+                  "optionsList": [],
+                  "options": "Negro",
+                  "traduccion": [
+                    { "traduccion": "Negre", "idioma": "cat" },
+                    { "traduccion": "Black", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 282,
+                  "optionsList": [],
+                  "options": "Tabaco para liar",
+                  "traduccion": [
+                    { "traduccion": "Tabac de liar", "idioma": "cat" },
+                    { "traduccion": "Rolling tobacco", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 283,
+                  "optionsList": [],
+                  "options": "Pipa",
+                  "traduccion": [
+                    { "traduccion": "Pipa", "idioma": "cat" },
+                    { "traduccion": "Pipe", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 284,
+                  "optionsList": [],
+                  "isText": true,
+                  "options": "Otros:",
+                  "traduccion": [
+                    { "traduccion": "Altres:", "idioma": "cat" },
+                    { "traduccion": "Others:", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 375,
+                  "traduccion": "Quin tipus de tabac fuma o ha fumat?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 376,
+                  "traduccion": "What kind of tobacco do you smoke or have you smoked?",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Sí, actualmente fumo o hace menos de un año que dejé de fumar"
+        },
+        {
+          "id": 63,
+          "questionsRelated": [
+            {
+              "questionId": 159,
+              "questionText": "¿Cuántos cigarrillos de media al día fumaba aproximadamente?",
+              "type": "text",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 377,
+                  "traduccion": "Quantes cigarretes de mitjana al dia fumava aproximadament?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 378,
+                  "traduccion": "Approximately, how many cigarettes a day did you smoke on average?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 160,
+              "questionText": "¿A qué edad empezó a fumar?",
+              "type": "text",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 379,
+                  "traduccion": "A quina edat va començar a fumar?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 380,
+                  "traduccion": "At what age did you start smoking?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 161,
+              "questionText": "¿A qué edad dejó de fumar?",
+              "type": "text",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 381,
+                  "traduccion": "A quina edat va deixar de fumar?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 382,
+                  "traduccion": "At what age did you quit smoking?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 162,
+              "questionText": "¿Qué tipo de tabaco fuma o ha fumado?",
+              "type": "checkbox",
+              "page": 1,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 285,
+                  "optionsList": [],
+                  "options": "Rubio",
+                  "traduccion": [
+                    { "traduccion": "Ros", "idioma": "cat" },
+                    { "traduccion": "Blond", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 286,
+                  "optionsList": [],
+                  "options": "Negro",
+                  "traduccion": [
+                    { "traduccion": "Negre", "idioma": "cat" },
+                    { "traduccion": "Black", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 287,
+                  "optionsList": [],
+                  "options": "Tabaco para liar",
+                  "traduccion": [
+                    { "traduccion": "Tabac de liar", "idioma": "cat" },
+                    { "traduccion": "Rolling tobacco", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 288,
+                  "optionsList": [],
+                  "options": "Pipa",
+                  "traduccion": [
+                    { "traduccion": "Pipa", "idioma": "cat" },
+                    { "traduccion": "Pipe", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 289,
+                  "optionsList": [],
+                  "isText": true,
+                  "options": "Otros:",
+                  "traduccion": [
+                    { "traduccion": "Altres:", "idioma": "cat" },
+                    { "traduccion": "Others:", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 383,
+                  "traduccion": "Quin tipus de tabac fuma o ha fumat?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 384,
+                  "traduccion": "What kind of tobacco do you smoke or have you smoked?",
+                  "idioma": "en"
+                }
+              ]
             }
           ],
           "answer": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)"
         }
       ],
-      "traduccion": []
+      "traduccion": [
+        {
+          "id": 391,
+          "traduccion": "Actualment fuma?",
+          "idioma": "cat"
+        },
+        {
+          "id": 392,
+          "traduccion": "Do you currently smoke?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 163,
+      "questionText": "8. ¿Ha fumado o fuma otros productos a parte de cigarrillos?",
+      "type": "checkbox",
+      "page": 1,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 293,
+          "optionsList": [],
+          "options": "Puros",
+          "traduccion": [
+            {
+              "id": 393,
+              "traduccion": "Cigars",
+              "idioma": "cat"
+            },
+            {
+              "id": 394,
+              "traduccion": "Cigars",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 294,
+          "optionsList": [],
+          "options": "Vaper/Cigarrillo electrónico",
+          "traduccion": [
+            {
+              "id": 395,
+              "traduccion": "Vaper/Cigarret electrònic",
+              "idioma": "cat"
+            },
+            {
+              "id": 396,
+              "traduccion": "Vaper/Electronic cigarette",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 295,
+          "optionsList": [],
+          "options": "Cannabis",
+          "traduccion": [
+            {
+              "id": 397,
+              "traduccion": "Cannabis",
+              "idioma": "cat"
+            },
+            {
+              "id": 398,
+              "traduccion": "Cannabis",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 296,
+          "optionsList": [],
+          "options": "Otros:",
+          "traduccion": [
+            {
+              "id": 399,
+              "traduccion": "Altres:",
+              "idioma": "cat"
+            },
+            {
+              "id": 400,
+              "traduccion": "Others:",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 297,
+          "optionsList": [],
+          "options": "No",
+          "traduccion": [
+            {
+              "id": 401,
+              "traduccion": "No",
+              "idioma": "cat"
+            },
+            {
+              "id": 402,
+              "traduccion": "No",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 403,
+          "traduccion": "Ha fumat o fuma altres productes a part de cigarretes?",
+          "idioma": "cat"
+        },
+        {
+          "id": 404,
+          "traduccion": "Have you smoked or do you smoke other products besides cigarettes?",
+          "idioma": "en"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "questionId": 164,
+      "questionText": "9. ¿Cuál de las siguientes categorías describe mejor su estatus laboral?",
+      "type": "checkbox",
+      "page": 2,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 298,
+          "optionsList": [],
+          "options": "Amo/a de casa",
+          "traduccion": [
+            {
+              "id": 405,
+              "traduccion": "Amo/a de casa",
+              "idioma": "cat"
+            },
+            {
+              "id": 406,
+              "traduccion": "Househusband/wife",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 299,
+          "optionsList": [],
+          "options": "Trabajando en activo",
+          "traduccion": [
+            {
+              "id": 407,
+              "traduccion": "Treballant en actiu",
+              "idioma": "cat"
+            },
+            {
+              "id": 408,
+              "traduccion": "Working active",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 300,
+          "optionsList": [],
+          "options": "Jubilado",
+          "traduccion": [
+            {
+              "id": 409,
+              "traduccion": "Jubilat",
+              "idioma": "cat"
+            },
+            {
+              "id": 410,
+              "traduccion": "Retired",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 301,
+          "optionsList": [],
+          "options": "De baja laboral",
+          "traduccion": [
+            {
+              "id": 411,
+              "traduccion": "De baixa laboral",
+              "idioma": "cat"
+            },
+            {
+              "id": 412,
+              "traduccion": "Sick leave",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 302,
+          "optionsList": [],
+          "options": "En paro",
+          "traduccion": [
+            {
+              "id": 413,
+              "traduccion": "A l'atur",
+              "idioma": "cat"
+            },
+            {
+              "id": 414,
+              "traduccion": "Unemployed",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 303,
+          "optionsList": [],
+          "options": "Otros:",
+          "traduccion": [
+            {
+              "id": 415,
+              "traduccion": "Altres:",
+              "idioma": "cat"
+            },
+            {
+              "id": 416,
+              "traduccion": "Others:",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": {
+        "id": 8,
+        "information": "Continuamos con preguntas en relación con su trabajo actual y previos.",
+        "videoUrl": null,
+        "imageName": null,
+        "traduccion": []
+      },
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 417,
+          "traduccion": "Quina de les categories següents descriu millor el seu estatus laboral?",
+          "idioma": "cat"
+        },
+        {
+          "id": 418,
+          "traduccion": "Which of the following categories best describes your employment status?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 165,
+      "questionText": "10. En relación con su trabajo actual, o previo si ya no trabaja. Indique el año de inicio:",
+      "type": "text",
+      "page": 2,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 419,
+          "traduccion": "Pel que fa al seu treball actual, o previ si ja no treballa. Indiqueu l'any d'inici:",
+          "idioma": "cat"
+        },
+        {
+          "id": 420,
+          "traduccion": "In relation to your current or previous job if you are no longer working. Indicate the start year:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 166,
+      "questionText": "Indique el año de fin/Continúo trabajando:",
+      "type": "text",
+      "page": 2,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 421,
+          "traduccion": "Indiqueu l'any de fi/Coninuo treballant:",
+          "idioma": "cat"
+        },
+        {
+          "id": 422,
+          "traduccion": "Indicate the year end/Continue working:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 167,
+      "questionText": "Indique el tipo de trabajo:",
+      "type": "text",
+      "page": 2,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 423,
+          "traduccion": "Indiqueu el tipus de treball:",
+          "idioma": "cat"
+        },
+        {
+          "id": 424,
+          "traduccion": "Indicate the type of job:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 168,
+      "questionText": "11. ¿En qué sector está su profesión actual, o previa si ya no trabaja? Marque la que mejor se ajuste:",
+      "type": "radio",
+      "page": 2,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 304,
+          "optionsList": [],
+          "options": "Agricultura, plantaciones, otros sectores rurales",
+          "traduccion": [
+            {
+              "id": 425,
+              "traduccion": "Agricultura, plantacions, altres sectors rurals",
+              "idioma": "cat"
+            },
+            {
+              "id": 426,
+              "traduccion": "Agriculture, plantations, other rural sectors",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 305,
+          "optionsList": [],
+          "options": "Producción de metales básicos",
+          "traduccion": [
+            {
+              "id": 427,
+              "traduccion": "Producció de metalls bàsics",
+              "idioma": "cat"
+            },
+            {
+              "id": 428,
+              "traduccion": "Basic metal production",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 306,
+          "optionsList": [],
+          "options": "Industrias químicas",
+          "traduccion": [
+            {
+              "id": 429,
+              "traduccion": "Indústries químiques",
+              "idioma": "cat"
+            },
+            {
+              "id": 430,
+              "traduccion": "Chemical industries",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 307,
+          "optionsList": [],
+          "options": "Comercio",
+          "traduccion": [
+            {
+              "id": 431,
+              "traduccion": "Comerç",
+              "idioma": "cat"
+            },
+            {
+              "id": 432,
+              "traduccion": "Trade",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 308,
+          "optionsList": [],
+          "options": "Alimentación, bebidas, tabaco",
+          "traduccion": [
+            {
+              "id": 433,
+              "traduccion": "Alimentació, begudes, tabac",
+              "idioma": "cat"
+            },
+            {
+              "id": 434,
+              "traduccion": "Food, drinks, tobacco",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 309,
+          "optionsList": [],
+          "options": "Silvicultura, madera, pasta y papel",
+          "traduccion": [
+            {
+              "id": 435,
+              "traduccion": "Silvicultura, fusta, pasta i paper",
+              "idioma": "cat"
+            },
+            {
+              "id": 436,
+              "traduccion": "Forestry, wood, pulp and paper",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 310,
+          "optionsList": [],
+          "options": "Servicios sanitarios",
+          "traduccion": [
+            {
+              "id": 437,
+              "traduccion": "Serveis sanitaris",
+              "idioma": "cat"
+            },
+            {
+              "id": 438,
+              "traduccion": "Health services",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 311,
+          "optionsList": [],
+          "options": "Hostelería, turismo, restauración",
+          "traduccion": [
+            {
+              "id": 439,
+              "traduccion": "Hostaleria, turisme, restauració",
+              "idioma": "cat"
+            },
+            {
+              "id": 440,
+              "traduccion": "Catering, tourism, restaurant industry",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 312,
+          "optionsList": [],
+          "options": "Minería (carbón, otras minas)  ",
+          "traduccion": [
+            {
+              "id": 441,
+              "traduccion": "Mineria (carbó, altres mines)",
+              "idioma": "cat"
+            },
+            {
+              "id": 442,
+              "traduccion": "Mining (coal, other mines)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 313,
+          "optionsList": [],
+          "options": "Ingeniería mecánica y eléctrica",
+          "traduccion": [
+            {
+              "id": 443,
+              "traduccion": "Enginyeria mecànica i elèctrica",
+              "idioma": "cat"
+            },
+            {
+              "id": 444,
+              "traduccion": "Mechanical and electrical engineering",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 314,
+          "optionsList": [],
+          "options": "Medios de comunicación, cultura, gráficos",
+          "traduccion": [
+            {
+              "id": 445,
+              "traduccion": "Mitjans de comunicació, cultura, gràfics",
+              "idioma": "cat"
+            },
+            {
+              "id": 446,
+              "traduccion": "Mass media, culture, graphics",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 315,
+          "optionsList": [],
+          "options": "Producción de petróleo y gas",
+          "traduccion": [
+            {
+              "id": 447,
+              "traduccion": "Producció de petroli i gas",
+              "idioma": "cat"
+            },
+            {
+              "id": 448,
+              "traduccion": "Oil and gas production",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 316,
+          "optionsList": [],
+          "options": "Servicios postales y de telecomunicaciones",
+          "traduccion": [
+            {
+              "id": 449,
+              "traduccion": "Serveis postals i de telecomunicacions",
+              "idioma": "cat"
+            },
+            {
+              "id": 450,
+              "traduccion": "Postal and telecommunication services",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 317,
+          "optionsList": [],
+          "options": "Servicios públicos",
+          "traduccion": [
+            {
+              "id": 451,
+              "traduccion": "Serveis públics",
+              "idioma": "cat"
+            },
+            {
+              "id": 452,
+              "traduccion": "Public services",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 318,
+          "optionsList": [],
+          "options": "Transporte marítimo/Puertos/Pesca/Vías navegables interiores",
+          "traduccion": [
+            {
+              "id": 453,
+              "traduccion": "Transport marítim/Ports/Pesca/Vies navegables interiors",
+              "idioma": "cat"
+            },
+            {
+              "id": 454,
+              "traduccion": "Shipping/Ports/Fishing/Inland Waterways",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 319,
+          "optionsList": [],
+          "options": "Textil, confección, cuero, calzado",
+          "traduccion": [
+            {
+              "id": 455,
+              "traduccion": "Tèxtil, confecció, cuir, calçat",
+              "idioma": "cat"
+            },
+            {
+              "id": 456,
+              "traduccion": "Textile, clothing, leather, footwear",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 320,
+          "optionsList": [],
+          "options": "Transporte (incluida la aviación civil, el ferrocarril y el transporte por carretera)",
+          "traduccion": [
+            {
+              "id": 457,
+              "traduccion": "Transport (inclosa l'aviació civil, el ferrocarril i el transport per carretera)",
+              "idioma": "cat"
+            },
+            {
+              "id": 458,
+              "traduccion": "Transport (including civil aviation, rail and road transport)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 321,
+          "optionsList": [],
+          "options": "Fabricación de equipos de transporte",
+          "traduccion": [
+            {
+              "id": 459,
+              "traduccion": "Fabricació d'equips de transport",
+              "idioma": "cat"
+            },
+            {
+              "id": 460,
+              "traduccion": "Manufacture of transport equipment",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 322,
+          "optionsList": [],
+          "options": "Servicios públicos (agua, gas, electricidad)",
+          "traduccion": [
+            {
+              "id": 461,
+              "traduccion": "Serveis públics (aigua, gas, electricitat)",
+              "idioma": "cat"
+            },
+            {
+              "id": 462,
+              "traduccion": "Public services (water, gas, electricity)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 323,
+          "optionsList": [],
+          "options": "Construcción",
+          "traduccion": [
+            {
+              "id": 463,
+              "traduccion": "Construcció",
+              "idioma": "cat"
+            },
+            {
+              "id": 464,
+              "traduccion": "Construction",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 324,
+          "optionsList": [],
+          "options": "Educación",
+          "traduccion": [
+            {
+              "id": 465,
+              "traduccion": "Educació",
+              "idioma": "cat"
+            },
+            {
+              "id": 466,
+              "traduccion": "Education",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 325,
+          "optionsList": [],
+          "options": "Servicios financieros y profesionales",
+          "traduccion": [
+            {
+              "id": 467,
+              "traduccion": "Serveis financers i professionals",
+              "idioma": "cat"
+            },
+            {
+              "id": 468,
+              "traduccion": "Financial and professional services",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 326,
+          "optionsList": [],
+          "options": "Prefiero no contestar",
+          "traduccion": [
+            {
+              "id": 469,
+              "traduccion": "Prefereixo no contestar",
+              "idioma": "cat"
+            },
+            {
+              "id": 470,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 471,
+          "traduccion": "En quin sector està la seva professió actual, o prèvia si ja no treballa? Marqueu la que millor s'ajusti:",
+          "idioma": "cat"
+        },
+        {
+          "id": 472,
+          "traduccion": "In which sector is your current profession, or previous if you no longer work? Check the one that best fits:",
+          "idioma": "en"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "questionId": 169,
+      "questionText": "12. País de residencia actual:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": {
+        "id": 9,
+        "information": "VIVIENDA: En relación con su residencia actual...",
+        "videoUrl": null,
+        "imageName": null,
+        "traduccion": []
+      },
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 473,
+          "traduccion": "País de residència actual:",
+          "idioma": "cat"
+        },
+        {
+          "id": 474,
+          "traduccion": "Current country of residence:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 170,
+      "questionText": "Ciudad/municipio de residencia actual:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 475,
+          "traduccion": "Ciutat/poble de residència actual:",
+          "idioma": "cat"
+        },
+        {
+          "id": 476,
+          "traduccion": "Current city/town of residence:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 171,
+      "questionText": "Código postal de residencia actual:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 477,
+          "traduccion": "Codi postal de residència actual:",
+          "idioma": "cat"
+        },
+        {
+          "id": 478,
+          "traduccion": "Current residence postal code:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 172,
+      "questionText": "13. ¿Desde cuándo vive en su residencia actual?",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 479,
+          "traduccion": "Des de quan viu a la seva residència actual?",
+          "idioma": "cat"
+        },
+        {
+          "id": 480,
+          "traduccion": "Since when do you live in your current residence?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 173,
+      "questionText": "14. ¿La casa donde vive es de ...?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 329,
+          "optionsList": [],
+          "options": "Soy propietario/a",
+          "traduccion": [
+            {
+              "id": 483,
+              "traduccion": "Sóc propietari/ària",
+              "idioma": "cat"
+            },
+            {
+              "id": 484,
+              "traduccion": "I'm owner",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 330,
+          "optionsList": [],
+          "options": "Estoy de alquiler",
+          "traduccion": [
+            {
+              "id": 485,
+              "traduccion": "Estic de lloguer",
+              "idioma": "cat"
+            },
+            {
+              "id": 486,
+              "traduccion": "I'm renting",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 331,
+          "optionsList": [],
+          "options": "Prefiero no contestar",
+          "traduccion": [
+            {
+              "id": 487,
+              "traduccion": "Prefereixo no contestar",
+              "idioma": "cat"
+            },
+            {
+              "id": 488,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [
+        {
+          "id": 64,
+          "questionsRelated": [
+            {
+              "questionId": 174,
+              "questionText": "En relación a su alquiler:",
+              "type": "radio",
+              "page": 3,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 327,
+                  "optionsList": [],
+                  "options": "El propietario es ajeno a mi familia",
+                  "traduccion": [
+                    { "traduccion": "El propietari és aliè a la meva família", "idioma": "cat" },
+                    { "traduccion": "The owner is oblivious to my family", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 328,
+                  "optionsList": [],
+                  "options": "El propietario es un miembro de mi familia",
+                  "traduccion": [
+                    {
+                      "traduccion": "El propietari és un membre de la meva família",
+                      "idioma": "cat"
+                    },
+                    { "traduccion": "The owner is a member of my family", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 481,
+                  "traduccion": "Pel que fa al lloguer:",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 482,
+                  "traduccion": "In relation to your rental:",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Estoy de alquiler"
+        }
+      ],
+      "traduccion": [
+        {
+          "id": 489,
+          "traduccion": "La casa on viu és de ...?",
+          "idioma": "cat"
+        },
+        {
+          "id": 490,
+          "traduccion": "The house where you live is from ...?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 175,
+      "questionText": "15. ¿Su residencia actual es un/a?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 332,
+          "optionsList": [],
+          "options": "Casa unifamiliar",
+          "traduccion": [
+            {
+              "id": 491,
+              "traduccion": "Casa unifamiliar",
+              "idioma": "cat"
+            },
+            {
+              "id": 492,
+              "traduccion": "Single-family house",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 333,
+          "optionsList": [],
+          "options": "Casa adosada",
+          "traduccion": [
+            {
+              "id": 493,
+              "traduccion": "Casa adossada",
+              "idioma": "cat"
+            },
+            {
+              "id": 494,
+              "traduccion": "Terraced house",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 334,
+          "optionsList": [],
+          "options": "Casa pareada",
+          "traduccion": [
+            {
+              "id": 495,
+              "traduccion": "Casa aparellada",
+              "idioma": "cat"
+            },
+            {
+              "id": 496,
+              "traduccion": "Semi-detached house",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 335,
+          "optionsList": [],
+          "options": "Piso / Apartamento",
+          "traduccion": [
+            {
+              "id": 497,
+              "traduccion": "Pis / Apartament",
+              "idioma": "cat"
+            },
+            {
+              "id": 498,
+              "traduccion": "Flat / Apartment",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 336,
+          "optionsList": [],
+          "options": "Otro (especifique):",
+          "traduccion": [
+            {
+              "id": 499,
+              "traduccion": "Un altre (especifiqueu):",
+              "idioma": "cat"
+            },
+            {
+              "id": 500,
+              "traduccion": "Other (specify):",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 501,
+          "traduccion": "La vostra residència actual és un/a?",
+          "idioma": "cat"
+        },
+        {
+          "id": 502,
+          "traduccion": "Your current residence is a?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 176,
+      "questionText": "16. ¿En qué piso (altura) vive?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 337,
+          "optionsList": [],
+          "options": "Bajo",
+          "traduccion": [
+            {
+              "id": 503,
+              "traduccion": "Baix",
+              "idioma": "cat"
+            },
+            {
+              "id": 504,
+              "traduccion": "Ground",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 338,
+          "optionsList": [],
+          "options": "Entresuelo",
+          "traduccion": [
+            {
+              "id": 505,
+              "traduccion": "Entresòl",
+              "idioma": "cat"
+            },
+            {
+              "id": 506,
+              "traduccion": "Mezzanine",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 339,
+          "optionsList": [],
+          "options": "Primero",
+          "traduccion": [
+            {
+              "id": 507,
+              "traduccion": "Primer",
+              "idioma": "cat"
+            },
+            {
+              "id": 508,
+              "traduccion": "First",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 340,
+          "optionsList": [],
+          "options": "Segundo",
+          "traduccion": [
+            {
+              "id": 509,
+              "traduccion": "Segon",
+              "idioma": "cat"
+            },
+            {
+              "id": 510,
+              "traduccion": "Second",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 341,
+          "optionsList": [],
+          "options": "Tercero o superior",
+          "traduccion": [
+            {
+              "id": 511,
+              "traduccion": "Tercer o superior",
+              "idioma": "cat"
+            },
+            {
+              "id": 512,
+              "traduccion": "Third or higher",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 513,
+          "traduccion": "A quin pis (alçada) viu?",
+          "idioma": "cat"
+        },
+        {
+          "id": 514,
+          "traduccion": "What floor (height) do you live on?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 177,
+      "questionText": "17. ¿Conoce el año de construcción aproximado?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 342,
+          "optionsList": [],
+          "options": "Antes de 1950",
+          "traduccion": [
+            {
+              "id": 515,
+              "traduccion": "Abans de 1950",
+              "idioma": "cat"
+            },
+            {
+              "id": 516,
+              "traduccion": "Before 1950",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 343,
+          "optionsList": [],
+          "options": "De la década de 1960",
+          "traduccion": [
+            {
+              "id": 517,
+              "traduccion": "De la dècada de 1960",
+              "idioma": "cat"
+            },
+            {
+              "id": 518,
+              "traduccion": "From the 1960s",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 344,
+          "optionsList": [],
+          "options": "De la década de 1970",
+          "traduccion": [
+            {
+              "id": 519,
+              "traduccion": "De la dècada de 1970",
+              "idioma": "cat"
+            },
+            {
+              "id": 520,
+              "traduccion": "From the 1970s",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 345,
+          "optionsList": [],
+          "options": "De la década de 1980",
+          "traduccion": [
+            {
+              "id": 521,
+              "traduccion": "De la dècada de 1980",
+              "idioma": "cat"
+            },
+            {
+              "id": 522,
+              "traduccion": "From the 1980s",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 346,
+          "optionsList": [],
+          "options": "De la década de 1990",
+          "traduccion": [
+            {
+              "id": 523,
+              "traduccion": "De la dècada de 1990",
+              "idioma": "cat"
+            },
+            {
+              "id": 524,
+              "traduccion": "From the 1990s",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 347,
+          "optionsList": [],
+          "options": "Construida más tarde del 2000",
+          "traduccion": [
+            {
+              "id": 525,
+              "traduccion": "Construïda més tard del 2000",
+              "idioma": "cat"
+            },
+            {
+              "id": 526,
+              "traduccion": "Built later than 2000",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 348,
+          "optionsList": [],
+          "options": "No lo sé",
+          "traduccion": [
+            {
+              "id": 527,
+              "traduccion": "No ho sé",
+              "idioma": "cat"
+            },
+            {
+              "id": 528,
+              "traduccion": "I don't know",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 529,
+          "traduccion": "Coneixeu l'any de construcció aproximat?",
+          "idioma": "cat"
+        },
+        {
+          "id": 530,
+          "traduccion": "Do you know the approximate year of construction?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 178,
+      "questionText": "18. ¿Ha hecho alguna vez reformas en su domicilio actual?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 351,
+          "optionsList": [],
+          "options": "Sí",
+          "traduccion": [
+            {
+              "id": 533,
+              "traduccion": "Si",
+              "idioma": "cat"
+            },
+            {
+              "id": 534,
+              "traduccion": "Yes",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 352,
+          "optionsList": [],
+          "options": "No",
+          "traduccion": [
+            {
+              "id": 535,
+              "traduccion": "No",
+              "idioma": "cat"
+            },
+            {
+              "id": 536,
+              "traduccion": "No",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [
+        {
+          "id": 65,
+          "questionsRelated": [
+            {
+              "questionId": 179,
+              "questionText": "En relación al tipo de reforma en su domicilio actual:",
+              "type": "checkbox",
+              "page": 3,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 349,
+                  "optionsList": [],
+                  "options": "Aislamiento térmico/sonoro",
+                  "traduccion": [
+                    { "traduccion": "Aïllament tèrmic/sonor", "idioma": "cat" },
+                    { "traduccion": "Thermal/sound insulation", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 350,
+                  "optionsList": [],
+                  "options": "Aislamiento ventanas/suelo",
+                  "traduccion": [
+                    { "traduccion": "Aïllament finestres/sòl", "idioma": "cat" },
+                    { "traduccion": "Windows/floor insulation", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 531,
+                  "traduccion": "Pel que fa al tipus de reforma al seu domicili actual:",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 532,
+                  "traduccion": "In relation to the type of reform in your current home:",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Sí"
+        }
+      ],
+      "traduccion": [
+        {
+          "id": 537,
+          "traduccion": "Ha fet mai reformes al seu domicili actual?",
+          "idioma": "cat"
+        },
+        {
+          "id": 538,
+          "traduccion": "Have you ever made reforms in your current home?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 180,
+      "questionText": "19. ¿Cuál es el sistema de ventilación que usted emplea en su casa?",
+      "type": "radio",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 353,
+          "optionsList": [],
+          "options": "Natural (abriendo ventanas)",
+          "traduccion": [
+            {
+              "id": 539,
+              "traduccion": "Natural (obrint finestres)",
+              "idioma": "cat"
+            },
+            {
+              "id": 540,
+              "traduccion": "Natural (opening windows)",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 354,
+          "optionsList": [],
+          "options": "Ventilación mecánica",
+          "traduccion": [
+            {
+              "id": 541,
+              "traduccion": "Ventilació mecànica",
+              "idioma": "cat"
+            },
+            {
+              "id": 542,
+              "traduccion": "Mechanic ventilation",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 355,
+          "optionsList": [],
+          "options": "Presión positiva",
+          "traduccion": [
+            {
+              "id": 543,
+              "traduccion": "Pressió positiva",
+              "idioma": "cat"
+            },
+            {
+              "id": 544,
+              "traduccion": "Positive pressure",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 356,
+          "optionsList": [],
+          "options": "Aspiración",
+          "traduccion": [
+            {
+              "id": 545,
+              "traduccion": "Aspiració",
+              "idioma": "cat"
+            },
+            {
+              "id": 546,
+              "traduccion": "Aspiration",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 357,
+          "optionsList": [],
+          "options": "Otros",
+          "traduccion": [
+            {
+              "id": 547,
+              "traduccion": "Altres",
+              "idioma": "cat"
+            },
+            {
+              "id": 548,
+              "traduccion": "Others",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 549,
+          "traduccion": "Quin és el sistema de ventilació que vostè empra a casa?",
+          "idioma": "cat"
+        },
+        {
+          "id": 550,
+          "traduccion": "What is the ventilation system that you use in your home?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 181,
+      "questionText": "20. ¿Cuántos miembros de la familia viven actualmente en su hogar (incluido usted mismo)? Los hijos/as que viven en alojamientos para estudiantes y regresan a casa durante el fin de semana también cuentan como miembros del hogar.",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 551,
+          "traduccion": "Quants membres de la família viuen actualment a casa seva (inclòs vostè mateix)? Els fills/es que viuen en allotjaments per a estudiants i tornen a casa durant el cap de setmana també compten com a membres de la llar.",
+          "idioma": "cat"
+        },
+        {
+          "id": 552,
+          "traduccion": "How many family members currently live in your home (including yourself)? Children living in student accommodation and returning home over the weekend also count as household members.",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 182,
+      "questionText": "21. ¿Con quién reside en su domicilio?",
+      "type": "checkbox",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 358,
+          "optionsList": [],
+          "options": "Solo",
+          "traduccion": [
+            {
+              "id": 553,
+              "traduccion": "Sol",
+              "idioma": "cat"
+            },
+            {
+              "id": 554,
+              "traduccion": "Alone",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 359,
+          "optionsList": [],
+          "options": "Pareja",
+          "traduccion": [
+            {
+              "id": 555,
+              "traduccion": "Parella",
+              "idioma": "cat"
+            },
+            {
+              "id": 556,
+              "traduccion": "Partner",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 360,
+          "optionsList": [],
+          "options": "Hijos",
+          "traduccion": [
+            {
+              "id": 557,
+              "traduccion": "Fills",
+              "idioma": "cat"
+            },
+            {
+              "id": 558,
+              "traduccion": "Children",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 361,
+          "optionsList": [],
+          "options": "Otros familiares",
+          "traduccion": [
+            {
+              "id": 559,
+              "traduccion": "Altres familiars",
+              "idioma": "cat"
+            },
+            {
+              "id": 560,
+              "traduccion": "Other relatives",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 362,
+          "optionsList": [],
+          "options": "Compañeros de piso",
+          "traduccion": [
+            {
+              "id": 561,
+              "traduccion": "Companys de pis",
+              "idioma": "cat"
+            },
+            {
+              "id": 562,
+              "traduccion": "Flatesmates",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 363,
+          "optionsList": [],
+          "options": "Prefiero no contestar",
+          "traduccion": [
+            {
+              "id": 563,
+              "traduccion": "Prefereixo no contestar",
+              "idioma": "cat"
+            },
+            {
+              "id": 564,
+              "traduccion": "I prefer not to answer",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 565,
+          "traduccion": "Amb qui resideix al seu domicili?",
+          "idioma": "cat"
+        },
+        {
+          "id": 566,
+          "traduccion": "With whom do you reside at home?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 183,
+      "questionText": "22. ¿Cuántas personas menores de 18 años viven en su domicilio?",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 567,
+          "traduccion": "Quantes persones menors de 18 anys viuen al seu domicili?",
+          "idioma": "cat"
+        },
+        {
+          "id": 568,
+          "traduccion": "How many people under 18 live in your home?",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 184,
+      "questionText": "23. País donde vivió durante su infancia:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 569,
+          "traduccion": "País on va viure durant la seva infància:",
+          "idioma": "cat"
+        },
+        {
+          "id": 570,
+          "traduccion": "Country where you lived during your childhood:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 185,
+      "questionText": "Ciudad/municipio dónde vivió durante su infancia:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 571,
+          "traduccion": "Ciutat/poble on va viure durant la seva infància:",
+          "idioma": "cat"
+        },
+        {
+          "id": 572,
+          "traduccion": "City/town where you lived during your childhood:",
+          "idioma": "en"
+        }
+      ]
+    },
+    {
+      "questionId": 186,
+      "questionText": "Código postal de donde vivió durante su infancia:",
+      "type": "text",
+      "page": 3,
+      "compulsory": null,
+      "optionsList": [],
+      "questionInformation": null,
+      "answerRelateds": [],
+      "traduccion": [
+        {
+          "id": 573,
+          "traduccion": "Codi postal d'on va viure durant la seva infància:",
+          "idioma": "cat"
+        },
+        {
+          "id": 574,
+          "traduccion": "Postal code of where you lived during your childhood:",
+          "idioma": "en"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "questionId": 187,
+      "questionText": "24. ¿Antes de hacer esta encuesta sabía algo sobre el radón?",
+      "type": "radio",
+      "page": 4,
+      "compulsory": null,
+      "optionsList": [
+        {
+          "optionsId": 386,
+          "optionsList": [],
+          "options": "Sí",
+          "traduccion": [
+            {
+              "id": 583,
+              "traduccion": "Si",
+              "idioma": "cat"
+            },
+            {
+              "id": 584,
+              "traduccion": "Yes",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 387,
+          "optionsList": [],
+          "options": "Me suena",
+          "traduccion": [
+            {
+              "id": 585,
+              "traduccion": "Em sona",
+              "idioma": "cat"
+            },
+            {
+              "id": 586,
+              "traduccion": "It sounds familiar to me",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 388,
+          "optionsList": [],
+          "options": "No",
+          "traduccion": [
+            {
+              "id": 587,
+              "traduccion": "No",
+              "idioma": "cat"
+            },
+            {
+              "id": 588,
+              "traduccion": "No",
+              "idioma": "en"
+            }
+          ]
+        },
+        {
+          "optionsId": 389,
+          "optionsList": [],
+          "options": "No lo sé",
+          "traduccion": [
+            {
+              "id": 589,
+              "traduccion": "No ho sé",
+              "idioma": "cat"
+            },
+            {
+              "id": 590,
+              "traduccion": "I don't know",
+              "idioma": "en"
+            }
+          ]
+        }
+      ],
+      "questionInformation": {
+        "id": 10,
+        "information": "PREGUNTAS DE SENSIBILIZACIÓ SOBRE RADÓN: Ahora nos interesa saber qué piensa sobre los siguientes temas:",
+        "videoUrl": null,
+        "imageName": null,
+        "traduccion": []
+      },
+      "answerRelateds": [
+        {
+          "id": 66,
+          "questionsRelated": [
+            {
+              "questionId": 188,
+              "questionText": "¿Cómo de seguro está de su conocimiento sobre el radón?",
+              "type": "radio",
+              "page": 4,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 364,
+                  "optionsList": [],
+                  "options": "Nada confiado",
+                  "traduccion": [
+                    { "traduccion": "Res confiat", "idioma": "cat" },
+                    { "traduccion": "Not confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 365,
+                  "optionsList": [],
+                  "options": "Poco confiado",
+                  "traduccion": [
+                    { "traduccion": "Poc confiat", "idioma": "cat" },
+                    { "traduccion": "Not very confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 366,
+                  "optionsList": [],
+                  "options": "Bastante confiado",
+                  "traduccion": [
+                    { "traduccion": "Força confiat", "idioma": "cat" },
+                    { "traduccion": "Quiet confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 367,
+                  "optionsList": [],
+                  "options": "Muy confiado",
+                  "traduccion": [
+                    { "traduccion": "Molt confiat", "idioma": "cat" },
+                    { "traduccion": "Very confident", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 575,
+                  "traduccion": "Com de segur està del seu coneixement sobre el radó?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 576,
+                  "traduccion": "How sure are you of your knowledge about radon?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 189,
+              "questionText": "Si ya conocía el radón antes de hacer la encuesta, ¿dónde ha oído hablar de él?",
+              "type": "radio",
+              "page": 4,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 368,
+                  "optionsList": [],
+                  "options": "Medios de comunicación tradicionales (periódicos, revistas, televisión, radio...)",
+                  "traduccion": [
+                    {
+                      "traduccion": "Mitjans de comunicació tradicionals (periòdics, revistes, televisió, ràdio...)",
+                      "idioma": "cat"
+                    },
+                    {
+                      "traduccion": "Traditional media (newspapers, magazines, television, radio...)",
+                      "idioma": "en"
+                    }
+                  ]
+                },
+                {
+                  "optionsId": 369,
+                  "optionsList": [],
+                  "options": "A través de redes sociales (Twitter, Instagram, Facebook, etc.)",
+                  "traduccion": [
+                    {
+                      "traduccion": "A través de xarxes socials (Twitter, Instagram, Facebook, etc.)",
+                      "idioma": "cat"
+                    },
+                    {
+                      "traduccion": "Through social networks (Twitter, Instagram, Facebook, etc.)",
+                      "idioma": "en"
+                    }
+                  ]
+                },
+                {
+                  "optionsId": 370,
+                  "optionsList": [],
+                  "options": "Por personas de mi entorno",
+                  "traduccion": [
+                    { "traduccion": "Per persones del meu entorn", "idioma": "cat" },
+                    { "traduccion": "By people around me", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 371,
+                  "optionsList": [],
+                  "options": "Por personal sanitario",
+                  "traduccion": [
+                    { "traduccion": "Per personal sanitari", "idioma": "cat" },
+                    { "traduccion": "By health personnel", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 372,
+                  "optionsList": [],
+                  "options": "En la escuela o instituto",
+                  "traduccion": [
+                    { "traduccion": "A l'escola o institut", "idioma": "cat" },
+                    { "traduccion": "At school or college", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 373,
+                  "optionsList": [],
+                  "options": "En la universidad",
+                  "traduccion": [
+                    { "traduccion": "A la universitat", "idioma": "cat" },
+                    { "traduccion": "At University", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 374,
+                  "optionsList": [],
+                  "isText": true,
+                  "options": "Otros:",
+                  "traduccion": [
+                    { "traduccion": "Altres:", "idioma": "cat" },
+                    { "traduccion": "Others:", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 577,
+                  "traduccion": "Si ja coneixia el radó abans de fer l'enquesta, on n'ha sentit a parlar?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 578,
+                  "traduccion": "If you already knew about radon before taking the survey, where did you hear about it?",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Sí"
+        },
+        {
+          "id": 67,
+          "questionsRelated": [
+            {
+              "questionId": 190,
+              "questionText": "¿Cómo de seguro está de su conocimiento sobre el radón?",
+              "type": "radio",
+              "page": 4,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 375,
+                  "optionsList": [],
+                  "options": "Nada confiado",
+                  "traduccion": [
+                    { "traduccion": "Res confiat", "idioma": "cat" },
+                    { "traduccion": "Not confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 376,
+                  "optionsList": [],
+                  "options": "Poco confiado",
+                  "traduccion": [
+                    { "traduccion": "Poc confiat", "idioma": "cat" },
+                    { "traduccion": "Not very confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 377,
+                  "optionsList": [],
+                  "options": "Bastante confiado",
+                  "traduccion": [
+                    { "traduccion": "Força confiat", "idioma": "cat" },
+                    { "traduccion": "Quiet confident", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 378,
+                  "optionsList": [],
+                  "options": "Muy confiado",
+                  "traduccion": [
+                    { "traduccion": "Molt confiat", "idioma": "cat" },
+                    { "traduccion": "Very confident", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 579,
+                  "traduccion": "Com de segur està del seu coneixement sobre el radó?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 580,
+                  "traduccion": "How sure are you of your knowledge about radon?",
+                  "idioma": "en"
+                }
+              ]
+            },
+            {
+              "questionId": 191,
+              "questionText": "Si ya conocía el radón antes de hacer la encuesta, ¿dónde ha oído hablar de él?",
+              "type": "radio",
+              "page": 4,
+              "compulsory": null,
+              "optionsList": [
+                {
+                  "optionsId": 379,
+                  "optionsList": [],
+                  "options": "Medios de comunicación tradicionales (periódicos, revistas, televisión, radio...)",
+                  "traduccion": [
+                    {
+                      "traduccion": "Mitjans de comunicació tradicionals (periòdics, revistes, televisió, ràdio...)",
+                      "idioma": "cat"
+                    },
+                    {
+                      "traduccion": "Traditional media (newspapers, magazines, television, radio...)",
+                      "idioma": "en"
+                    }
+                  ]
+                },
+                {
+                  "optionsId": 380,
+                  "optionsList": [],
+                  "options": "A través de redes sociales (Twitter, Instagram, Facebook, etc.)",
+                  "traduccion": [
+                    {
+                      "traduccion": "A través de xarxes socials (Twitter, Instagram, Facebook, etc.)",
+                      "idioma": "cat"
+                    },
+                    {
+                      "traduccion": "Through social networks (Twitter, Instagram, Facebook, etc.)",
+                      "idioma": "en"
+                    }
+                  ]
+                },
+                {
+                  "optionsId": 381,
+                  "optionsList": [],
+                  "options": "Por personas de mi entorno",
+                  "traduccion": [
+                    { "traduccion": "Per persones del meu entorn", "idioma": "cat" },
+                    { "traduccion": "By people around me", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 382,
+                  "optionsList": [],
+                  "options": "Por personal sanitario",
+                  "traduccion": [
+                    { "traduccion": "Per personal sanitari", "idioma": "cat" },
+                    { "traduccion": "By health personnel", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 383,
+                  "optionsList": [],
+                  "options": "En la escuela o instituto",
+                  "traduccion": [
+                    { "traduccion": "A l'escola o institut", "idioma": "cat" },
+                    { "traduccion": "At school or college", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 384,
+                  "optionsList": [],
+                  "options": "En la universidad",
+                  "traduccion": [
+                    { "traduccion": "A la universitat", "idioma": "cat" },
+                    { "traduccion": "At University", "idioma": "en" }
+                  ]
+                },
+                {
+                  "optionsId": 385,
+                  "optionsList": [],
+                  "isText": true,
+                  "options": "Otros:",
+                  "traduccion": [
+                    { "traduccion": "Altres:", "idioma": "cat" },
+                    { "traduccion": "Others:", "idioma": "en" }
+                  ]
+                }
+              ],
+              "questionInformation": null,
+              "answerRelateds": [],
+              "traduccion": [
+                {
+                  "id": 581,
+                  "traduccion": "Si ja coneixia el radó abans de fer l'enquesta, on n'ha sentit a parlar?",
+                  "idioma": "cat"
+                },
+                {
+                  "id": 582,
+                  "traduccion": "If you already knew about radon before taking the survey, where did you hear about it?",
+                  "idioma": "en"
+                }
+              ]
+            }
+          ],
+          "answer": "Me suena"
+        }
+      ],
+      "traduccion": [
+        {
+          "id": 591,
+          "traduccion": "Abans de fer aquesta enquesta sabia alguna cosa sobre el radó?",
+          "idioma": "cat"
+        },
+        {
+          "id": 592,
+          "traduccion": "Before doing this survey, did you know anything about radon?",
+          "idioma": "en"
+        }
+      ]
     }
   ]
 ]

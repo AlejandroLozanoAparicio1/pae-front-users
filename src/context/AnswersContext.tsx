@@ -28,7 +28,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
         const [questionKey] = key.split('_');
         const formItem = form.filter((item) => item.questionId === parseInt(questionKey));
 
-        let type = formItem ? formItem[0].type : '';
+        let type = formItem && formItem.length > 0 ? formItem[0].type : '';
         if (!type) {
           type = 'text';
         }
@@ -37,8 +37,10 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
           ? formItem[0].optionsList.filter((item) => item.optionsId === ans)
           : '';
 
-        const optionId = answerObj ? answerObj[0].optionsId : -1;
-        const optionsText = answerObj ? answerObj[0].options : '';
+        const optionId =
+          answerObj && answerObj.length > 0 && answerObj[0].optionsId ? answerObj[0].optionsId : -1;
+        const optionsText =
+          answerObj && answerObj.length > 0 && answerObj[0].options ? answerObj[0].options : '';
 
         const row: Answer = {
           options: { optionsId: optionId },
