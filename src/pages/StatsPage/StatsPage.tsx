@@ -1,48 +1,144 @@
-import { useContext } from 'react';
-import { RadialChart } from 'react-vis';
-import { DiscreteColorLegend } from 'react-vis';
-import { LabelsContext } from '../../context/LabelsContext';
-import { useStats } from '../../hooks/useStats';
+import { DiscreteColorLegend, RadialChart } from 'react-vis';
 import styles from './stats_page.module.scss';
 
 const StatsPage: React.FC = () => {
-  const { mostSelected, selectedCount, questionCounts } = useStats();
-  const { get } = useContext(LabelsContext);
+  const questionCounts = [
+    {
+      question: '1. ¿Cuál es su género?',
+      answers: [
+        {
+          title: 'Masculino',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'Femenino',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'No binario',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'Prefiero no responder',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+      ],
+      counts: [
+        {
+          angle: 15,
+        },
+        {
+          angle: 5,
+        },
+
+        {
+          angle: 3,
+        },
+        {
+          angle: 17,
+        },
+      ],
+    },
+    {
+      question: '8. ¿Ha fumado o fuma otros productos a parte de cigarrillos?',
+      answers: [
+        {
+          title: 'Puros',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'Vaper/Cigarrillo electrónico',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'Cannabis',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+
+        {
+          title: 'No',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+      ],
+      counts: [
+        {
+          angle: 4,
+        },
+        {
+          angle: 5,
+        },
+
+        {
+          angle: 9,
+        },
+
+        {
+          angle: 5,
+        },
+      ],
+    },
+    {
+      question: '24. ¿Antes de hacer esta encuesta sabía algo sobre el radón?',
+      answers: [
+        {
+          title: 'Sí',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'Me suena',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'No',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+        {
+          title: 'No lo sé',
+          strokeWidth: 90,
+          strokeStyle: 'wide',
+        },
+      ],
+      counts: [
+        {
+          angle: 7,
+        },
+        {
+          angle: 5,
+        },
+        {
+          angle: 5,
+        },
+        {
+          angle: 9,
+        },
+      ],
+    },
+  ];
 
   return (
     <div className={styles.dataResults}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>{get('stats.mostCommonAnswers')}</h2>
-        <div className={styles.subtitles}>
-          <h3 className={styles.subtitle}>Question</h3>
-          <h3 className={styles.subtitle}>Most common answer</h3>
-        </div>
-        <ul>
-          {mostSelected.map((item) => (
-            <>
-              <li key={`most-selected-answer-${item.answer}`} className={styles.info}>
-                <p className={styles.question}>{item.question}</p>
-                <p className={styles.answer}>{item.answer}</p>
-              </li>
-              <div className={styles.divider}></div>
-            </>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.container}>
-        <h2 className={styles.title}>¿Cuanta gente ha contestado lo mismo que tú?</h2>
-        {selectedCount.map((item) => (
-          <p className={styles.info}>
-            {item.answer} : {item.count}
-          </p>
-        ))}
-      </div>
       {questionCounts.map((item) => (
         <div className={styles.chartContainer}>
           <h2 className={styles.subtitle}>{item.question}</h2>
           <div className={styles.chart}>
-            <RadialChart data={item.counts} width={300} height={300} />
-            <DiscreteColorLegend height={300} width={300} items={item.answers} />
+            <RadialChart className={styles.radial} data={item.counts} width={300} height={300} />
+            <DiscreteColorLegend
+              className={styles.legend}
+              height={150}
+              width={300}
+              items={item.answers}
+            />
           </div>
         </div>
       ))}

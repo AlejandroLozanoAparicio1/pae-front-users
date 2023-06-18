@@ -898,16 +898,6 @@
                     { "traduccion": "Pipa", "idioma": "cat" },
                     { "traduccion": "Pipe", "idioma": "en" }
                   ]
-                },
-                {
-                  "optionsId": 284,
-                  "optionsList": [],
-                  "isText": true,
-                  "options": "Otros:",
-                  "traduccion": [
-                    { "traduccion": "Altres:", "idioma": "cat" },
-                    { "traduccion": "Others:", "idioma": "en" }
-                  ]
                 }
               ],
               "questionInformation": null,
@@ -1039,16 +1029,6 @@
                     { "traduccion": "Pipa", "idioma": "cat" },
                     { "traduccion": "Pipe", "idioma": "en" }
                   ]
-                },
-                {
-                  "optionsId": 289,
-                  "optionsList": [],
-                  "isText": true,
-                  "options": "Otros:",
-                  "traduccion": [
-                    { "traduccion": "Altres:", "idioma": "cat" },
-                    { "traduccion": "Others:", "idioma": "en" }
-                  ]
                 }
               ],
               "questionInformation": null,
@@ -1137,23 +1117,6 @@
             {
               "id": 398,
               "traduccion": "Cannabis",
-              "idioma": "en"
-            }
-          ]
-        },
-        {
-          "optionsId": 296,
-          "optionsList": [],
-          "options": "Otros:",
-          "traduccion": [
-            {
-              "id": 399,
-              "traduccion": "Altres:",
-              "idioma": "cat"
-            },
-            {
-              "id": 400,
-              "traduccion": "Others:",
               "idioma": "en"
             }
           ]
@@ -3051,16 +3014,6 @@
                     { "traduccion": "A la universitat", "idioma": "cat" },
                     { "traduccion": "At University", "idioma": "en" }
                   ]
-                },
-                {
-                  "optionsId": 374,
-                  "optionsList": [],
-                  "isText": true,
-                  "options": "Otros:",
-                  "traduccion": [
-                    { "traduccion": "Altres:", "idioma": "cat" },
-                    { "traduccion": "Others:", "idioma": "en" }
-                  ]
                 }
               ],
               "questionInformation": null,
@@ -3214,16 +3167,6 @@
                   "traduccion": [
                     { "traduccion": "A la universitat", "idioma": "cat" },
                     { "traduccion": "At University", "idioma": "en" }
-                  ]
-                },
-                {
-                  "optionsId": 385,
-                  "optionsList": [],
-                  "isText": true,
-                  "options": "Otros:",
-                  "traduccion": [
-                    { "traduccion": "Altres:", "idioma": "cat" },
-                    { "traduccion": "Others:", "idioma": "en" }
                   ]
                 }
               ],

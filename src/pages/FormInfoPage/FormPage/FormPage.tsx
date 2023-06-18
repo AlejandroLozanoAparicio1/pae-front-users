@@ -18,11 +18,7 @@ const FormPage: React.FC<FormLoader> = ({ form, hasMorePages, page, questionaryN
     const formData = new FormData(e.target);
     const formJson = Object.fromEntries(formData.entries());
     buildFormData(formJson, form);
-    navigate(
-      nextPage,
-      // should uncomment but makes testing a pain
-      // { replace: true },
-    );
+    navigate(nextPage, { replace: true });
   };
 
   return (

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { AnswersContext } from '../context/AnswersContext';
-import postForm from '../services/forms/postForm';
+// import postForm from '../services/forms/postForm';
 import getMostSelected from '../services/stats/getMostSelected';
 import getQuestionCounts from '../services/stats/getQuestionCounts';
 import getSelectedCount from '../services/stats/getSelectedCount';
@@ -14,7 +14,7 @@ export const useStats = () => {
   /* maybe all these use effects dont have to be use effects?? (at least the post one shouldn't really be one (i think)) */
   useEffect(() => {
     if (answers.length > 0) {
-      postForm(answers);
+      // postForm(answers);
     }
   }, [answers]);
 

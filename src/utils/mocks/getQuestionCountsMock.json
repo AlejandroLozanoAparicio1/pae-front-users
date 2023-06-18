@@ -1,0 +1,14 @@
+[
+  {
+    "timesSelected": 7,
+    "answer": "Sí, actualmente fumo o hace menos de un año que dejé de fumar"
+  },
+  {
+    "timesSelected": 5,
+    "answer": "No, pero fumaba previamente (marque esta opción si hace más de un año que dejó de fumar)"
+  },
+  {
+    "timesSelected": 5,
+    "answer": "Nunca he fumado"
+  }
+]

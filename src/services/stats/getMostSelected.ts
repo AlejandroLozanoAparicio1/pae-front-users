@@ -1,17 +1,11 @@
-import { API_HOST } from '../../utils/constants';
+import getMostSelectedMock from '../../utils/mocks/getMostSelectedMock.json';
 
 const getMostSelected = (questionId: number): Promise<{ optionsId: number; options: string }> =>
-  fetch(`${API_HOST}/mostSelected?question_id=${questionId}`, {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  }).then((response) => {
-    if (!response.ok) {
-      throw response;
-    }
-    return response.json();
+  new Promise<any>((resolve, _reject) => {
+    setTimeout(() => {
+      const res: { optionsId: number; options: string } = getMostSelectedMock as any;
+      resolve(res);
+    }, 300);
   });
 
 export default getMostSelected;
