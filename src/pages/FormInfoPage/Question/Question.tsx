@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
+import { LabelsContext } from '../../../context/LabelsContext';
 import Answer from '../Answer/Answer';
 import TextAnswer from '../Answer/TextAnswer';
 import styles from './question.module.scss';
@@ -6,6 +7,7 @@ import styles from './question.module.scss';
 const Question: React.FC<{
   data: QuestionResponse[];
 }> = ({ data }) => {
+  const { lang } = useContext(LabelsContext);
   const fillFirstAnswers = () =>
     data.reduce((accumulator: any, current) => {
       if (current.answerRelateds.length > 0) {
@@ -38,15 +40,28 @@ const Question: React.FC<{
   const otherAnswers = (optionsList: Option[]): string[] =>
     optionsList.map(({ options }) => options);
 
-  const renderQuestion = ({
-    questionId,
-    questionText,
-    type,
-    optionsList,
-  }: QuestionResponse): JSX.Element => {
+  const getTranslation = (question: QuestionResponse) => {
+    const { traduccion } = question;
+    const catTranslation =
+      traduccion[0].idioma === 'cat' ? traduccion[0].traduccion : traduccion[1].traduccion;
+    const enTranslation =
+      traduccion[0].idioma === 'en' ? traduccion[0].traduccion : traduccion[1].traduccion;
+
+    switch (lang) {
+      case 'es':
+        return question.questionText;
+      case 'en':
+        return enTranslation;
+      case 'cat':
+        return catTranslation;
+    }
+  };
+
+  const renderQuestion = (question: QuestionResponse): JSX.Element => {
+    const { questionId, type, optionsList } = question;
     return (
       <div className={styles.form}>
-        <h3 className={styles.question}>{questionText}</h3>
+        <h3 className={styles.question}>{getTranslation(question)}</h3>
         {optionsList.map((answer) => {
           return (
             <Answer

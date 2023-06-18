@@ -8,6 +8,7 @@ type QuestionResponse = SimpleQuestion & {
   optionsList: Option[];
   page: number;
   compulsory: boolean | null;
+  traduccion: { traduccion: string; idioma: string }[];
   answerRelateds: {
     id: number;
     answer: string;
