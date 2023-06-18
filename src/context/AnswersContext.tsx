@@ -54,7 +54,7 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
         answerArray.push(optionsText);
         questionArray.push({
           questionId: parseInt(questionKey),
-          questionText: formItem ? formItem[0].questionText : '',
+          questionText: formItem && formItem.length > 0 ? formItem[0].questionText : '',
         });
         qIdArray.push(parseInt(questionKey));
       });
