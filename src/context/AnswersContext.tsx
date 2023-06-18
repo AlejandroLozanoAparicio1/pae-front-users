@@ -33,9 +33,10 @@ const AnswersProvider: React.FC<ContextChildrenType> = ({ children }: any): Reac
           type = 'text';
         }
 
-        const answerObj = formItem
-          ? formItem[0].optionsList.filter((item) => item.optionsId === ans)
-          : '';
+        const answerObj =
+          formItem && formItem.length > 0
+            ? formItem[0].optionsList.filter((item) => item.optionsId === ans)
+            : '';
 
         const optionId =
           answerObj && answerObj.length > 0 && answerObj[0].optionsId ? answerObj[0].optionsId : -1;
