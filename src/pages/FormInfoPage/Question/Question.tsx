@@ -72,6 +72,7 @@ const Question: React.FC<{
                 { traduccion: '', idioma: 'cat' },
               ],
             }}
+            radio={false}
             key={questionId + '_text'}
           />
         )}
